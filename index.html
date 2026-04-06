@@ -14,8 +14,14 @@
             background-color: #f9fafb;
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             color: #111827;
+        }
+
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 5px;
+            margin-top: 40px;
         }
 
         .hero {
@@ -73,6 +79,22 @@
             margin-right: 5px;
             margin-top: 5px;
         }
+
+        pre {
+            background-color: #f3f4f6;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: monospace;
+            color: #111827;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -80,10 +102,7 @@
     <div class="hero">
         <h1>👋 Hi, I'm Viktor</h1>
         <p><strong>AI Engineer specializing in AI automation for e-commerce brands.</strong></p>
-        <p>
-            I build AI systems that reduce customer support workload, generate high-converting content, 
-            and help Shopify stores increase revenue.
-        </p>
+        <p>I build AI systems that reduce customer support workload, generate high-converting content, and help Shopify stores increase revenue.</p>
     </div>
 
     <h2>🚀 Projects</h2>
@@ -91,8 +110,7 @@
     <div class="project">
         <h3>🥇 AI Customer Support Bot for Shopify</h3>
         <p>
-            AI-powered assistant trained on company documents that answers customer questions instantly 
-            and reduces support workload.
+            AI-powered assistant trained on company documents that answers customer questions instantly and reduces support workload.
         </p>
 
         <div>
@@ -121,43 +139,101 @@
         </div>
     </div>
 
-    <!-- Placeholder for future projects -->
-    <div class="project">
-        <h3>🥈 AI Product Description Generator</h3>
-        <p>
-            Generates high-converting product descriptions for Shopify stores.
-        </p>
-        <div>
-            <span class="label">NLP</span>
-            <span class="label">OpenAI</span>
-        </div>
+    <h2>📝 AI Customer Support System – Architecture & Core Components</h2>
+    <section>
+        <h4>Overview</h4>
+        <p>This system is an AI-powered customer support engine for e-commerce, combining RAG, hybrid search, AI routing, memory, and query rewriting to deliver accurate and context-aware responses.</p>
+    </section>
+
+    <section>
+        <h4>1. Data Ingestion</h4>
+        <p><strong>Purpose:</strong> Enable understanding of business data like product catalogs, policies, and FAQs.</p>
+        <p><strong>Implementation:</strong> Users upload <code>.txt</code> files.</p>
+        <pre><code>content = await file.read()
+text = content.decode("utf-8")
+chunks = splitter.split_text(text)
+
+Chroma.from_texts(
+    texts=chunks,
+    embedding=embeddings,
+    collection_name=user_id,
+    persist_directory=f"./chroma_db/{user_id}"
+)</code></pre>
+    </section>
+
+    <section>
+        <h4>2. Chunking Strategy</h4>
+        <p><strong>Purpose:</strong> Break large docs into smaller pieces for efficient retrieval and context understanding.</p>
+        <pre><code>splitter = RecursiveCharacterTextSplitter(
+    chunk_size=800,
+    chunk_overlap=100
+)</code></pre>
+        <p>Improves retrieval accuracy and prevents fragmented context.</p>
+    </section>
+
+    <section>
+        <h4>3. Hybrid Search (Vector + Keyword)</h4>
+        <p>Combines semantic embeddings search with keyword matching for precise retrieval.</p>
+        <pre><code>vector_docs = retriever.invoke(rewritten_question)
+keyword_docs = [
+    doc for doc in vector_docs
+    if any(word in doc.page_content.lower() for word in rewritten_question.lower().split())
+]
+unique_docs = []
+seen = set()
+for doc in vector_docs + keyword_docs:
+    if doc.page_content not in seen:
+        unique_docs.append(doc)
+        seen.add(doc.page_content)
+top_docs = sorted(unique_docs, key=lambda d: score(d), reverse=True)[:5]</code></pre>
+    </section>
+
+    <section>
+        <h4>4. LLM Orchestration</h4>
+        <p><strong>Components:</strong></p>
         <ul>
-            <li>✔ SEO-optimized text</li>
-            <li>✔ Multiple tones (luxury, casual, persuasive)</li>
-            <li>✔ Ready for product pages</li>
+            <li><strong>Prompt Engineering:</strong> Guides LLM to answer using context only.</li>
+            <li><strong>AI Routing:</strong> Classifies user query (products, policy, faq).</li>
+            <li><strong>Query Rewriting:</strong> Clarifies vague questions before retrieval.</li>
+            <li><strong>Conversation Memory:</strong> Maintains context across messages.</li>
         </ul>
-        <div class="tech">
-            Tech: Python, OpenAI API
-        </div>
-        <div class="links">
-            <a href="#">GitHub (Coming soon)</a>
-            <a href="#">Live Demo (Coming soon)</a>
-            <a href="#">YouTube Demo (Coming soon)</a>
-        </div>
-    </div>
+    </section>
+
+    <section>
+        <h4>5. Full System Flow</h4>
+        <p>User Question → Query Rewriting → AI Routing → Hybrid Search → Context Building → LLM Response → Save to Memory</p>
+    </section>
+
+    <section>
+        <h4>6. Key Takeaways</h4>
+        <ul>
+            <li>RAG is about both data structure and prompt design</li>
+            <li>Hybrid search improves retrieval accuracy</li>
+            <li>Query rewriting helps understand vague input</li>
+            <li>Memory enables natural conversation flow</li>
+            <li>AI routing replaces rigid rule-based systems</li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>7. System Capabilities</h4>
+        <ul>
+            <li>Multi-document understanding</li>
+            <li>Context-aware conversations</li>
+            <li>Intelligent query handling</li>
+            <li>Ecommerce-specific support</li>
+        </ul>
+        <p>Forms a strong foundation for scalable AI SaaS products.</p>
+    </section>
 
     <h2>🧠 About Me</h2>
-    <p>
-        I build practical AI solutions that solve real business problems for e-commerce brands.
-    </p>
+    <p>I build practical AI solutions that solve real business problems for e-commerce brands.</p>
     <ul>
         <li>Automate repetitive tasks</li>
         <li>Improve customer experience</li>
         <li>Increase revenue using AI</li>
     </ul>
-    <p>
-        Currently studying Data Science while building real-world AI systems.
-    </p>
+    <p>Currently studying Data Science while building real-world AI systems.</p>
 
     <h2>🛠 Tech Stack</h2>
     <ul>
