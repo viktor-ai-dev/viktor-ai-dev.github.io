@@ -14,7 +14,7 @@
             background-color: #f9fafb;
         }
 
-        h1, h2, h3, h4 {
+        h1, h2, h3 {
             color: #111827;
         }
 
@@ -53,12 +53,6 @@
             text-decoration: underline;
         }
 
-        .tech {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #6b7280;
-        }
-
         ul {
             padding-left: 20px;
         }
@@ -80,18 +74,6 @@
             margin-top: 5px;
         }
 
-        pre {
-            background-color: #f3f4f6;
-            padding: 15px;
-            border-radius: 8px;
-            overflow-x: auto;
-        }
-
-        code {
-            font-family: monospace;
-            color: #111827;
-        }
-
         section {
             margin-bottom: 30px;
         }
@@ -109,7 +91,7 @@
 
     <div class="project">
         <h3>🥇 AI Customer Support Bot for Shopify</h3>
-        <p>AI-powered assistant trained on company documents that answers customer questions instantly and reduces support workload.</p>
+        <p>An AI-powered assistant trained on company documents to answer customer questions instantly and reduce support workload.</p>
 
         <div>
             <span class="label">RAG</span>
@@ -119,108 +101,56 @@
         </div>
 
         <ul>
-            <li>⚡ Reduces support tickets by up to 50%</li>
-            <li>📄 Understands company docs via Retrieval-Augmented Generation (RAG)</li>
-            <li>🤖 Maintains conversation context across sessions</li>
+            <li>Reduces support tickets by up to 50%</li>
+            <li>Understands company documents via Retrieval-Augmented Generation (RAG)</li>
+            <li>Maintains conversation context across sessions</li>
         </ul>
 
         <img src="placeholder_screenshot.png" alt="Screenshot of AI Customer Support Bot" class="screenshot">
 
-        <div class="tech">
-            Tech: Python, OpenAI API, LangChain, Streamlit, RAG
-        </div>
-
         <div class="links">
             <a href="https://github.com/viktor-ai-dev/ai-customer-support-bot" target="_blank">GitHub</a>
+            <a href="https://viktor-ai-dev.github.io/ai-bot-demo/" target="_blank">Live Demo</a>
             <a href="https://youtu.be/your-demo-video" target="_blank">YouTube Demo</a>
         </div>
     </div>
 
-    <h2>📝 AI Customer Support System – Architecture & Key Skills</h2>
+    <h2>📝 Key Skills & System Highlights</h2>
 
     <section>
-        <h4>📂 1. Data Ingestion</h4>
-        <p><strong>Purpose:</strong> Process business data (product catalogs, policies, FAQs) for AI understanding.</p>
-        <p><strong>Implementation:</strong> Users upload <code>.txt</code> files.</p>
-        <pre><code>content = await file.read()
-text = content.decode("utf-8")
-chunks = splitter.split_text(text)
-
-Chroma.from_texts(
-    texts=chunks,
-    embedding=embeddings,
-    collection_name=user_id,
-    persist_directory=f"./chroma_db/{user_id}"
-)</code></pre>
-        <p><strong>Value to Employers:</strong> Shows ability to implement ingestion pipelines and handle structured/unstructured data.</p>
-    </section>
-
-    <section>
-        <h4>🧩 2. Chunking Strategy</h4>
-        <p><strong>Purpose:</strong> Break large documents into manageable chunks for efficient AI retrieval.</p>
-        <pre><code>splitter = RecursiveCharacterTextSplitter(
-    chunk_size=800,
-    chunk_overlap=100
-)</code></pre>
-        <p><strong>Value to Employers:</strong> Demonstrates understanding of optimizing AI context handling.</p>
-    </section>
-
-    <section>
-        <h4>🔍 3. Hybrid Search (Vector + Keyword)</h4>
-        <p>Combines semantic embeddings with keyword matching for precise information retrieval.</p>
-        <pre><code>vector_docs = retriever.invoke(rewritten_question)
-keyword_docs = [
-    doc for doc in vector_docs
-    if any(word in doc.page_content.lower() for word in rewritten_question.lower().split())
-]
-unique_docs = []
-seen = set()
-for doc in vector_docs + keyword_docs:
-    if doc.page_content not in seen:
-        unique_docs.append(doc)
-        seen.add(doc.page_content)
-top_docs = sorted(unique_docs, key=lambda d: score(d), reverse=True)[:5]</code></pre>
-        <p><strong>Value to Employers:</strong> Shows expertise in combining modern retrieval methods.</p>
-    </section>
-
-    <section>
-        <h4>🤖 4. LLM Orchestration</h4>
+        <h3>Data Ingestion & Chunking</h3>
         <ul>
-            <li><strong>Prompt Engineering:</strong> Guides LLMs to respond accurately using context only.</li>
-            <li><strong>AI Routing:</strong> Classifies queries by type (product, policy, FAQ).</li>
-            <li><strong>Query Rewriting:</strong> Clarifies vague questions for improved retrieval.</li>
-            <li><strong>Conversation Memory:</strong> Maintains context across user interactions.</li>
+            <li>Process business data like product catalogs, policies, FAQs</li>
+            <li>Break large documents into manageable chunks for efficient AI retrieval</li>
         </ul>
-        <p><strong>Value to Employers:</strong> Demonstrates ability to integrate complex AI workflows and improve UX.</p>
     </section>
 
     <section>
-        <h4>⚙️ 5. Full System Flow</h4>
-        <p>User Question → Query Rewriting → AI Routing → Hybrid Search → Context Building → LLM Response → Save to Memory</p>
-        <p><strong>Value to Employers:</strong> Shows understanding of end-to-end AI system architecture.</p>
-    </section>
-
-    <section>
-        <h4>💡 6. Key Takeaways</h4>
+        <h3>Hybrid Search</h3>
         <ul>
-            <li>RAG enhances both data structure and prompt design</li>
-            <li>Hybrid search increases retrieval accuracy</li>
-            <li>Query rewriting improves understanding of vague inputs</li>
-            <li>Memory enables natural conversation flow</li>
-            <li>AI routing replaces rigid rule-based systems</li>
+            <li>Combines semantic embeddings with keyword matching</li>
+            <li>Delivers accurate, context-aware responses</li>
         </ul>
-        <p><strong>Value to Employers:</strong> Highlights strategic AI design decisions.</p>
     </section>
 
     <section>
-        <h4>🚀 7. System Capabilities</h4>
+        <h3>LLM Orchestration</h3>
         <ul>
+            <li>Prompt engineering to guide LLM responses</li>
+            <li>AI routing to classify queries by type</li>
+            <li>Query rewriting to clarify vague questions</li>
+            <li>Conversation memory for natural interactions</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>System Flow & Capabilities</h3>
+        <ul>
+            <li>End-to-end system: Question → Query Rewriting → AI Routing → Hybrid Search → LLM Response → Memory</li>
             <li>Multi-document understanding</li>
             <li>Context-aware conversations</li>
-            <li>Intelligent query handling</li>
-            <li>E-commerce specific AI solutions</li>
+            <li>Scalable AI solutions for e-commerce</li>
         </ul>
-        <p><strong>Value to Employers:</strong> Shows ability to deliver scalable AI solutions for business.</p>
     </section>
 
     <h2>🧠 About Me</h2>
