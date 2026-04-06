@@ -109,9 +109,7 @@
 
     <div class="project">
         <h3>🥇 AI Customer Support Bot for Shopify</h3>
-        <p>
-            AI-powered assistant trained on company documents that answers customer questions instantly and reduces support workload.
-        </p>
+        <p>AI-powered assistant trained on company documents that answers customer questions instantly and reduces support workload.</p>
 
         <div>
             <span class="label">RAG</span>
@@ -122,7 +120,7 @@
 
         <ul>
             <li>⚡ Reduces support tickets by up to 50%</li>
-            <li>📄 Understands company docs via Retrieval-Augmented Generation</li>
+            <li>📄 Understands company docs via Retrieval-Augmented Generation (RAG)</li>
             <li>🤖 Maintains conversation context across sessions</li>
         </ul>
 
@@ -139,15 +137,11 @@
         </div>
     </div>
 
-    <h2>📝 AI Customer Support System – Architecture & Core Components</h2>
-    <section>
-        <h4>Overview</h4>
-        <p>This system is an AI-powered customer support engine for e-commerce, combining RAG, hybrid search, AI routing, memory, and query rewriting to deliver accurate and context-aware responses.</p>
-    </section>
+    <h2>📝 AI Customer Support System – Architecture & Key Skills</h2>
 
     <section>
-        <h4>1. Data Ingestion</h4>
-        <p><strong>Purpose:</strong> Enable understanding of business data like product catalogs, policies, and FAQs.</p>
+        <h4>📂 1. Data Ingestion</h4>
+        <p><strong>Purpose:</strong> Process business data (product catalogs, policies, FAQs) for AI understanding.</p>
         <p><strong>Implementation:</strong> Users upload <code>.txt</code> files.</p>
         <pre><code>content = await file.read()
 text = content.decode("utf-8")
@@ -159,21 +153,22 @@ Chroma.from_texts(
     collection_name=user_id,
     persist_directory=f"./chroma_db/{user_id}"
 )</code></pre>
+        <p><strong>Value to Employers:</strong> Shows ability to implement ingestion pipelines and handle structured/unstructured data.</p>
     </section>
 
     <section>
-        <h4>2. Chunking Strategy</h4>
-        <p><strong>Purpose:</strong> Break large docs into smaller pieces for efficient retrieval and context understanding.</p>
+        <h4>🧩 2. Chunking Strategy</h4>
+        <p><strong>Purpose:</strong> Break large documents into manageable chunks for efficient AI retrieval.</p>
         <pre><code>splitter = RecursiveCharacterTextSplitter(
     chunk_size=800,
     chunk_overlap=100
 )</code></pre>
-        <p>Improves retrieval accuracy and prevents fragmented context.</p>
+        <p><strong>Value to Employers:</strong> Demonstrates understanding of optimizing AI context handling.</p>
     </section>
 
     <section>
-        <h4>3. Hybrid Search (Vector + Keyword)</h4>
-        <p>Combines semantic embeddings search with keyword matching for precise retrieval.</p>
+        <h4>🔍 3. Hybrid Search (Vector + Keyword)</h4>
+        <p>Combines semantic embeddings with keyword matching for precise information retrieval.</p>
         <pre><code>vector_docs = retriever.invoke(rewritten_question)
 keyword_docs = [
     doc for doc in vector_docs
@@ -186,44 +181,47 @@ for doc in vector_docs + keyword_docs:
         unique_docs.append(doc)
         seen.add(doc.page_content)
 top_docs = sorted(unique_docs, key=lambda d: score(d), reverse=True)[:5]</code></pre>
+        <p><strong>Value to Employers:</strong> Shows expertise in combining modern retrieval methods.</p>
     </section>
 
     <section>
-        <h4>4. LLM Orchestration</h4>
-        <p><strong>Components:</strong></p>
+        <h4>🤖 4. LLM Orchestration</h4>
         <ul>
-            <li><strong>Prompt Engineering:</strong> Guides LLM to answer using context only.</li>
-            <li><strong>AI Routing:</strong> Classifies user query (products, policy, faq).</li>
-            <li><strong>Query Rewriting:</strong> Clarifies vague questions before retrieval.</li>
-            <li><strong>Conversation Memory:</strong> Maintains context across messages.</li>
+            <li><strong>Prompt Engineering:</strong> Guides LLMs to respond accurately using context only.</li>
+            <li><strong>AI Routing:</strong> Classifies queries by type (product, policy, FAQ).</li>
+            <li><strong>Query Rewriting:</strong> Clarifies vague questions for improved retrieval.</li>
+            <li><strong>Conversation Memory:</strong> Maintains context across user interactions.</li>
         </ul>
+        <p><strong>Value to Employers:</strong> Demonstrates ability to integrate complex AI workflows and improve UX.</p>
     </section>
 
     <section>
-        <h4>5. Full System Flow</h4>
+        <h4>⚙️ 5. Full System Flow</h4>
         <p>User Question → Query Rewriting → AI Routing → Hybrid Search → Context Building → LLM Response → Save to Memory</p>
+        <p><strong>Value to Employers:</strong> Shows understanding of end-to-end AI system architecture.</p>
     </section>
 
     <section>
-        <h4>6. Key Takeaways</h4>
+        <h4>💡 6. Key Takeaways</h4>
         <ul>
-            <li>RAG is about both data structure and prompt design</li>
-            <li>Hybrid search improves retrieval accuracy</li>
-            <li>Query rewriting helps understand vague input</li>
+            <li>RAG enhances both data structure and prompt design</li>
+            <li>Hybrid search increases retrieval accuracy</li>
+            <li>Query rewriting improves understanding of vague inputs</li>
             <li>Memory enables natural conversation flow</li>
             <li>AI routing replaces rigid rule-based systems</li>
         </ul>
+        <p><strong>Value to Employers:</strong> Highlights strategic AI design decisions.</p>
     </section>
 
     <section>
-        <h4>7. System Capabilities</h4>
+        <h4>🚀 7. System Capabilities</h4>
         <ul>
             <li>Multi-document understanding</li>
             <li>Context-aware conversations</li>
             <li>Intelligent query handling</li>
-            <li>Ecommerce-specific support</li>
+            <li>E-commerce specific AI solutions</li>
         </ul>
-        <p>Forms a strong foundation for scalable AI SaaS products.</p>
+        <p><strong>Value to Employers:</strong> Shows ability to deliver scalable AI solutions for business.</p>
     </section>
 
     <h2>🧠 About Me</h2>
