@@ -1,152 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viktor | AI Engineer</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #f9fafb;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viktor | AI Engineer</title>
 
-        h1, h2, h3 {
-            color: #111827;
-        }
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(180deg, #0f172a, #020617);
+    color: #e5e7eb;
+}
 
-        h2 {
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 5px;
-            margin-top: 40px;
-        }
+h1, h2, h3 {
+    color: #f9fafb;
+}
 
-        .hero {
-            margin-bottom: 40px;
-        }
+h2 {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 8px;
+    margin-top: 50px;
+}
 
-        .project {
-            border: 1px solid #e5e7eb;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            background-color: white;
-            transition: 0.2s;
-        }
+.hero {
+    margin-bottom: 60px;
+}
 
-        .project:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
+.project {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 14px;
+    margin: 25px 0;
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    transition: 0.25s;
+}
 
-        .links a {
-            margin-right: 15px;
-            font-weight: bold;
-            color: #2563eb;
-            text-decoration: none;
-        }
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
 
-        .links a:hover {
-            text-decoration: underline;
-        }
+.links a {
+    margin-right: 15px;
+    font-weight: bold;
+    color: #60a5fa;
+    text-decoration: none;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+.links a:hover {
+    text-decoration: underline;
+}
 
-        .screenshot {
-            margin-top: 10px;
-            max-width: 100%;
-            border-radius: 5px;
-        }
+.label {
+    display: inline-block;
+    background: rgba(99,102,241,0.2);
+    color: #c7d2fe;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin: 5px 5px 0 0;
+}
 
-        .label {
-            display: inline-block;
-            background-color: #e0f2fe;
-            color: #0369a1;
-            font-size: 12px;
-            padding: 2px 8px;
-            border-radius: 5px;
-            margin-right: 5px;
-            margin-top: 5px;
-        }
+.highlight {
+    background: rgba(99,102,241,0.15);
+    border: 1px solid rgba(99,102,241,0.3);
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
 
-        section {
-            margin-bottom: 30px;
-        }
+.screenshot {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
 
-        .screenshot {
-            max-width: 600px;  /* maximal bredd */
-            max-height: 600px;
-            width: auto;       /* skalar ner om fönstret är smalare */
-            height: auto;      /* behåller proportioner */
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-    </style>
+video {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="hero">
-        <h1>👋 Hi, I'm Viktor</h1>
-        <p><strong>AI Engineer specializing in AI automation for e-commerce brands.</strong></p>
-        <p>I build AI systems that reduce customer support workload, generate high-converting content, and help Shopify stores increase revenue.</p>
-    </div>
+<!-- HERO -->
+<div class="hero">
+    <h1>👋 Hi, I'm Viktor</h1>
+    <p><strong>AI Engineer building production-ready AI systems for e-commerce.</strong></p>
 
-    <h2>🚀 Projects</h2>
-
-    <div class="project">
-        <h3>🥇 AI Customer Support Bot for E-commerce</h3>
-        <p>An AI-powered assistant trained on company documents to answer customer questions instantly and reduce support workload.</p>
-
-        <div>
-            <span class="label">RAG</span>
-            <span class="label">LLM</span>
-            <span class="label">Streamlit</span>
-            <span class="label">Python</span>
-        </div>
-
-        <ul>
-            <li>Reduces support tickets by up to 50%</li>
-            <li>Understands company documents via Retrieval-Augmented Generation (RAG)</li>
-            <li>Maintains conversation context across sessions</li>
-        </ul>
-
-        <img src="robot_screenshot.png" alt="Screenshot of AI Customer Support Bot" class="screenshot">
-
-        <div class="links">
-            <a href="https://github.com/viktor-ai-dev/ai-customer-support-bot" target="_blank">GitHub</a>
-            <a href="https://youtu.be/B2sFbipFX2E" target="_blank">YouTube Demo</a>
-        </div>
-    </div>
-
-    <h2>🧠 About Me</h2>
-    <p>I build practical AI solutions that solve real business problems for e-commerce brands.</p>
-    <ul>
-        <li>Automate repetitive tasks</li>
-        <li>Improve customer experience</li>
-        <li>Increase revenue using AI</li>
-    </ul>
-    <p>Currently studying Data Science while building real-world AI systems.</p>
-
-    <h2>🛠 Tech Stack</h2>
-    <ul>
-        <li>Python</li>
-        <li>OpenAI API</li>
-        <li>LangChain</li>
-        <li>Pandas / NumPy</li>
-        <li>Streamlit</li>
-        <li>RAG / LLMs</li>
-    </ul>
-
-    <h2>📫 Contact</h2>
     <p>
-        <a href="https://github.com/viktor-ai-dev">GitHub</a><br>
-        Email: your@email.com
+        I design and build AI-powered tools that automate marketing, customer support,
+        and content generation for online stores.
     </p>
+
+    <div class="highlight">
+        🚀 Focus: RAG systems, LLM orchestration, AI automation, product-level engineering
+    </div>
+</div>
+
+<!-- FLAGSHIP PROJECT -->
+<h2>🚀 Flagship Project</h2>
+
+<div class="project">
+
+    <h3>AI E-commerce Intelligence Platform</h3>
+
+    <p><strong>
+        Built a production-style AI system that automates marketing workflows and reduces manual work by up to 90%.
+    </strong></p>
+
+    <p>
+        A full AI-powered platform combining Retrieval-Augmented Generation (RAG),
+        multi-brand modeling, and automated content + campaign generation.
+    </p>
+
+    <div>
+        <span class="label">RAG</span>
+        <span class="label">LLM</span>
+        <span class="label">Multi-brand</span>
+        <span class="label">AI Automation</span>
+    </div>
+
+    <ul>
+        <li>✔ Context-aware AI using vector search (ChromaDB)</li>
+        <li>✔ Multi-brand comparison engine</li>
+        <li>✔ AI content generation (descriptions, ads)</li>
+        <li>✔ 1-click full marketing campaign generator</li>
+        <li>✔ Modular system design (RAG + generation + orchestration)</li>
+    </ul>
+
+    <!-- VIDEO DEMO -->
+    <h4>🎥 Demo</h4>
+    <video controls>
+        <source src="demo.mp4" type="video/mp4">
+    </video>
+
+    <!-- LINKS -->
+    <div class="links">
+        <a href="#">GitHub Repo</a>
+        <a href="#">Live Demo</a>
+        <a href="#">YouTube Demo</a>
+    </div>
+
+    <h4>🛠 Tech Stack</h4>
+    <p>Python, Streamlit, OpenAI API, LangChain, ChromaDB</p>
+
+</div>
+
+<!-- SUPPORT PROJECT -->
+<h2>🧪 Supporting Project</h2>
+
+<div class="project">
+    <h3>AI Customer Support Bot</h3>
+
+    <p>
+        RAG-based chatbot trained on company documents to answer customer questions instantly.
+    </p>
+
+    <div>
+        <span class="label">RAG</span>
+        <span class="label">Chatbot</span>
+        <span class="label">LLM</span>
+    </div>
+
+    <ul>
+        <li>✔ Reduces support workload</li>
+        <li>✔ Answers FAQs with high accuracy</li>
+        <li>✔ Maintains conversation context</li>
+    </ul>
+
+    <img src="robot_screenshot.png" class="screenshot">
+
+    <div class="links">
+        <a href="https://github.com/viktor-ai-dev/ai-customer-support-bot">GitHub</a>
+        <a href="https://youtu.be/B2sFbipFX2E">YouTube Demo</a>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<h2>🧠 About Me</h2>
+
+<p>
+I focus on building AI systems that solve real business problems, especially in e-commerce.
+</p>
+
+<ul>
+    <li>Automate repetitive workflows</li>
+    <li>Improve customer experience</li>
+    <li>Increase revenue using AI</li>
+</ul>
+
+<p>
+Currently studying Data Science while building production-level AI applications.
+</p>
+
+<!-- TECH -->
+<h2>🛠 Tech Stack</h2>
+
+<ul>
+    <li>Python</li>
+    <li>OpenAI API</li>
+    <li>LangChain</li>
+    <li>ChromaDB</li>
+    <li>Streamlit</li>
+    <li>RAG / LLM Systems</li>
+</ul>
+
+<!-- CONTACT -->
+<h2>📫 Contact</h2>
+
+<p>
+<a href="https://github.com/viktor-ai-dev">GitHub</a><br>
+Email: your@email.com
+</p>
 
 </body>
 </html>
