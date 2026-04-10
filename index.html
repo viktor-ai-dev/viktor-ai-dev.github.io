@@ -176,6 +176,12 @@ video, img {
   transition: transform 0.3s ease;
 }
 
+.project-top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 video {
   width: 100%;
   max-width: 900px;
@@ -229,14 +235,15 @@ video {
         <li>🔁 Iterative improvement loop</li>
     </ul>
 
-    <div>
-    <span class="label">Multi-Agent</span>
-    <span class="label">LLM</span>
-    <span class="label">FastAPI</span>
-    <span class="label">Next.js</span>
-    </div>
-    
-   <img src="screenshot4.png" class="screenshot">
+  <div class="project-top">
+      <div class="labels">
+        <span class="label">Multi-Agent</span>
+        <span class="label">LLM</span>
+        <span class="label">FastAPI</span>
+        <span class="label">Next.js</span>
+      </div>
+      <img src="screenshot4.png" class="screenshot">
+  </div>
 
     <video controls>
         <source src="demo.mp4" type="video/mp4">
