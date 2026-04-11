@@ -11,118 +11,192 @@
 
 <style>
 :root {
-    --bg1: #0b1020;
-    --bg2: #050814;
-    --card: rgba(255,255,255,0.06);
+    --bg: #050816;
+    --card: rgba(255,255,255,0.05);
     --stroke: rgba(255,255,255,0.10);
-    --accent: #6366f1;
     --text: #e5e7eb;
     --muted: #9ca3af;
+    --accent: #6366f1;
+    --accent2: #22d3ee;
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    margin: 0;
-    background: radial-gradient(circle at top, #1a1f3a 0%, var(--bg2) 50%, #020617 100%);
-    color: var(--text);
-    line-height: 1.6;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, #1a1f3a, var(--bg));
+    color: var(--text);
+}
+
+/* LAYOUT */
 .container {
     max-width: 1100px;
     margin: auto;
     padding: 40px 24px;
 }
 
+/* NAV */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(14px);
+    background: rgba(5,8,22,0.6);
+    border-bottom: 1px solid var(--stroke);
+}
+
+.nav-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-inner a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 16px;
+    font-size: 14px;
+}
+
+.nav-inner a:hover {
+    color: white;
+}
+
 /* HERO */
 .hero {
-    padding: 80px 0 60px;
+    padding: 90px 0 60px;
 }
 
 .hero h1 {
-    font-size: 52px;
-    line-height: 1.1;
-    margin-bottom: 12px;
+    font-size: 56px;
+    line-height: 1.05;
     letter-spacing: -1px;
+
+    background: linear-gradient(90deg, #fff, #a5b4fc, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: fadeUp 1s ease-out;
 }
 
 .hero p {
-    color: var(--muted);
+    margin-top: 16px;
     font-size: 18px;
-    max-width: 700px;
+    color: var(--muted);
+    max-width: 720px;
+    animation: fadeUp 1.2s ease-out;
 }
 
 .highlight {
-    margin-top: 20px;
+    margin-top: 24px;
     padding: 16px;
-    border-radius: 12px;
+    border-radius: 14px;
     background: rgba(99,102,241,0.12);
     border: 1px solid rgba(99,102,241,0.25);
 }
 
 /* BUTTONS */
 .cta {
-    margin-top: 24px;
+    margin-top: 28px;
 }
 
-.cta a {
+.btn {
     display: inline-block;
-    margin-right: 12px;
     padding: 10px 16px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.2s;
+    margin-right: 10px;
+    transition: 0.25s;
+    font-size: 14px;
 }
 
-.btn-primary {
+.primary {
     background: var(--accent);
     color: white;
 }
 
-.btn-primary:hover {
+.primary:hover {
     transform: translateY(-2px);
 }
 
-.btn-secondary {
+.secondary {
     border: 1px solid var(--stroke);
     color: white;
 }
 
-.btn-secondary:hover {
+.secondary:hover {
     border-color: var(--accent);
 }
 
-/* HEADINGS */
+/* SECTIONS */
+section {
+    margin-top: 90px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 h2 {
-    margin-top: 80px;
     font-size: 28px;
+    margin-bottom: 20px;
     letter-spacing: -0.5px;
 }
 
-/* PROJECT */
+/* PROJECTS */
 .project {
     background: var(--card);
     border: 1px solid var(--stroke);
-    padding: 28px;
     border-radius: 18px;
-    margin-top: 24px;
-    transition: 0.25s ease;
-    backdrop-filter: blur(10px);
+    padding: 26px;
+    margin-top: 20px;
+    transition: 0.3s ease;
+    backdrop-filter: blur(12px);
 }
 
 .project:hover {
-    transform: translateY(-6px);
-    border-color: rgba(99,102,241,0.35);
+    transform: translateY(-6px) scale(1.01);
+    border-color: rgba(99,102,241,0.4);
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
 .project h3 {
-    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+/* TAGS */
+.tag {
+    display: inline-block;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(99,102,241,0.15);
+    margin-right: 6px;
+    margin-top: 10px;
+}
+
+/* MEDIA */
+img, video {
+    width: 100%;
+    border-radius: 14px;
+    margin-top: 16px;
 }
 
 /* GRID */
@@ -138,26 +212,8 @@ h2 {
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 38px;
     }
-}
-
-/* LABELS */
-.label {
-    display: inline-block;
-    background: rgba(99,102,241,0.15);
-    color: #c7d2fe;
-    font-size: 12px;
-    padding: 6px 10px;
-    border-radius: 999px;
-    margin-right: 6px;
-}
-
-/* MEDIA */
-img, video {
-    width: 100%;
-    border-radius: 12px;
-    margin-top: 16px;
 }
 
 /* LINKS */
@@ -167,30 +223,43 @@ img, video {
 
 .links a {
     margin-right: 10px;
-    font-weight: 500;
+    font-size: 14px;
     color: #93c5fd;
     text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.12);
-    transition: 0.2s;
 }
 
 .links a:hover {
-    background: rgba(147,197,253,0.08);
-    border-color: #60a5fa;
+    color: white;
 }
 
-/* STACK */
-.meta {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 </head>
 
 <body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div><strong>Viktor.dev</strong></div>
+    <div>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
 <div class="container">
 
 <!-- HERO -->
@@ -198,46 +267,36 @@ img, video {
     <h1>AI Engineer building autonomous systems for e-commerce</h1>
 
     <p>
-        I design and build production-ready AI systems that automate marketing,
-        customer support, and conversion optimization.
+        I build production-grade AI systems that automate marketing, support, and conversion optimization.
     </p>
 
     <div class="highlight">
-        🚀 Focus: RAG systems • LLM orchestration • Multi-agent systems • AI automation
+        🚀 RAG systems • Multi-agent AI • LLM orchestration • Automation at scale
     </div>
 
     <div class="cta">
-        <a href="https://github.com/viktor-ai-dev" class="btn-primary">View GitHub</a>
-        <a href="#" class="btn-secondary">Contact Me</a>
+        <a class="btn primary" href="https://github.com/viktor-ai-dev">View GitHub</a>
+        <a class="btn secondary" href="#contact">Contact</a>
     </div>
 </div>
 
 <!-- FLAGSHIP -->
-<h2>🚀 Flagship Project</h2>
+<section id="projects">
+<h2>Flagship Project</h2>
 
 <div class="project">
-    <h3>Autonomous Multi-Agent System for E-commerce Optimization</h3>
+    <h3>Autonomous Multi-Agent E-commerce System</h3>
 
-    <p><strong>
-        Built a production-style AI system that autonomously improves e-commerce conversion rates.
-    </strong></p>
+    <p>
+        AI system that analyzes and improves e-commerce conversion rates autonomously.
+    </p>
 
-    <div class="highlight">
-        💡 AI team simulation: Analyst → Strategist → Copywriter → UX → Implementer
+    <div>
+        <span class="tag">Multi-Agent</span>
+        <span class="tag">LLM</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Next.js</span>
     </div>
-
-    <ul>
-        <li>Scrapes and analyzes real websites</li>
-        <li>Detects conversion issues using AI</li>
-        <li>Generates optimized high-converting copy</li>
-        <li>Compares before/after performance</li>
-        <li>Iterative improvement loop</li>
-    </ul>
-
-    <div class="label">Multi-Agent</div>
-    <div class="label">LLM</div>
-    <div class="label">FastAPI</div>
-    <div class="label">Next.js</div>
 
     <img src="sc4.png">
     <video controls>
@@ -245,24 +304,23 @@ img, video {
     </video>
 
     <div class="links">
-        <a href="#">💻 GitHub</a>
-        <a href="#">🌐 Live Demo</a>
-        <a href="#">🎥 YouTube</a>
+        <a href="#">GitHub</a>
+        <a href="#">Live</a>
+        <a href="#">YouTube</a>
     </div>
 </div>
 
 <!-- GRID -->
-<h2>🧪 AI Projects</h2>
+<h2>Other Projects</h2>
 
 <div class="grid">
 
 <div class="project">
     <h3>AI Customer Support (RAG SaaS)</h3>
-    <p>Full-stack AI support system with RAG + authentication + subscriptions.</p>
+    <p>Context-aware AI support system with Stripe + Supabase.</p>
 
-    <div class="label">RAG</div>
-    <div class="label">FastAPI</div>
-    <div class="label">Stripe</div>
+    <span class="tag">RAG</span>
+    <span class="tag">Stripe</span>
 
     <img src="sc1.png">
 
@@ -274,10 +332,10 @@ img, video {
 
 <div class="project">
     <h3>AI Content Engine</h3>
-    <p>Generates high-converting product descriptions and ad copy using RAG.</p>
+    <p>Generates high-converting marketing content using RAG.</p>
 
-    <div class="label">RAG</div>
-    <div class="label">LLM</div>
+    <span class="tag">LLM</span>
+    <span class="tag">RAG</span>
 
     <img src="sc2.png">
 
@@ -287,35 +345,39 @@ img, video {
     </div>
 </div>
 
-<div class="project">
-    <h3>AI Marketing Automation</h3>
-    <p>Creates full marketing campaigns from a single input.</p>
-
-    <div class="label">Automation</div>
-    <div class="label">GPT</div>
-
-    <img src="sc3.png">
-
-    <div class="links">
-        <a href="#">GitHub</a>
-        <a href="#">YouTube</a>
-    </div>
 </div>
-
-</div>
+</section>
 
 <!-- ABOUT -->
-<h2>🧠 About</h2>
-<p>AI Engineer focused on real-world production AI systems with business impact.</p>
-
-<!-- STACK -->
-<h2>🛠 Tech Stack</h2>
-<p>Python • FastAPI • OpenAI • LangChain • Next.js • Stripe • Supabase</p>
+<section id="about">
+<h2>About</h2>
+<p>
+AI Engineer focused on building production AI systems with real business impact.
+</p>
+</section>
 
 <!-- CONTACT -->
-<h2>📫 Contact</h2>
+<section id="contact">
+<h2>Contact</h2>
 <p>Email: viktor.sz.hire@gmail.com</p>
+</section>
 
 </div>
+
+<script>
+// Scroll reveal (startup feel)
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+}, { threshold: 0.15 });
+
+sections.forEach(sec => observer.observe(sec));
+</script>
+
 </body>
 </html>
