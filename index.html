@@ -38,66 +38,80 @@ nav{
 .nav-inner{
     max-width:1100px;
     margin:auto;
-    padding:14px 24px;
+    padding:12px 20px;
     display:flex;
     justify-content:space-between;
+    font-size:14px;
 }
 
 /* HERO */
 .hero{
-    padding:140px 24px 80px;
+    padding:110px 20px 40px;
     max-width:1100px;
     margin:auto;
 }
 
 .hero h1{
-    font-size:60px;
+    font-size:54px;
     line-height:1.05;
+    letter-spacing:-1px;
     background:linear-gradient(90deg,#fff,#a5b4fc);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-    margin-top:20px;
+    margin-top:14px;
     color:var(--muted);
-    max-width:700px;
-    font-size:18px;
+    max-width:650px;
+    font-size:17px;
 }
 
 /* BUTTON */
 .btn{
     display:inline-block;
-    margin-top:24px;
-    padding:12px 18px;
-    border-radius:12px;
+    margin-top:18px;
+    padding:10px 16px;
+    border-radius:10px;
     text-decoration:none;
     font-weight:500;
+    font-size:14px;
 }
 
 .primary{background:var(--accent);color:white;}
-.secondary{border:1px solid var(--stroke);color:white;margin-left:10px;}
+.secondary{border:1px solid var(--stroke);color:white;margin-left:8px;}
 
 /* SECTION */
 .section{
     max-width:1100px;
     margin:auto;
-    padding:80px 24px;
+    padding:50px 20px;
+}
+
+/* HEADINGS */
+h2{
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+h3{
+    font-size:18px;
+    margin-bottom:6px;
 }
 
 /* CARD */
 .card{
     background:var(--card);
     border:1px solid var(--stroke);
-    border-radius:20px;
-    padding:28px;
-    margin-top:24px;
+    border-radius:16px;
+    padding:20px;
+    margin-top:16px;
     backdrop-filter:blur(20px);
-    transition:0.3s;
+    transition:0.25s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-4px);
     border-color:rgba(99,102,241,0.4);
 }
 
@@ -105,46 +119,57 @@ nav{
 .grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:24px;
+    gap:16px;
 }
 
 @media(max-width:900px){
     .grid{grid-template-columns:1fr;}
 }
 
-/* TAGS */
-.tag{
-    display:inline-block;
-    font-size:12px;
-    padding:6px 10px;
-    border-radius:999px;
-    background:rgba(99,102,241,0.15);
-    margin:5px 5px 0 0;
+/* TEXT */
+.small{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:8px;
 }
 
 /* LIST */
 ul{
-    margin-top:12px;
+    margin-top:8px;
     padding-left:18px;
 }
 
 li{
-    margin-bottom:6px;
+    margin-bottom:4px;
+    font-size:14px;
     color:#d1d5db;
+}
+
+/* METRICS */
+.metrics{
+    margin-top:10px;
+    padding:10px;
+    border-radius:10px;
+    background:rgba(99,102,241,0.12);
+    border:1px solid rgba(99,102,241,0.25);
+    font-size:13px;
+}
+
+/* TAGS */
+.tag{
+    display:inline-block;
+    font-size:11px;
+    padding:5px 8px;
+    border-radius:999px;
+    background:rgba(99,102,241,0.15);
+    margin:6px 4px 0 0;
 }
 
 /* MEDIA */
 img,video{
     width:100%;
-    border-radius:14px;
-    margin-top:14px;
-}
-
-/* SMALL TITLE */
-.small{
-    color:var(--muted);
-    font-size:13px;
-    margin-top:12px;
+    border-radius:10px;
+    margin-top:10px;
 }
 </style>
 </head>
@@ -163,11 +188,10 @@ img,video{
 <h1>Building Autonomous AI Systems That Replace Entire Workflows</h1>
 
 <p>
-I design and ship production-grade AI systems that automate marketing,
-customer support, and growth — reducing manual work by up to 90%.
+I design and ship production-grade AI systems that automate marketing, support, and growth.
 </p>
 
-<a href="https://github.com/viktor-ai-dev" class="btn primary">View GitHub</a>
+<a href="https://github.com/viktor-ai-dev" class="btn primary">GitHub</a>
 <a href="#contact" class="btn secondary">Contact</a>
 </div>
 
@@ -178,19 +202,24 @@ customer support, and growth — reducing manual work by up to 90%.
 
 <div class="card">
 
-<h3>Autonomous Multi-Agent E-commerce Optimization Engine</h3>
+<h3>Autonomous Multi-Agent Optimization Engine</h3>
 
 <p class="small">
-AI system that simulates a full growth team and continuously improves conversion rates.
+Simulates a full AI growth team to continuously improve e-commerce conversion.
 </p>
 
 <ul>
 <li>Scrapes and analyzes real e-commerce websites</li>
-<li>Detects conversion bottlenecks using LLM reasoning</li>
-<li>Generates optimized high-converting copy</li>
-<li>Implements iterative improvement loops</li>
-<li>Scores performance before vs after optimization</li>
+<li>Detects conversion issues using LLM reasoning</li>
+<li>Generates high-converting copy</li>
+<li>Iterative optimization loop</li>
 </ul>
+
+<div class="metrics">
+↑ Reduced manual marketing work by ~90%<br>
+↑ Generated optimized copy in seconds instead of hours<br>
+↑ Enabled continuous autonomous improvement cycles
+</div>
 
 <div>
 <span class="tag">Multi-Agent</span>
@@ -200,7 +229,6 @@ AI system that simulates a full growth team and continuously improves conversion
 </div>
 
 <img src="sc4.png">
-
 <video controls>
 <source src="demo.mp4">
 </video>
@@ -221,15 +249,19 @@ AI system that simulates a full growth team and continuously improves conversion
 
 <ul>
 <li>Context-aware chat with memory</li>
-<li>Hybrid search (semantic + keyword)</li>
+<li>Hybrid semantic + keyword search</li>
 <li>Supabase authentication</li>
 <li>Stripe subscriptions</li>
 </ul>
 
-<div>
+<div class="metrics">
+Handled complex queries with context retention<br>
+Reduced need for manual support responses<br>
+Scalable SaaS-ready architecture
+</div>
+
 <span class="tag">RAG</span>
 <span class="tag">Stripe</span>
-</div>
 
 <img src="sc1.png">
 </div>
@@ -240,13 +272,17 @@ AI system that simulates a full growth team and continuously improves conversion
 <ul>
 <li>Generates product descriptions with hooks & CTA</li>
 <li>Ad copy generator</li>
-<li>Multi-brand comparison engine</li>
+<li>Brand-aware output</li>
 </ul>
 
-<div>
+<div class="metrics">
+Generated marketing content instantly<br>
+Improved consistency across brand messaging<br>
+Reduced content production time significantly
+</div>
+
 <span class="tag">LLM</span>
 <span class="tag">Marketing AI</span>
-</div>
 
 <img src="sc2.png">
 </div>
@@ -258,7 +294,7 @@ AI system that simulates a full growth team and continuously improves conversion
 <!-- CONTACT -->
 <div class="section" id="contact">
 <h2>Contact</h2>
-<p>viktor.sz.hire@gmail.com</p>
+<p style="font-size:14px;">viktor.sz.hire@gmail.com</p>
 </div>
 
 </body>
