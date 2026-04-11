@@ -5,50 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Viktor | AI Engineer</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root {
-    --bg: #020617;
-    --card: rgba(255,255,255,0.05);
+    --bg1: #0b1020;
+    --bg2: #050814;
+    --card: rgba(255,255,255,0.06);
+    --stroke: rgba(255,255,255,0.10);
     --accent: #6366f1;
     --text: #e5e7eb;
     --muted: #9ca3af;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    background: radial-gradient(circle at top, #1a1f3a 0%, var(--bg2) 50%, #020617 100%);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
     max-width: 1100px;
     margin: auto;
-    padding: 30px;
-    background: linear-gradient(180deg, #0f172a, #020617);
-    color: var(--text);
+    padding: 40px 24px;
 }
 
 /* HERO */
 .hero {
-    margin-bottom: 80px;
+    padding: 80px 0 60px;
 }
 
 .hero h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
 }
 
 .hero p {
     color: var(--muted);
     font-size: 18px;
+    max-width: 700px;
 }
 
-.cta {
+.highlight {
     margin-top: 20px;
+    padding: 16px;
+    border-radius: 12px;
+    background: rgba(99,102,241,0.12);
+    border: 1px solid rgba(99,102,241,0.25);
+}
+
+/* BUTTONS */
+.cta {
+    margin-top: 24px;
 }
 
 .cta a {
     display: inline-block;
-    margin-right: 15px;
-    padding: 10px 18px;
-    border-radius: 8px;
+    margin-right: 12px;
+    padding: 10px 16px;
+    border-radius: 10px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    transition: 0.2s;
 }
 
 .btn-primary {
@@ -56,141 +84,114 @@ body {
     color: white;
 }
 
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
 .btn-secondary {
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid var(--stroke);
     color: white;
 }
 
-/* SECTIONS */
-h2 {
-    margin-top: 60px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 10px;
+.btn-secondary:hover {
+    border-color: var(--accent);
 }
 
-/* CARDS */
+/* HEADINGS */
+h2 {
+    margin-top: 80px;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+}
+
+/* PROJECT */
 .project {
     background: var(--card);
-    padding: 30px;
-    border-radius: 16px;
-    margin-top: 30px;
-    border: 1px solid rgba(255,255,255,0.08);
-    transition: 0.3s;
+    border: 1px solid var(--stroke);
+    padding: 28px;
+    border-radius: 18px;
+    margin-top: 24px;
+    transition: 0.25s ease;
+    backdrop-filter: blur(10px);
 }
 
 .project:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: rgba(99,102,241,0.35);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
-/* LABELS */
-.label {
-    display: inline-block;
-    background: rgba(99,102,241,0.2);
-    color: #c7d2fe;
-    font-size: 12px;
-    padding: 5px 10px;
-    border-radius: 6px;
-    margin: 5px 5px 0 0;
-}
-
-/* HIGHLIGHT */
-.highlight {
-    background: rgba(99,102,241,0.15);
-    border: 1px solid rgba(99,102,241,0.3);
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 15px;
+.project h3 {
+    margin-top: 0;
 }
 
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 900px) {
     .grid {
         grid-template-columns: 1fr;
     }
+
+    .hero h1 {
+        font-size: 36px;
+    }
 }
+
+/* LABELS */
+.label {
+    display: inline-block;
+    background: rgba(99,102,241,0.15);
+    color: #c7d2fe;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    margin-right: 6px;
+}
+
+/* MEDIA */
+img, video {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 16px;
+}
+
+/* LINKS */
 .links {
-    margin-top: 15px; 
+    margin-top: 14px;
 }
+
 .links a {
-    margin-right: 12px;
-    font-weight: bold;
-    color: #60a5fa;
+    margin-right: 10px;
+    font-weight: 500;
+    color: #93c5fd;
     text-decoration: none;
-    padding: 8px 14px;              
-    border: 1px solid rgba(255,255,255,0.15); 
-    border-radius: 8px;            
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.12);
     transition: 0.2s;
 }
 
 .links a:hover {
-    background: rgba(96,165,250,0.1);  
+    background: rgba(147,197,253,0.08);
     border-color: #60a5fa;
 }
 
+/* STACK */
 .meta {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-    
-video, img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
-}
-
-.image-row {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-    
-.image-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-.screenshot {
-  width: 100%;
-  height: 85%;
-
-  border-radius: 8px;
-  object-fit: contain;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-
-  display: block;
-  margin: 0 0;
-
-  transition: transform 0.3s ease;
-}
-
-.project-top {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-video {
-  width: 100%;
-  display: block;
-  margin: 24px 0 0 0;
-  border-radius: 8px;
-}
 </style>
 </head>
 
 <body>
+<div class="container">
 
 <!-- HERO -->
 <div class="hero">
@@ -218,135 +219,86 @@ video {
     <h3>Autonomous Multi-Agent System for E-commerce Optimization</h3>
 
     <p><strong>
-        Built a production-style AI system that autonomously analyzes, improves,
-        and optimizes e-commerce stores — reducing manual marketing work by up to 90%.
+        Built a production-style AI system that autonomously improves e-commerce conversion rates.
     </strong></p>
 
     <div class="highlight">
-        💡 Simulates a real AI team: Analyst → Strategist → Copywriter → UX → Implementer
+        💡 AI team simulation: Analyst → Strategist → Copywriter → UX → Implementer
     </div>
 
     <ul>
-        <li>🔍 Scrapes and analyzes real websites</li>
-        <li>🧠 Detects conversion issues using AI</li>
-        <li>✍️ Generates improved high-converting copy</li>
-        <li>📊 Scores before vs after performance</li>
-        <li>🔁 Iterative improvement loop</li>
+        <li>Scrapes and analyzes real websites</li>
+        <li>Detects conversion issues using AI</li>
+        <li>Generates optimized high-converting copy</li>
+        <li>Compares before/after performance</li>
+        <li>Iterative improvement loop</li>
     </ul>
 
-  <div class="project-top">
-      <div class="labels">
-        <span class="label">Multi-Agent</span>
-        <span class="label">LLM</span>
-        <span class="label">FastAPI</span>
-        <span class="label">Next.js</span>
-      </div>
-      <img src="sc4.png" class="screenshot">
-  </div>
+    <div class="label">Multi-Agent</div>
+    <div class="label">LLM</div>
+    <div class="label">FastAPI</div>
+    <div class="label">Next.js</div>
 
+    <img src="sc4.png">
     <video controls>
-        <source src="demo.mp4" type="video/mp4">
+        <source src="demo.mp4">
     </video>
 
     <div class="links">
         <a href="#">💻 GitHub</a>
         <a href="#">🌐 Live Demo</a>
-        <a href="https://youtube.com/your-video">🎥 YouTube</a>
+        <a href="#">🎥 YouTube</a>
     </div>
 </div>
 
-<!-- PROJECT GRID -->
+<!-- GRID -->
 <h2>🧪 AI Projects</h2>
 
 <div class="grid">
 
 <div class="project">
     <h3>AI Customer Support (RAG SaaS)</h3>
+    <p>Full-stack AI support system with RAG + authentication + subscriptions.</p>
 
-    <p>
-        Full-stack AI support system with authentication, subscriptions, and document-based RAG.
-    </p>
+    <div class="label">RAG</div>
+    <div class="label">FastAPI</div>
+    <div class="label">Stripe</div>
 
-    <ul>
-        <li>💬 Context-aware chat with memory</li>
-        <li>📄 Hybrid search (semantic + keyword)</li>
-        <li>🔐 Auth system (Supabase)</li>
-        <li>💳 Stripe subscription integration</li>
-    </ul>
+    <img src="sc1.png">
 
-    <div class="meta">
-        <div>
-            <span class="label">RAG</span>
-            <span class="label">FastAPI</span>
-            <span class="label">Stripe</span>
-        </div>
-        
-        <img src="sc1.png" class="screenshot">
-        
-        <div class="links">
-            <a href="https://github.com/viktor-ai-dev/ai-customer-support-bot">💻 GitHub</a>
-            <a href="https://youtu.be/B2sFbipFX2E">🎥 YouTube</a>
-        </div>
+    <div class="links">
+        <a href="#">GitHub</a>
+        <a href="#">YouTube</a>
     </div>
-    
 </div>
 
 <div class="project">
     <h3>AI Content Engine</h3>
+    <p>Generates high-converting product descriptions and ad copy using RAG.</p>
 
-    <p>
-        Generates high-converting product descriptions, ad copy, and brand-aware content using RAG.
-    </p>
+    <div class="label">RAG</div>
+    <div class="label">LLM</div>
 
-    <ul>
-        <li>📝 Product descriptions with hooks & CTA</li>
-        <li>📢 Ad copy generator</li>
-        <li>⚔️ Multi-brand comparison</li>
-    </ul>
+    <img src="sc2.png">
 
-    <div class="meta">
-        <div>
-            <span class="label">RAG</span>
-            <span class="label">LLM</span>
-            <span class="label">Marketing AI</span>
-        </div>
-
-        <img src="sc2.png" class="screenshot">
-        
-        <div class="links">
-            <a href="https://github.com/viktor-ai-dev/ai-content-gen">💻 GitHub</a>
-            <a href="https://youtu.be/eyhKLpfyhuY">🎥 YouTube</a>
-        </div>
-        
+    <div class="links">
+        <a href="#">GitHub</a>
+        <a href="#">YouTube</a>
     </div>
-    
 </div>
 
 <div class="project">
     <h3>AI Marketing Automation</h3>
+    <p>Creates full marketing campaigns from a single input.</p>
 
-    <p>
-        Generates complete marketing campaigns in seconds from a single input.
-    </p>
+    <div class="label">Automation</div>
+    <div class="label">GPT</div>
 
-    <ul>
-        <li>📧 Email campaigns</li>
-        <li>📢 Facebook ads</li>
-        <li>🎬 TikTok scripts</li>
-    </ul>
+    <img src="sc3.png">
 
-    <div class="meta">
-        <div>
-            <span class="label">Automation</span>
-            <span class="label">GPT-4</span>
-        </div>
-
-        <img src="sc3.png" class="screenshot">
-        
-        <div class="links">
-            <a href="https://github.com/viktor-ai-dev/ai-marketing">💻 GitHub</a>
-            <a href="https://youtu.be/olR-xik39fw">🎥 YouTube</a>
-        </div>
+    <div class="links">
+        <a href="#">GitHub</a>
+        <a href="#">YouTube</a>
     </div>
 </div>
 
@@ -354,31 +306,16 @@ video {
 
 <!-- ABOUT -->
 <h2>🧠 About</h2>
+<p>AI Engineer focused on real-world production AI systems with business impact.</p>
 
-<p>
-AI Engineer focused on building real-world AI systems that drive business impact.
-</p>
-
-<ul>
-    <li>Automating workflows with AI</li>
-    <li>Improving conversion rates</li>
-    <li>Building scalable AI products</li>
-</ul>
-
-<!-- TECH -->
+<!-- STACK -->
 <h2>🛠 Tech Stack</h2>
-
-<p>
-Python • FastAPI • OpenAI • LangChain • ChromaDB • Streamlit • Next.js • Stripe • Supabase
-</p>
+<p>Python • FastAPI • OpenAI • LangChain • Next.js • Stripe • Supabase</p>
 
 <!-- CONTACT -->
 <h2>📫 Contact</h2>
+<p>Email: viktor.sz.hire@gmail.com</p>
 
-<p>
-GitHub: <a href="https://github.com/viktor-ai-dev">viktor-ai-dev</a><br>
-Email: viktor.sz.hire@gmail.com
-</p>
-
+</div>
 </body>
 </html>
