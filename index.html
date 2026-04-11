@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viktor | AI Engineer</title>
+<title>Viktor | AI Systems Engineer</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -17,71 +15,51 @@
     --text: #e5e7eb;
     --muted: #9ca3af;
     --accent: #6366f1;
-    --accent2: #22d3ee;
+    --cyan: #22d3ee;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     background: radial-gradient(circle at top, #1a1f3a, var(--bg));
     color: var(--text);
+    overflow-x: hidden;
+    cursor: none;
+}
+
+/* CUSTOM CURSOR */
+.cursor {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: fixed;
+    background: white;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
 }
 
 /* LAYOUT */
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 40px 24px;
-}
-
-/* NAV */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(14px);
-    background: rgba(5,8,22,0.6);
-    border-bottom: 1px solid var(--stroke);
-}
-
-.nav-inner {
-    max-width: 1100px;
-    margin: auto;
-    padding: 14px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-inner a {
-    color: var(--muted);
-    text-decoration: none;
-    margin-left: 16px;
-    font-size: 14px;
-}
-
-.nav-inner a:hover {
-    color: white;
+    padding: 60px 24px;
 }
 
 /* HERO */
 .hero {
-    padding: 90px 0 60px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero h1 {
-    font-size: 56px;
+    font-size: 64px;
     line-height: 1.05;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
 
     background: linear-gradient(90deg, #fff, #a5b4fc, #22d3ee);
     -webkit-background-clip: text;
@@ -91,292 +69,282 @@ nav {
 }
 
 .hero p {
-    margin-top: 16px;
+    margin-top: 20px;
     font-size: 18px;
     color: var(--muted);
-    max-width: 720px;
-    animation: fadeUp 1.2s ease-out;
+    max-width: 700px;
 }
 
-.highlight {
-    margin-top: 24px;
-    padding: 16px;
-    border-radius: 14px;
-    background: rgba(99,102,241,0.12);
-    border: 1px solid rgba(99,102,241,0.25);
-}
-
-/* BUTTONS */
-.cta {
-    margin-top: 28px;
-}
-
+/* CTA */
 .btn {
-    display: inline-block;
-    padding: 10px 16px;
+    display:inline-block;
+    margin-top: 25px;
+    padding: 12px 18px;
     border-radius: 12px;
-    text-decoration: none;
-    font-weight: 500;
-    margin-right: 10px;
-    transition: 0.25s;
-    font-size: 14px;
+    text-decoration:none;
+    font-weight:500;
+    margin-right:10px;
+    transition:0.3s;
 }
 
 .primary {
     background: var(--accent);
-    color: white;
+    color:white;
 }
 
 .primary:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(99,102,241,0.3);
 }
 
 .secondary {
-    border: 1px solid var(--stroke);
-    color: white;
+    border:1px solid var(--stroke);
+    color:white;
 }
 
-.secondary:hover {
-    border-color: var(--accent);
-}
-
-/* SECTIONS */
-section {
-    margin-top: 90px;
+/* GLASS SECTION */
+.section {
+    margin-top: 120px;
     opacity: 0;
-    transform: translateY(20px);
-    transition: 0.8s ease;
+    transform: translateY(40px);
+    transition: 1s ease;
 }
 
-section.visible {
+.section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
+/* CARDS */
+.grid {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
 }
 
-/* PROJECTS */
-.project {
+@media(max-width:900px){
+    .grid{grid-template-columns:1fr;}
+    .hero h1{font-size:38px;}
+}
+
+.card {
     background: var(--card);
     border: 1px solid var(--stroke);
     border-radius: 18px;
-    padding: 26px;
-    margin-top: 20px;
+    padding: 24px;
+    backdrop-filter: blur(20px);
     transition: 0.3s ease;
-    backdrop-filter: blur(12px);
+    position: relative;
+    overflow:hidden;
 }
 
-.project:hover {
-    transform: translateY(-6px) scale(1.01);
+.card::before {
+    content:"";
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+    background: radial-gradient(circle, rgba(99,102,241,0.1), transparent 60%);
+    transform: rotate(0deg);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.01);
     border-color: rgba(99,102,241,0.4);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-}
-
-.project h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
 }
 
 /* TAGS */
 .tag {
-    display: inline-block;
-    font-size: 12px;
-    padding: 6px 10px;
-    border-radius: 999px;
+    display:inline-block;
+    font-size:12px;
+    padding:6px 10px;
+    border-radius:999px;
     background: rgba(99,102,241,0.15);
-    margin-right: 6px;
-    margin-top: 10px;
+    margin:5px 5px 0 0;
 }
 
-/* MEDIA */
-img, video {
-    width: 100%;
-    border-radius: 14px;
-    margin-top: 16px;
+/* IMAGES */
+img {
+    width:100%;
+    border-radius:14px;
+    margin-top:14px;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+/* NAV */
+nav {
+    position:fixed;
+    top:0;
+    width:100%;
+    backdrop-filter: blur(20px);
+    background: rgba(5,8,22,0.5);
+    border-bottom:1px solid var(--stroke);
+    z-index:100;
 }
 
-@media(max-width: 900px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
+.nav-inner {
+    max-width:1100px;
+    margin:auto;
+    padding:14px 24px;
+    display:flex;
+    justify-content:space-between;
 }
 
-/* LINKS */
-.links {
-    margin-top: 14px;
-}
-
-.links a {
-    margin-right: 10px;
-    font-size: 14px;
-    color: #93c5fd;
-    text-decoration: none;
-}
-
-.links a:hover {
-    color: white;
-}
-
-/* ANIMATION */
+/* ANIMATIONS */
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity:0; transform:translateY(20px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* MODAL */
+.modal {
+    position:fixed;
+    inset:0;
+    background: rgba(0,0,0,0.7);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+}
+
+.modal-content {
+    background: #0b1020;
+    padding:30px;
+    border-radius:18px;
+    max-width:700px;
+    border:1px solid var(--stroke);
 }
 </style>
 </head>
 
 <body>
 
+<div class="cursor"></div>
+
 <!-- NAV -->
 <nav>
-  <div class="nav-inner">
-    <div><strong>Viktor.dev</strong></div>
+<div class="nav-inner">
+    <strong>Viktor.dev</strong>
     <div>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </div>
-  </div>
+</div>
 </nav>
 
 <div class="container">
 
 <!-- HERO -->
 <div class="hero">
-    <h1>AI Engineer building autonomous systems for e-commerce</h1>
+    <h1>Building Autonomous AI Systems for Real Businesses</h1>
 
     <p>
-        I build production-grade AI systems that automate marketing, support, and conversion optimization.
+        I design production-grade AI systems that act as autonomous agents for marketing, support, and optimization.
     </p>
 
-    <div class="highlight">
-        🚀 RAG systems • Multi-agent AI • LLM orchestration • Automation at scale
-    </div>
-
-    <div class="cta">
-        <a class="btn primary" href="https://github.com/viktor-ai-dev">View GitHub</a>
+    <div>
+        <a class="btn primary" href="#projects">View Work</a>
         <a class="btn secondary" href="#contact">Contact</a>
     </div>
 </div>
 
-<!-- FLAGSHIP -->
-<section id="projects">
-<h2>Flagship Project</h2>
+<!-- PROJECTS -->
+<section id="projects" class="section">
 
-<div class="project">
-    <h3>Autonomous Multi-Agent E-commerce System</h3>
+<h2>Flagship Systems</h2>
+
+<div class="card" onclick="openModal()">
+    <h3>Autonomous Multi-Agent Optimization Engine</h3>
 
     <p>
-        AI system that analyzes and improves e-commerce conversion rates autonomously.
+        AI system that simulates a full growth team to optimize e-commerce conversion rates.
     </p>
 
     <div>
         <span class="tag">Multi-Agent</span>
-        <span class="tag">LLM</span>
+        <span class="tag">LLMs</span>
+        <span class="tag">RAG</span>
         <span class="tag">FastAPI</span>
-        <span class="tag">Next.js</span>
     </div>
 
     <img src="sc4.png">
-    <video controls>
-        <source src="demo.mp4">
-    </video>
-
-    <div class="links">
-        <a href="#">GitHub</a>
-        <a href="#">Live</a>
-        <a href="#">YouTube</a>
-    </div>
 </div>
 
-<!-- GRID -->
-<h2>Other Projects</h2>
+<h2 style="margin-top:60px;">Other Systems</h2>
 
 <div class="grid">
 
-<div class="project">
-    <h3>AI Customer Support (RAG SaaS)</h3>
-    <p>Context-aware AI support system with Stripe + Supabase.</p>
-
-    <span class="tag">RAG</span>
-    <span class="tag">Stripe</span>
-
+<div class="card">
+    <h3>AI Support System</h3>
+    <p>RAG-based support agent with memory + Stripe billing.</p>
     <img src="sc1.png">
-
-    <div class="links">
-        <a href="#">GitHub</a>
-        <a href="#">YouTube</a>
-    </div>
 </div>
 
-<div class="project">
+<div class="card">
     <h3>AI Content Engine</h3>
-    <p>Generates high-converting marketing content using RAG.</p>
-
-    <span class="tag">LLM</span>
-    <span class="tag">RAG</span>
-
+    <p>Generates marketing content optimized for conversion.</p>
     <img src="sc2.png">
-
-    <div class="links">
-        <a href="#">GitHub</a>
-        <a href="#">YouTube</a>
-    </div>
 </div>
 
 </div>
+
 </section>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="section">
 <h2>About</h2>
 <p>
-AI Engineer focused on building production AI systems with real business impact.
+AI Systems Engineer focused on building autonomous AI agents that replace manual workflows in real companies.
 </p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="section">
 <h2>Contact</h2>
-<p>Email: viktor.sz.hire@gmail.com</p>
+<p>viktor.sz.hire@gmail.com</p>
 </section>
 
 </div>
 
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <div class="modal-content">
+    <h2>Case Study</h2>
+    <p>This system mimics a full AI growth team: Analyst → Strategist → Copywriter → UX → Implementer.</p>
+  </div>
+</div>
+
 <script>
-// Scroll reveal (startup feel)
-const sections = document.querySelectorAll("section");
+
+/* CURSOR */
+const cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", e => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
+/* SCROLL REVEAL */
+const sections = document.querySelectorAll(".section");
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if(entry.isIntersecting) {
+        if(entry.isIntersecting){
             entry.target.classList.add("visible");
         }
     });
-}, { threshold: 0.15 });
+},{threshold:0.15});
 
-sections.forEach(sec => observer.observe(sec));
+sections.forEach(s => observer.observe(s));
+
+/* MODAL */
+function openModal(){
+    document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
 </script>
 
 </body>
