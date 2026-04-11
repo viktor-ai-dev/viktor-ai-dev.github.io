@@ -3,186 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Viktor | AI Systems Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --bg: #050816;
-    --card: rgba(255,255,255,0.05);
-    --stroke: rgba(255,255,255,0.10);
-    --text: #e5e7eb;
-    --muted: #9ca3af;
-    --accent: #6366f1;
-    --cyan: #22d3ee;
+    --bg:#050816;
+    --card:rgba(255,255,255,0.05);
+    --stroke:rgba(255,255,255,0.1);
+    --text:#e5e7eb;
+    --muted:#9ca3af;
+    --accent:#6366f1;
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-body {
-    font-family: Inter, sans-serif;
-    background: radial-gradient(circle at top, #1a1f3a, var(--bg));
-    color: var(--text);
-    overflow-x: hidden;
-    cursor: none;
-}
-
-/* CUSTOM CURSOR */
-.cursor {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    position: fixed;
-    background: white;
-    pointer-events: none;
-    mix-blend-mode: difference;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-}
-
-/* LAYOUT */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 24px;
-}
-
-/* HERO */
-.hero {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero h1 {
-    font-size: 64px;
-    line-height: 1.05;
-    letter-spacing: -1.5px;
-
-    background: linear-gradient(90deg, #fff, #a5b4fc, #22d3ee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    animation: fadeUp 1s ease-out;
-}
-
-.hero p {
-    margin-top: 20px;
-    font-size: 18px;
-    color: var(--muted);
-    max-width: 700px;
-}
-
-/* CTA */
-.btn {
-    display:inline-block;
-    margin-top: 25px;
-    padding: 12px 18px;
-    border-radius: 12px;
-    text-decoration:none;
-    font-weight:500;
-    margin-right:10px;
-    transition:0.3s;
-}
-
-.primary {
-    background: var(--accent);
-    color:white;
-}
-
-.primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(99,102,241,0.3);
-}
-
-.secondary {
-    border:1px solid var(--stroke);
-    color:white;
-}
-
-/* GLASS SECTION */
-.section {
-    margin-top: 120px;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 1s ease;
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* CARDS */
-.grid {
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-}
-
-@media(max-width:900px){
-    .grid{grid-template-columns:1fr;}
-    .hero h1{font-size:38px;}
-}
-
-.card {
-    background: var(--card);
-    border: 1px solid var(--stroke);
-    border-radius: 18px;
-    padding: 24px;
-    backdrop-filter: blur(20px);
-    transition: 0.3s ease;
-    position: relative;
-    overflow:hidden;
-}
-
-.card::before {
-    content:"";
-    position:absolute;
-    top:-50%;
-    left:-50%;
-    width:200%;
-    height:200%;
-    background: radial-gradient(circle, rgba(99,102,241,0.1), transparent 60%);
-    transform: rotate(0deg);
-}
-
-.card:hover {
-    transform: translateY(-8px) scale(1.01);
-    border-color: rgba(99,102,241,0.4);
-}
-
-/* TAGS */
-.tag {
-    display:inline-block;
-    font-size:12px;
-    padding:6px 10px;
-    border-radius:999px;
-    background: rgba(99,102,241,0.15);
-    margin:5px 5px 0 0;
-}
-
-/* IMAGES */
-img {
-    width:100%;
-    border-radius:14px;
-    margin-top:14px;
+body{
+    font-family:Inter,sans-serif;
+    background:radial-gradient(circle at top,#1a1f3a,var(--bg));
+    color:var(--text);
 }
 
 /* NAV */
-nav {
+nav{
     position:fixed;
-    top:0;
     width:100%;
-    backdrop-filter: blur(20px);
-    background: rgba(5,8,22,0.5);
+    backdrop-filter:blur(20px);
+    background:rgba(5,8,22,0.6);
     border-bottom:1px solid var(--stroke);
-    z-index:100;
 }
 
-.nav-inner {
+.nav-inner{
     max-width:1100px;
     margin:auto;
     padding:14px 24px;
@@ -190,162 +43,223 @@ nav {
     justify-content:space-between;
 }
 
-/* ANIMATIONS */
-@keyframes fadeUp {
-    from { opacity:0; transform:translateY(20px); }
-    to { opacity:1; transform:translateY(0); }
+/* HERO */
+.hero{
+    padding:140px 24px 80px;
+    max-width:1100px;
+    margin:auto;
 }
 
-/* MODAL */
-.modal {
-    position:fixed;
-    inset:0;
-    background: rgba(0,0,0,0.7);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    z-index:999;
+.hero h1{
+    font-size:60px;
+    line-height:1.05;
+    background:linear-gradient(90deg,#fff,#a5b4fc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-.modal-content {
-    background: #0b1020;
-    padding:30px;
-    border-radius:18px;
+.hero p{
+    margin-top:20px;
+    color:var(--muted);
     max-width:700px;
+    font-size:18px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:24px;
+    padding:12px 18px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.primary{background:var(--accent);color:white;}
+.secondary{border:1px solid var(--stroke);color:white;margin-left:10px;}
+
+/* SECTION */
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 24px;
+}
+
+/* CARD */
+.card{
+    background:var(--card);
     border:1px solid var(--stroke);
+    border-radius:20px;
+    padding:28px;
+    margin-top:24px;
+    backdrop-filter:blur(20px);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(99,102,241,0.4);
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+@media(max-width:900px){
+    .grid{grid-template-columns:1fr;}
+}
+
+/* TAGS */
+.tag{
+    display:inline-block;
+    font-size:12px;
+    padding:6px 10px;
+    border-radius:999px;
+    background:rgba(99,102,241,0.15);
+    margin:5px 5px 0 0;
+}
+
+/* LIST */
+ul{
+    margin-top:12px;
+    padding-left:18px;
+}
+
+li{
+    margin-bottom:6px;
+    color:#d1d5db;
+}
+
+/* MEDIA */
+img,video{
+    width:100%;
+    border-radius:14px;
+    margin-top:14px;
+}
+
+/* SMALL TITLE */
+.small{
+    color:var(--muted);
+    font-size:13px;
+    margin-top:12px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="cursor"></div>
-
-<!-- NAV -->
 <nav>
 <div class="nav-inner">
-    <strong>Viktor.dev</strong>
-    <div>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
+<strong>Viktor.dev</strong>
+<div>AI Systems Engineer</div>
 </div>
 </nav>
 
-<div class="container">
-
 <!-- HERO -->
 <div class="hero">
-    <h1>Building Autonomous AI Systems for Real Businesses</h1>
+<h1>Building Autonomous AI Systems That Replace Entire Workflows</h1>
 
-    <p>
-        I design production-grade AI systems that act as autonomous agents for marketing, support, and optimization.
-    </p>
+<p>
+I design and ship production-grade AI systems that automate marketing,
+customer support, and growth — reducing manual work by up to 90%.
+</p>
 
-    <div>
-        <a class="btn primary" href="#projects">View Work</a>
-        <a class="btn secondary" href="#contact">Contact</a>
-    </div>
+<a href="https://github.com/viktor-ai-dev" class="btn primary">View GitHub</a>
+<a href="#contact" class="btn secondary">Contact</a>
+</div>
+
+<!-- FLAGSHIP -->
+<div class="section">
+
+<h2>Flagship System</h2>
+
+<div class="card">
+
+<h3>Autonomous Multi-Agent E-commerce Optimization Engine</h3>
+
+<p class="small">
+AI system that simulates a full growth team and continuously improves conversion rates.
+</p>
+
+<ul>
+<li>Scrapes and analyzes real e-commerce websites</li>
+<li>Detects conversion bottlenecks using LLM reasoning</li>
+<li>Generates optimized high-converting copy</li>
+<li>Implements iterative improvement loops</li>
+<li>Scores performance before vs after optimization</li>
+</ul>
+
+<div>
+<span class="tag">Multi-Agent</span>
+<span class="tag">LLM</span>
+<span class="tag">RAG</span>
+<span class="tag">FastAPI</span>
+</div>
+
+<img src="sc4.png">
+
+<video controls>
+<source src="demo.mp4">
+</video>
+
+</div>
+
 </div>
 
 <!-- PROJECTS -->
-<section id="projects" class="section">
+<div class="section">
 
-<h2>Flagship Systems</h2>
-
-<div class="card" onclick="openModal()">
-    <h3>Autonomous Multi-Agent Optimization Engine</h3>
-
-    <p>
-        AI system that simulates a full growth team to optimize e-commerce conversion rates.
-    </p>
-
-    <div>
-        <span class="tag">Multi-Agent</span>
-        <span class="tag">LLMs</span>
-        <span class="tag">RAG</span>
-        <span class="tag">FastAPI</span>
-    </div>
-
-    <img src="sc4.png">
-</div>
-
-<h2 style="margin-top:60px;">Other Systems</h2>
+<h2>Other Systems</h2>
 
 <div class="grid">
 
 <div class="card">
-    <h3>AI Support System</h3>
-    <p>RAG-based support agent with memory + Stripe billing.</p>
-    <img src="sc1.png">
+<h3>AI Customer Support (RAG SaaS)</h3>
+
+<ul>
+<li>Context-aware chat with memory</li>
+<li>Hybrid search (semantic + keyword)</li>
+<li>Supabase authentication</li>
+<li>Stripe subscriptions</li>
+</ul>
+
+<div>
+<span class="tag">RAG</span>
+<span class="tag">Stripe</span>
+</div>
+
+<img src="sc1.png">
 </div>
 
 <div class="card">
-    <h3>AI Content Engine</h3>
-    <p>Generates marketing content optimized for conversion.</p>
-    <img src="sc2.png">
+<h3>AI Content Engine</h3>
+
+<ul>
+<li>Generates product descriptions with hooks & CTA</li>
+<li>Ad copy generator</li>
+<li>Multi-brand comparison engine</li>
+</ul>
+
+<div>
+<span class="tag">LLM</span>
+<span class="tag">Marketing AI</span>
+</div>
+
+<img src="sc2.png">
 </div>
 
 </div>
 
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section">
-<h2>About</h2>
-<p>
-AI Systems Engineer focused on building autonomous AI agents that replace manual workflows in real companies.
-</p>
-</section>
+</div>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<div class="section" id="contact">
 <h2>Contact</h2>
 <p>viktor.sz.hire@gmail.com</p>
-</section>
-
 </div>
-
-<!-- MODAL -->
-<div class="modal" id="modal" onclick="closeModal()">
-  <div class="modal-content">
-    <h2>Case Study</h2>
-    <p>This system mimics a full AI growth team: Analyst → Strategist → Copywriter → UX → Implementer.</p>
-  </div>
-</div>
-
-<script>
-
-/* CURSOR */
-const cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", e => {
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-});
-
-/* SCROLL REVEAL */
-const sections = document.querySelectorAll(".section");
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("visible");
-        }
-    });
-},{threshold:0.15});
-
-sections.forEach(s => observer.observe(s));
-
-/* MODAL */
-function openModal(){
-    document.getElementById("modal").style.display="flex";
-}
-
-function closeModal(){
-    document.getElementById("modal").style.display="none";
-}
-</script>
 
 </body>
 </html>
