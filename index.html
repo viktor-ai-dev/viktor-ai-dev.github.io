@@ -101,6 +101,7 @@ h3{
 
 /* CARD */
 .card{
+    isolation: isolate;
     background: linear-gradient(
         135deg,
         rgba(255,255,255,0.06),
@@ -118,6 +119,7 @@ h3{
 
 /* subtle glow effect */
 .card::before{
+    pointer-events: none;
     content: "";
     position: absolute;
     top: -50%;
@@ -133,13 +135,18 @@ h3{
     transition: opacity 0.3s ease;
 }
 
-.card:hover{
-    transform: translateY(-6px) scale(1.01);
-    border-color: rgba(99,102,241,0.5);
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99,102,241,0.4);
 }
 
 .card:hover::before{
     opacity: 1;
+}
+
+.card > * {
+    position: relative;
+    z-index: 2;
 }
 
 /* GRID */
