@@ -44,48 +44,35 @@ nav{
     display:flex;
     justify-content:space-between;
     font-size:14px;
-    opacity:0.9;
-}
-
-/* CENTER WRAPPER */
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:0 20px;
 }
 
 /* HERO */
 .hero{
-    min-height:85vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
     text-align:center;
-    padding-top:80px;
+    padding:120px 20px 60px;
+    max-width:900px;
+    margin:auto;
 }
 
 .hero h1{
-    font-size:52px;
-    line-height:1.1;
+    font-size:54px;
+    line-height:1.05;
     letter-spacing:-1px;
     background:linear-gradient(90deg,#fff,#a5b4fc);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
-    max-width:900px;
 }
 
 .hero p{
     margin-top:16px;
     color:var(--muted);
     font-size:18px;
-    max-width:600px;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn{
     display:inline-block;
-    margin-top:20px;
+    margin-top:18px;
     padding:10px 16px;
     border-radius:10px;
     text-decoration:none;
@@ -98,32 +85,22 @@ nav{
 
 /* SECTION */
 .section{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
     padding:70px 20px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
 }
 
 h2{
     font-size:22px;
     margin-bottom:18px;
     text-align:center;
-    opacity:0.9;
-}
-
-h3{
-    font-size:18px;
-    margin-bottom:8px;
 }
 
 /* GRID */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(420px, 1fr));
     gap:18px;
-    width:100%;
 }
 
 /* CARD */
@@ -131,7 +108,7 @@ h3{
     background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
     border:1px solid var(--stroke);
     border-radius:16px;
-    padding:20px;
+    padding:22px;
     backdrop-filter:blur(20px);
     transition:0.25s;
     position:relative;
@@ -188,9 +165,9 @@ img,iframe{
     margin-top:12px;
 }
 
-/* spacing fix between sections */
-.section + .section{
-    margin-top:-10px;
+/* CONTACT */
+#contact{
+    text-align:center;
 }
 </style>
 </head>
@@ -205,7 +182,7 @@ img,iframe{
 </nav>
 
 <!-- HERO -->
-<div class="hero container">
+<div class="hero">
 <h1>Building Autonomous AI Systems That Replace Entire Workflows</h1>
 
 <p>
@@ -221,6 +198,9 @@ I design and ship production-grade AI SaaS products that automate marketing, sup
 
 <h2>Flagship Systems</h2>
 
+<div class="grid">
+
+<!-- FLAGSHIP 1 -->
 <div class="card">
 
 <h3>AdCraft AI – Autonomous Ad Generation SaaS</h3>
@@ -234,7 +214,7 @@ Full-stack AI SaaS that generates complete high-converting marketing ads for eco
 <li>Multi-style generation (luxury, minimal, bold, tech, viral)</li>
 <li>Conversion-focused copywriting engine</li>
 <li>SaaS architecture with authentication & credit system</li>
-<li>Built for real-world ecommerce marketing workflows</li>
+<li>Built for real-world ecommerce workflows</li>
 </ul>
 
 <div class="metrics">
@@ -250,87 +230,57 @@ Full-stack AI SaaS that generates complete high-converting marketing ads for eco
 <span class="tag">Clerk</span>
 </div>
 
-<iframe height="380" src="https://www.youtube.com/embed/Y5MGQSWhg70" frameborder="0" allowfullscreen></iframe>
+<iframe height="360"
+src="https://www.youtube.com/embed/Y5MGQSWhg70"
+frameborder="0"
+allowfullscreen></iframe>
 
+<div style="margin-top:12px;">
+<a href="https://github.com/viktor-ai-dev/adcraft-ai" class="btn primary">GitHub</a>
 </div>
 
 </div>
 
-<!-- SUPPORTING -->
-<div class="section">
-
-<h2>Supporting AI Systems</h2>
-
-<div class="grid">
-
+<!-- FLAGSHIP 2 -->
 <div class="card">
-<h3>AI Customer Support (RAG SaaS)</h3>
-<p class="small">Context-aware AI support system using retrieval augmented generation.</p>
+
+<h3>Autonomous E-commerce Agent – AI Conversion Optimization System</h3>
+
+<p class="small">
+AI agent that audits and improves e-commerce stores to increase conversion rates autonomously.
+</p>
 
 <ul>
-<li>Hybrid semantic + keyword search</li>
-<li>Memory-based chat system</li>
-<li>Stripe subscriptions</li>
+<li>Scrapes and analyzes live e-commerce websites</li>
+<li>Detects conversion issues using AI reasoning</li>
+<li>Generates improved headlines, CTAs & structure</li>
+<li>Before vs After performance scoring</li>
+<li>Iterative AI optimization loop (agent behavior)</li>
 </ul>
 
 <div class="metrics">
-↓ Reduced manual support workload<br>
-↑ Improved accuracy via RAG
+↑ Improves conversion scores automatically<br>
+↑ Reduces CRO analysis time drastically<br>
+↑ Simulates autonomous marketing team
 </div>
 
-<span class="tag">RAG</span>
-<span class="tag">Stripe</span>
-
-<img src="sc1.png">
-
-<a href="https://youtu.be/P2UHLif6-C0" class="btn primary">Demo</a>
+<div>
+<span class="tag">Next.js</span>
+<span class="tag">FastAPI</span>
+<span class="tag">Python</span>
+<span class="tag">OpenAI API</span>
+<span class="tag">AI Agents</span>
 </div>
 
+<iframe height="360"
+src="https://www.youtube.com/embed/n-ZVVXpPOWE"
+frameborder="0"
+allowfullscreen></iframe>
 
-<div class="card">
-<h3>AI Content Engine</h3>
-<p class="small">Marketing content generator with brand-aware prompting.</p>
-
-<ul>
-<li>Ad copy generator</li>
-<li>Product descriptions</li>
-<li>Brand tone consistency</li>
-</ul>
-
-<div class="metrics">
-↓ Faster content creation<br>
-↑ Better brand consistency
+<div style="margin-top:12px;">
+<a href="https://github.com/viktor-ai-dev/autonomous-ecommerce-agent" class="btn primary">GitHub</a>
 </div>
 
-<span class="tag">LLM</span>
-<span class="tag">Marketing AI</span>
-
-<img src="sc2.png">
-
-<a href="https://youtu.be/WmViVFzdQl0" class="btn primary">Demo</a>
-</div>
-
-<div class="card">
-<h3>AI Marketing Generator</h3>
-<p class="small">System for generating conversion-optimized ad creatives.</p>
-
-<ul>
-<li>Multi-style ad generation</li>
-<li>Hook + CTA optimization</li>
-<li>Reusable prompt system</li>
-</ul>
-
-<div class="metrics">
-↓ Eliminates manual ad creation<br>
-↑ 10x faster marketing output
-</div>
-
-<span class="tag">Automation</span>
-<span class="tag">OpenAI</span>
-
-<img src="sc3.png">
-
-<a href="https://youtu.be/Y5MGQSWhg70" class="btn primary">Demo</a>
 </div>
 
 </div>
@@ -339,7 +289,9 @@ Full-stack AI SaaS that generates complete high-converting marketing ads for eco
 <!-- CONTACT -->
 <div class="section" id="contact">
 <h2>Contact</h2>
-<p style="font-size:14px;color:var(--muted)">viktor.sz.hire@gmail.com</p>
+<p style="color:var(--muted);font-size:14px;">
+viktor.sz.hire@gmail.com
+</p>
 </div>
 
 </body>
