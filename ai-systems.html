@@ -9,46 +9,101 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root {
+    --bg:#050816;
+    --card:rgba(255,255,255,0.04);
+    --stroke:rgba(255,255,255,0.08);
+    --text:#e5e7eb;
+    --muted:#9ca3af;
+    --accent:#6366f1;
+}
+
 body{
     font-family:Inter,sans-serif;
-    background:#050816;
-    color:#e5e7eb;
-    padding:40px 20px;
+    background:radial-gradient(circle at top,#1a1f3a,var(--bg));
+    color:var(--text);
+    padding:60px 20px;
 }
 
 .container{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
 }
 
 h1{
     text-align:center;
-    margin-bottom:10px;
+    font-size:34px;
 }
 
-p{
+p.subtitle{
     text-align:center;
-    color:#9ca3af;
-    margin-bottom:40px;
+    color:var(--muted);
+    margin:10px 0 40px;
 }
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
     gap:20px;
 }
 
 .card{
-    border:1px solid rgba(255,255,255,0.1);
-    padding:20px;
-    border-radius:12px;
+    background:linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+    border:1px solid var(--stroke);
+    padding:22px;
+    border-radius:16px;
+    transition:0.25s;
 }
 
-a{
+.card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(99,102,241,0.35);
+}
+
+.small{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+ul{padding-left:18px;}
+li{margin-bottom:5px;font-size:14px;}
+
+.metrics{
+    margin-top:12px;
+    padding:10px;
+    border-radius:10px;
+    background:rgba(99,102,241,0.12);
+    border:1px solid rgba(99,102,241,0.2);
+    font-size:13px;
+}
+
+.tag{
+    display:inline-block;
+    font-size:11px;
+    padding:5px 8px;
+    border-radius:999px;
+    background:rgba(99,102,241,0.15);
+    margin:6px 4px 0 0;
+}
+
+img{
+    width:100%;
+    border-radius:12px;
+    margin-top:12px;
+}
+
+.btn{
     display:inline-block;
     margin-top:10px;
-    color:#6366f1;
+    padding:8px 12px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:13px;
 }
+
+.primary{background:var(--accent);color:white;}
+.secondary{border:1px solid var(--stroke);color:white;margin-left:6px;}
 </style>
 </head>
 
@@ -57,32 +112,111 @@ a{
 <div class="container">
 
 <h1>AI Systems & Automation</h1>
-<p>Collection of AI systems, experiments, and automation tools</p>
+<p class="subtitle">Applied AI systems for real-world workflows, automation, and content generation</p>
 
 <div class="grid">
 
+<!-- SYSTEM 1 -->
 <div class="card">
-<h3>AI Customer Support (RAG)</h3>
-<p>Context-aware AI support system with retrieval pipeline.</p>
-<a href="https://github.com/viktor-ai-dev/ai-customer-support">GitHub →</a>
+<h3>AI Customer Support (RAG SaaS)</h3>
+
+<p class="small">
+Context-aware AI support system using retrieval-augmented generation.
+</p>
+
+<ul>
+<li>Semantic + keyword document retrieval</li>
+<li>Context-aware responses using RAG pipeline</li>
+<li>Conversation memory system</li>
+<li>Subscription-based SaaS model</li>
+</ul>
+
+<div class="metrics">
+↓ Reduced manual support workload<br>
+↑ Improved response accuracy
 </div>
 
+<div>
+<span class="tag">RAG</span>
+<span class="tag">Next.js</span>
+<span class="tag">Stripe</span>
+</div>
+
+<img src="sc1.png">
+
+<div>
+<a href="https://github.com/viktor-ai-dev/ai-customer-support" class="btn primary">GitHub</a>
+</div>
+</div>
+
+<!-- SYSTEM 2 -->
 <div class="card">
 <h3>AI Content Engine</h3>
-<p>Generates marketing content with brand consistency.</p>
-<a href="https://github.com/viktor-ai-dev/ai-content-gen">GitHub →</a>
+
+<p class="small">
+AI system for generating structured marketing content with consistent brand voice.
+</p>
+
+<ul>
+<li>Ad copy & product descriptions</li>
+<li>Hook + CTA generation</li>
+<li>Brand tone control via prompts</li>
+<li>Reusable content templates</li>
+</ul>
+
+<div class="metrics">
+↓ Faster content production<br>
+↑ Consistent branding output
 </div>
 
+<div>
+<span class="tag">LLM</span>
+<span class="tag">Marketing AI</span>
+</div>
+
+<img src="sc2.png">
+
+<div>
+<a href="https://github.com/viktor-ai-dev/ai-content-gen" class="btn primary">GitHub</a>
+</div>
+</div>
+
+<!-- SYSTEM 3 -->
 <div class="card">
 <h3>AI Marketing Generator</h3>
-<p>Automated system for generating high-converting ads.</p>
-<a href="https://github.com/viktor-ai-dev/ai-marketing">GitHub →</a>
+
+<p class="small">
+Automated system for generating high-converting marketing creatives.
+</p>
+
+<ul>
+<li>Multi-style ad generation</li>
+<li>Conversion-focused prompt design</li>
+<li>Creative variation engine</li>
+<li>Reusable marketing workflows</li>
+</ul>
+
+<div class="metrics">
+↓ Eliminates manual ad creation<br>
+↑ 10x faster campaign generation
+</div>
+
+<div>
+<span class="tag">OpenAI API</span>
+<span class="tag">Automation</span>
+</div>
+
+<img src="sc3.png">
+
+<div>
+<a href="https://github.com/viktor-ai-dev/ai-marketing" class="btn primary">GitHub</a>
+</div>
 </div>
 
 </div>
 
-<div style="text-align:center; margin-top:40px;">
-<a href="index.html">← Back to Main</a>
+<div style="text-align:center; margin-top:50px;">
+<a href="index.html" class="btn secondary">← Back to Main</a>
 </div>
 
 </div>
