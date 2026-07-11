@@ -126,7 +126,9 @@ nav{
 }
 
 
-/* CASE STUDIES */
+/* =========================
+   CASE STUDIES
+========================= */
 
 .case{
     background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
@@ -139,53 +141,82 @@ nav{
     flex-direction:column;
 }
 
+
 .case h2,
 .case h3{
     text-align:center;
 }
 
-.case .preview-app,
-.case .preview-diagram{
-    width:100%;
-    display:flex;
-    justify-content:center;
-}
+
+/* =========================
+   DESCRIPTION
+========================= */
 
 .description{
- color:var(--muted);
- margin-top:15px;
- max-width:700px;
+    color:var(--muted);
+    margin-top:15px;
+    max-width:700px;
 }
+
+
+/* =========================
+   APP SCREENSHOT
+========================= */
 
 .preview-app{
+    width:100%;
     padding:30px;
+    margin-top:25px;
+
     border-radius:20px;
     background:#111827;
-    display:flex;
-    justify-content:center; /* centrerar horisontellt */
-    align-items:center;     /* centrerar vertikalt */
-}
 
-.preview-app img{
-    width:75%;
-    max-width:650px;
-    height:auto;
-    border-radius:15px;
-}
-
- .preview-diagram{
-    padding:40px;
-    border-radius:20px;
-    background:#111827;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
+
+.preview-app img{
+    display:block;
+
+    width:650px;
+    max-width:90%;
+    height:auto;
+
+    margin:0 auto;
+
+    border-radius:15px;
+}
+
+
+/* =========================
+   ARCHITECTURE DIAGRAM
+========================= */
+
+.preview-diagram{
+    width:100%;
+    padding:40px;
+    margin-top:25px;
+
+    border-radius:20px;
+    background:#111827;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
 .preview-diagram img{
+    display:block;
+
     width:100%;
     max-width:1100px;
     height:auto;
+
+    margin:0 auto;
+
     border-radius:15px;
 }
 
