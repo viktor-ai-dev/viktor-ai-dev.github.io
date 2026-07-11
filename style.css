@@ -42,7 +42,7 @@ padding:0 20px
 /* Project  */
 
 .screenshot-box{
-    border:3px solid red;
+    
     margin:25px 0;
     padding:20px;
     border-radius:20px;
@@ -55,7 +55,7 @@ padding:0 20px
 
 
 .project-screenshot{
-    border:3px solid lime;
+    
     display:block;
     width:420px;
     max-width:100%;
