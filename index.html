@@ -129,21 +129,27 @@ nav{
 /* CASE STUDIES */
 
 .case{
- background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
- border:1px solid var(--border);
- border-radius:28px;
- padding:35px;
- margin-bottom:50px;
+    background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+    border:1px solid var(--border);
+    border-radius:28px;
+    padding:35px;
+    margin-bottom:50px;
+
+    display:flex;
+    flex-direction:column;
 }
 
-.case-header{
- display:flex;
- justify-content:space-between;
- gap:30px;
- align-items:center;
+.case h2,
+.case h3{
+    text-align:center;
 }
 
-.case h3{font-size:32px}
+.case .preview-app,
+.case .preview-diagram{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
 
 .description{
  color:var(--muted);
