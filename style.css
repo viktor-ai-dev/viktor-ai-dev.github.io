@@ -346,3 +346,15 @@ min-height:200px
 }
 
 }
+
+.screenshot-box{
+    text-align:center;
+}
+
+.screenshot-box .project-screenshot{
+    display:block !important;
+    width:420px !important;
+    max-width:420px !important;
+    height:auto !important;
+    margin:0 auto !important;
+}
