@@ -3,262 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Viktor | AI Engineer Portfolio</title>
+
+<title>Viktor | AI Engineer & Data Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-:root{
- --bg:#030712;
- --card:rgba(255,255,255,.05);
- --border:rgba(255,255,255,.1);
- --text:#f9fafb;
- --muted:#9ca3af;
- --accent:#6366f1;
- --accent2:#22d3ee;
-}
-
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
- font-family:Inter,sans-serif;
- background:
- radial-gradient(circle at top,#172554,transparent 35%),
- radial-gradient(circle at bottom,#111827,transparent 40%),
- var(--bg);
- color:var(--text);
- line-height:1.6;
-}
-
-a{text-decoration:none;color:white}
-
-nav{
- position:fixed;
- top:0;
- width:100%;
- background:rgba(3,7,18,.7);
- backdrop-filter:blur(20px);
- border-bottom:1px solid var(--border);
- z-index:10;
-}
-
-.nav-inner{
- max-width:1200px;
- margin:auto;
- padding:18px 20px;
- display:flex;
- justify-content:space-between;
- font-size:14px;
-}
-
-.container{
- max-width:1200px;
- margin:auto;
- padding:0 20px;
-}
-
-.hero{
- padding:170px 20px 100px;
- text-align:center;
-}
-
-.badge{
- display:inline-block;
- padding:8px 15px;
- border-radius:999px;
- background:rgba(99,102,241,.15);
- border:1px solid rgba(99,102,241,.3);
- font-size:13px;
- margin-bottom:30px;
-}
-
-.hero h1{
- font-size:70px;
- line-height:1.05;
- background:linear-gradient(90deg,#fff,#a5b4fc,#22d3ee);
- -webkit-background-clip:text;
- -webkit-text-fill-color:transparent;
-}
-
-.hero p{
- max-width:750px;
- margin:30px auto;
- font-size:20px;
- color:var(--muted);
-}
-
-.buttons{margin-top:35px}
-
-.btn{
- display:inline-block;
- padding:13px 22px;
- border-radius:12px;
- font-size:14px;
- font-weight:600;
- margin:5px;
- transition:.3s;
-}
-
-.btn:hover{transform:translateY(-3px)}
-
-.primary{
- background:linear-gradient(135deg,#6366f1,#4f46e5);
-}
-
-.secondary{
- border:1px solid var(--border);
- background:rgba(255,255,255,.03);
-}
-
-.section{padding:90px 0}
-
-.section-title{
- text-align:center;
- font-size:38px;
- margin-bottom:15px;
-}
-
-.subtitle{
- text-align:center;
- color:var(--muted);
- max-width:700px;
- margin:0 auto 60px;
-}
-
-
-/* =========================
-   CASE STUDIES
-========================= */
-
-.case{
-    background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
-    border:1px solid var(--border);
-    border-radius:28px;
-    padding:35px;
-    margin-bottom:50px;
-
-    display:flex;
-    flex-direction:column;
-}
-
-
-.case h2,
-.case h3{
-    text-align:center;
-}
-
-
-/* =========================
-   DESCRIPTION
-========================= */
-
-.description{
-    color:var(--muted);
-    margin-top:15px;
-    max-width:700px;
-}
-
-
-/* =========================
-   APP SCREENSHOT
-========================= */
-
-.preview-app{
-    width:100%;
-    padding:30px;
-    margin-top:25px;
-
-    border-radius:20px;
-    background:#111827;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-
-.preview-app img{
-    display:block;
-
-    width:650px;
-    max-width:90%;
-    height:auto;
-
-    margin:0 auto;
-
-    border-radius:15px;
-}
-
-
-/* =========================
-   ARCHITECTURE DIAGRAM
-========================= */
-
-.preview-diagram{
-    width:100%;
-    padding:40px;
-    margin-top:25px;
-
-    border-radius:20px;
-    background:#111827;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-
-.preview-diagram img{
-    display:block;
-
-    width:100%;
-    max-width:1100px;
-    height:auto;
-
-    margin:0 auto;
-
-    border-radius:15px;
-}
-
-.grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
- gap:25px;
- margin-top:35px;
-}
-
-.box{
- background:var(--card);
- border:1px solid var(--border);
- border-radius:20px;
- padding:25px;
-}
-
-.box h4{margin-bottom:10px}
-
-.box p{color:var(--muted)}
-
-.tags span{
- display:inline-block;
- background:rgba(99,102,241,.15);
- padding:6px 12px;
- border-radius:999px;
- font-size:12px;
- margin:5px;
-}
-
-.diagram{
- height:280px;
- margin-top:30px;
- border-radius:20px;
- border:1px dashed rgba(99,102,241,.5);
- display:flex;
- align-items:center;
- justify-content:center;
- color:#9ca3af;
- background:rgba(99,102,241,.05);
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -275,15 +25,17 @@ nav{
 <div class="container">
 
 <div class="badge">
-AI Systems • Data Engineering • SaaS
+AI Systems • Data Engineering • Cloud Architecture
 </div>
 
-<h1>Building Production AI Systems</h1>
+<h1>
+Building Production AI & Data Systems
+</h1>
 
 <p>
-I design and build intelligent platforms,
-RAG systems, autonomous AI agents and
-modern data pipelines.
+I design and engineer intelligent applications,
+RAG systems, autonomous AI agents and scalable
+data pipelines for real-world business problems.
 </p>
 
 <div class="buttons">
@@ -292,96 +44,99 @@ GitHub
 </a>
 
 <a class="btn secondary" href="#projects">
-View Projects
+Projects
 </a>
 </div>
 
 </div>
 </section>
 
+
 <section class="section" id="projects">
 <div class="container">
 
-<h2 class="section-title">Featured AI Systems</h2>
+<h2 class="section-title">
+Featured AI Engineering Systems
+</h2>
 
 <p class="subtitle">
-Production-focused AI applications with real architecture,
-data pipelines and engineering decisions.
+Production-focused AI applications combining
+LLMs, data processing, backend engineering and automation.
 </p>
 
+
+
+<!-- STOREPULSE -->
 
 <div class="case">
 
-<div class="case-header">
-<div>
-
-<h3>StorePulse AI</h3>
+<h3>
+StorePulse AI
+</h3>
 
 <p class="description">
-Autonomous ecommerce intelligence platform
-that analyzes stores, competitors and generates
-AI-powered optimization strategies.
+Autonomous ecommerce intelligence platform that analyzes
+stores, competitors and generates AI-powered optimization
+strategies using web intelligence and structured AI analysis.
 </p>
 
-</div>
-</div>
 
+<div class="diagram">
+<img src="assets/diagrams/storepulse-architecture.png"
+alt="StorePulse Architecture">
 
-<div class="preview">
+<p>
 PLACEHOLDER:
-Dashboard Screenshot
-
-<br>
-assets/screenshots/storepulse-dashboard.png
+StorePulse AI System Architecture
+</p>
 </div>
 
 
 <div class="diagram">
-PLACEHOLDER:
-StorePulse Architecture Diagram
+<img src="assets/diagrams/storepulse-ai-flow.png"
+alt="StorePulse AI Flow">
 
-<br>
-assets/diagrams/storepulse-flow.png
+<p>
+PLACEHOLDER:
+AI Analysis Pipeline
+</p>
 </div>
 
 
 <div class="grid">
 
 <div class="box">
-<h4>Problem</h4>
+<h4>Business Problem</h4>
 <p>
-Ecommerce businesses need better visibility
-into SEO, UX issues, competitors and
-conversion opportunities.
+Ecommerce companies need automated insights
+about SEO, UX, competitors and conversion issues.
 </p>
 </div>
 
 
 <div class="box">
-<h4>Solution</h4>
+<h4>AI Solution</h4>
 <p>
-An autonomous AI analysis system that
-combines web crawling, structured AI analysis
-and automated business recommendations.
+Autonomous analysis engine combining crawling,
+structured LLM outputs and business recommendations.
 </p>
 </div>
 
 
 <div class="box">
-<h4>Engineering Highlights</h4>
+<h4>Engineering</h4>
 <p>
-✓ AI structured outputs<br>
-✓ Evidence based recommendations<br>
-✓ Dynamic website crawling<br>
-✓ Automated report generation
+• Web crawling<br>
+• AI structured outputs<br>
+• Evidence-based generation<br>
+• Automated reporting
 </p>
 </div>
 
 </div>
 
 
-<div class="box" style="margin-top:25px">
-
+<div class="box stack">
 <h4>Technology Stack</h4>
 
 <div class="tags">
@@ -414,43 +169,33 @@ Live Demo Coming Soon
 
 
 
-<!-- RAG SYSTEM -->
 
+
+<!-- RAG -->
 
 <div class="case">
 
-<div class="case-header">
-<div>
-
-<h3>AI Customer Support RAG</h3>
+<h3>
+AI Customer Support RAG
+</h3>
 
 <p class="description">
-Retrieval Augmented Generation system
-for intelligent customer support using
-vector search and grounded AI responses.
+Retrieval Augmented Generation platform providing
+accurate AI answers using document retrieval,
+embeddings and vector search.
 </p>
-
-</div>
-</div>
-
-
-
-<div class="preview">
-
-<img src="assets/screenshots/sc1.png"
-alt="AI Customer Support RAG Dashboard">
-
-</div>
-
 
 
 <div class="diagram">
+
+<img src="assets/diagrams/rag-pipeline.png"
+alt="RAG Pipeline">
+
+<p>
 PLACEHOLDER:
+RAG Architecture Pipeline
+</p>
 
-RAG Pipeline Architecture
-
-<br>
-assets/diagrams/rag-pipeline.png
 </div>
 
 
@@ -458,47 +203,36 @@ assets/diagrams/rag-pipeline.png
 <div class="grid">
 
 <div class="box">
-
 <h4>Problem</h4>
-
 <p>
-Customer support teams need fast,
-accurate answers from large amounts
-of documentation.
+Support teams need instant answers from
+large knowledge bases without hallucinations.
 </p>
-
 </div>
 
 
 <div class="box">
-
 <h4>Solution</h4>
-
 <p>
-A RAG pipeline that retrieves relevant
-knowledge before generating answers,
-reducing hallucinations.
+RAG pipeline retrieving relevant context
+before generating grounded responses.
 </p>
-
 </div>
 
 
 <div class="box">
-
 <h4>Architecture</h4>
-
 <p>
 Documents → Chunking → Embeddings →
 Vector Database → Retriever → LLM
 </p>
-
 </div>
 
 </div>
 
 
 
-<div class="box" style="margin-top:25px">
+<div class="box stack">
 
 <h4>Technology Stack</h4>
 
@@ -527,13 +261,21 @@ Demo Coming Soon
 
 </div>
 
-
 </div>
+
 
 </div>
 </section>
 
+
+
+
+
+<!-- DATA ENGINEERING -->
+
+
 <section class="section">
+
 <div class="container">
 
 <h2 class="section-title">
@@ -541,32 +283,45 @@ Data Engineering Systems
 </h2>
 
 <p class="subtitle">
-Building scalable pipelines,
-analytics platforms and cloud-ready architectures.
+Building reliable pipelines, analytics platforms
+and scalable data architectures.
 </p>
+
 
 
 <div class="grid">
 
 
-<div class="box">
+<div class="case">
 
-<h3>E-Commerce Data Platform</h3>
+<h3>
+E-Commerce Data Platform
+</h3>
+
+<p class="description">
+Modern analytics platform transforming raw ecommerce
+data into business intelligence.
+</p>
+
 
 <div class="diagram">
+
+<img src="assets/diagrams/data-platform.png"
+alt="Data Platform Architecture">
+
+<p>
 PLACEHOLDER:
+ETL Pipeline Architecture
+</p>
 
-Data Pipeline Diagram
-
-<br>
-Source → ETL → Warehouse → Analytics
 </div>
 
+
 <div class="tags">
+<span>Python</span>
 <span>SQL</span>
 <span>Airflow</span>
-<span>Docker</span>
-<span>Python</span>
+<span>Warehouse</span>
 <span>Cloud</span>
 </div>
 
@@ -574,23 +329,35 @@ Source → ETL → Warehouse → Analytics
 
 
 
-<div class="box">
+<div class="case">
 
-<h3>Real-Time Customer Intelligence</h3>
+<h3>
+Real-Time Customer Intelligence
+</h3>
+
+<p class="description">
+Streaming data platform processing customer events
+for analytics and personalization.
+</p>
+
 
 <div class="diagram">
+
+<img src="assets/diagrams/streaming-platform.png"
+alt="Streaming Architecture">
+
+<p>
 PLACEHOLDER:
+Real-Time Data Architecture
+</p>
 
-Streaming Architecture
-
-<br>
-Kafka → Processing → Database → Dashboard
 </div>
+
 
 <div class="tags">
 <span>Kafka</span>
 <span>Python</span>
-<span>Data Engineering</span>
+<span>SQL</span>
 <span>Cloud</span>
 </div>
 
@@ -598,13 +365,15 @@ Kafka → Processing → Database → Dashboard
 
 
 </div>
+
 </div>
+
 </section>
 
-
-
+ <!-- ENGINEERING APPROACH -->
 
 <section class="section">
+
 <div class="container">
 
 <h2 class="section-title">
@@ -612,8 +381,121 @@ Engineering Approach
 </h2>
 
 <p class="subtitle">
-How I design reliable AI and data systems.
+How I design reliable AI systems and scalable data platforms.
 </p>
+
+
+
+<div class="case">
+
+<h3>
+Production AI System Lifecycle
+</h3>
+
+
+<div class="diagram">
+
+<img src="assets/diagrams/ai-system-lifecycle.png"
+alt="AI System Lifecycle">
+
+<p>
+PLACEHOLDER:
+Data Sources → Processing → AI Layer → Application → Monitoring
+</p>
+
+</div>
+
+
+
+<div class="grid">
+
+<div class="box">
+
+<h4>
+Reliable AI Systems
+</h4>
+
+<p>
+Structured outputs, validation schemas,
+retrieval pipelines and evidence-based
+generation to reduce hallucinations.
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h4>
+Data Driven Architecture
+</h4>
+
+<p>
+Building pipelines that transform raw
+information into reliable business intelligence.
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h4>
+Production Engineering
+</h4>
+
+<p>
+API design, databases, containers,
+deployment workflows and scalable systems.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ARCHITECTURE OVERVIEW -->
+
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+System Architecture
+</h2>
+
+
+<p class="subtitle">
+Examples of how AI and data engineering components
+connect in production environments.
+</p>
+
+
+
+<div class="case">
+
+
+<div class="diagram">
+
+<img src="assets/diagrams/full-system-architecture.png"
+alt="Full System Architecture">
+
+<p>
+PLACEHOLDER:
+Complete AI + Data Engineering Architecture
+</p>
+
+</div>
 
 
 
@@ -622,12 +504,15 @@ How I design reliable AI and data systems.
 
 <div class="box">
 
-<h4>Reliable AI Systems</h4>
+<h4>
+Data Layer
+</h4>
 
 <p>
-Using structured outputs,
-validation schemas and evidence-based
-generation to reduce AI hallucinations.
+Databases<br>
+Data warehouses<br>
+Vector databases<br>
+Storage systems
 </p>
 
 </div>
@@ -636,12 +521,15 @@ generation to reduce AI hallucinations.
 
 <div class="box">
 
-<h4>Production Architecture</h4>
+<h4>
+AI Layer
+</h4>
 
 <p>
-Building scalable applications with
-modern backend systems, databases
-and cloud-ready infrastructure.
+LLMs<br>
+RAG pipelines<br>
+AI agents<br>
+Machine learning workflows
 </p>
 
 </div>
@@ -650,11 +538,15 @@ and cloud-ready infrastructure.
 
 <div class="box">
 
-<h4>Data Driven Development</h4>
+<h4>
+Application Layer
+</h4>
 
 <p>
-Creating pipelines that transform
-raw data into useful business intelligence.
+APIs<br>
+Dashboards<br>
+Automation tools<br>
+Business applications
 </p>
 
 </div>
@@ -662,11 +554,18 @@ raw data into useful business intelligence.
 
 </div>
 
+
 </div>
+
+</div>
+
 </section>
 
 
 
+
+
+<!-- TECH STACK -->
 
 
 <section class="section">
@@ -678,18 +577,28 @@ Technical Stack
 </h2>
 
 
+<p class="subtitle">
+Tools and technologies used to build modern
+AI and data-driven applications.
+</p>
+
+
+
 <div class="grid">
 
 
 <div class="box">
 
-<h4>AI & Machine Learning</h4>
+<h4>
+AI Engineering
+</h4>
 
 <p>
-OpenAI<br>
+OpenAI API<br>
 LangChain<br>
 RAG Systems<br>
 AI Agents<br>
+Prompt Engineering<br>
 Vector Databases
 </p>
 
@@ -699,14 +608,17 @@ Vector Databases
 
 <div class="box">
 
-<h4>Backend Engineering</h4>
+<h4>
+Data Engineering
+</h4>
 
 <p>
 Python<br>
-FastAPI<br>
-PostgreSQL<br>
-Docker<br>
-REST APIs
+SQL<br>
+ETL Pipelines<br>
+Apache Airflow<br>
+Apache Kafka<br>
+Data Warehousing
 </p>
 
 </div>
@@ -715,35 +627,43 @@ REST APIs
 
 <div class="box">
 
-<h4>Frontend</h4>
+<h4>
+Backend Engineering
+</h4>
+
+<p>
+FastAPI<br>
+REST APIs<br>
+PostgreSQL<br>
+Docker<br>
+Authentication<br>
+Cloud Deployment
+</p>
+
+</div>
+
+
+
+<div class="box">
+
+<h4>
+Frontend Engineering
+</h4>
 
 <p>
 React<br>
 Next.js<br>
 TypeScript<br>
-Tailwind CSS
+Tailwind CSS<br>
+Data Visualization
 </p>
 
 </div>
 
 
 
-<div class="box">
-
-<h4>Data Engineering</h4>
-
-<p>
-SQL<br>
-ETL Pipelines<br>
-Airflow<br>
-Kafka<br>
-Cloud Architecture
-</p>
-
 </div>
 
-
-</div>
 
 </div>
 
@@ -753,10 +673,105 @@ Cloud Architecture
 
 
 
+<!-- DEVELOPMENT PROCESS -->
+
 
 <section class="section">
 
 <div class="container">
+
+
+<h2 class="section-title">
+Development Process
+</h2>
+
+
+<p class="subtitle">
+From idea to production-ready intelligent systems.
+</p>
+
+
+
+<div class="grid">
+
+
+<div class="box">
+
+<h4>
+1. Data Collection
+</h4>
+
+<p>
+Gathering structured and unstructured
+data from reliable sources.
+</p>
+
+</div>
+
+
+
+<div class="box">
+
+<h4>
+2. Data Processing
+</h4>
+
+<p>
+Cleaning, transforming and preparing
+data pipelines.
+</p>
+
+</div>
+
+
+
+<div class="box">
+
+<h4>
+3. AI Engineering
+</h4>
+
+<p>
+Building RAG systems, AI agents
+and intelligent workflows.
+</p>
+
+</div>
+
+
+
+<div class="box">
+
+<h4>
+4. Production
+</h4>
+
+<p>
+Deploying scalable applications
+with monitoring and reliability.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- EDUCATION -->
+
+
+<section class="section">
+
+<div class="container">
+
 
 <h2 class="section-title">
 Education & Journey
@@ -766,22 +781,29 @@ Education & Journey
 
 <div class="case">
 
+
 <h3>
 Bachelor of Computer Science - Artificial Intelligence
 </h3>
 
+
 <p class="description">
 Computer science foundation focused on
-artificial intelligence, software engineering
-and intelligent systems.
+artificial intelligence, software engineering,
+machine learning and intelligent systems.
 </p>
 
 
+
 <div class="tags">
+
 <span>Artificial Intelligence</span>
 <span>Machine Learning</span>
 <span>Software Engineering</span>
+<span>Algorithms</span>
+
 </div>
+
 
 </div>
 
@@ -791,9 +813,11 @@ and intelligent systems.
 
 <div class="case">
 
+
 <h3>
-AI → Data Engineering Journey
+AI Engineer → Data Engineer Journey
 </h3>
+
 
 
 <div class="grid">
@@ -801,11 +825,13 @@ AI → Data Engineering Journey
 
 <div class="box">
 
-<h4>2024</h4>
+<h4>
+2024
+</h4>
 
 <p>
-AI foundations,
-computer science and software engineering.
+Computer science foundation,
+AI concepts and software engineering.
 </p>
 
 </div>
@@ -814,7 +840,9 @@ computer science and software engineering.
 
 <div class="box">
 
-<h4>2025</h4>
+<h4>
+2025
+</h4>
 
 <p>
 Production AI systems,
@@ -827,11 +855,13 @@ RAG applications and SaaS platforms.
 
 <div class="box">
 
-<h4>2026</h4>
+<h4>
+2026
+</h4>
 
 <p>
-AI + Data Engineering,
-pipelines and cloud architecture.
+Data engineering,
+cloud architecture and scalable platforms.
 </p>
 
 </div>
@@ -852,27 +882,31 @@ pipelines and cloud architecture.
 
 
 
+<!-- CONTACT -->
+
+
 <section class="section" id="contact">
 
 <div class="container">
 
-<div class="case" style="text-align:center">
+
+<div class="case contact">
 
 
-<h2 class="section-title">
-Let's Build Something Intelligent
+<h2>
+Let's Build Intelligent Systems
 </h2>
 
 
-<p class="description" style="margin:auto">
-Open for AI Engineer,
-Data Engineer roles,
+<p class="description">
+Open for AI Engineer, Data Engineer roles,
 internships and collaborations.
 </p>
 
 
 
 <div class="buttons">
+
 
 <a class="btn primary"
 href="mailto:viktor.sz.hire@gmail.com">
@@ -885,16 +919,18 @@ href="https://github.com/viktor-ai-dev">
 GitHub
 </a>
 
+
 </div>
 
 
 </div>
+
 
 </div>
 
 </section>
 
 
+
 </body>
 </html>
-  
