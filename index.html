@@ -3,310 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Viktor | AI Systems Engineer</title>
-
+<title>Viktor | AI Systems & Data Engineering</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
-:root {
-    --bg:#050816;
-    --card:rgba(255,255,255,0.04);
-    --stroke:rgba(255,255,255,0.08);
-    --text:#e5e7eb;
-    --muted:#9ca3af;
-    --accent:#6366f1;
+:root{
+--bg:#050816;--card:rgba(255,255,255,.04);--stroke:rgba(255,255,255,.08);
+--text:#e5e7eb;--muted:#9ca3af;--accent:#6366f1;
 }
-
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-    font-family:Inter,sans-serif;
-    background:radial-gradient(circle at top,#1a1f3a,var(--bg));
-    color:var(--text);
-    overflow-x:hidden;
-}
-
-/* NAV */
-nav{
-    position:fixed;
-    width:100%;
-    backdrop-filter:blur(20px);
-    background:rgba(5,8,22,0.6);
-    border-bottom:1px solid var(--stroke);
-    z-index:10;
-}
-
-.nav-inner{
-    max-width:1100px;
-    margin:auto;
-    padding:12px 20px;
-    display:flex;
-    justify-content:space-between;
-    font-size:14px;
-}
-
-/* HERO */
-.hero{
-    text-align:center;
-    padding:120px 20px 60px;
-    max-width:900px;
-    margin:auto;
-}
-
-.hero h1{
-    font-size:54px;
-    line-height:1.05;
-    letter-spacing:-1px;
-    background:linear-gradient(90deg,#fff,#a5b4fc);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.hero p{
-    margin-top:16px;
-    color:var(--muted);
-    font-size:18px;
-}
-
-/* BUTTON */
-.btn{
-    display:inline-block;
-    margin-top:18px;
-    padding:10px 16px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:500;
-    font-size:14px;
-}
-
-.primary{background:var(--accent);color:white;}
-.secondary{border:1px solid var(--stroke);color:white;margin-left:8px;}
-
-/* SECTION */
-.section{
-    max-width:1100px;
-    margin:auto;
-    padding:70px 20px;
-}
-
-h2{
-    font-size:22px;
-    margin-bottom:18px;
-    text-align:center;
-}
-
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(420px, 1fr));
-    gap:18px;
-}
-
-/* CARD */
-.card{
-    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-    border:1px solid var(--stroke);
-    border-radius:16px;
-    padding:22px;
-    backdrop-filter:blur(20px);
-    transition:0.25s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    border-color:rgba(99,102,241,0.35);
-}
-
-.small{
-    color:var(--muted);
-    font-size:13px;
-    margin-bottom:10px;
-}
-
-ul{padding-left:18px;margin-top:10px;}
-li{margin-bottom:5px;font-size:14px;color:#d1d5db;}
-
-.metrics{
-    margin-top:12px;
-    padding:10px;
-    border-radius:10px;
-    background:rgba(99,102,241,0.12);
-    border:1px solid rgba(99,102,241,0.2);
-    font-size:13px;
-}
-
-.tag{
-    display:inline-block;
-    font-size:11px;
-    padding:5px 8px;
-    border-radius:999px;
-    background:rgba(99,102,241,0.15);
-    margin:6px 4px 0 0;
-}
-
-img,iframe{
-    width:100%;
-    border-radius:12px;
-    margin-top:12px;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:radial-gradient(circle at top,#1a1f3a,var(--bg));color:var(--text)}
+nav{position:fixed;top:0;width:100%;backdrop-filter:blur(20px);background:rgba(5,8,22,.65);border-bottom:1px solid var(--stroke);z-index:10}
+.nav-inner{max-width:1150px;margin:auto;padding:14px 20px;display:flex;justify-content:space-between}
+.hero{text-align:center;padding:130px 20px 70px;max-width:900px;margin:auto}
+.hero h1{font-size:58px;line-height:1.05;background:linear-gradient(90deg,#fff,#a5b4fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{margin-top:18px;color:var(--muted);font-size:18px}
+.btn{display:inline-block;margin-top:18px;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px}
+.primary{background:var(--accent);color:#fff}
+.secondary{border:1px solid var(--stroke);color:#fff;margin-left:8px}
+.section{max-width:1150px;margin:auto;padding:70px 20px}
+h2{text-align:center;margin-bottom:14px;font-size:28px}
+.subtitle{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:20px}
+.card{background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid var(--stroke);border-radius:18px;padding:24px}
+.card:hover{border-color:rgba(99,102,241,.35)}
+.small{color:var(--muted);margin:10px 0}
+ul{padding-left:18px;margin-top:12px}
+li{margin-bottom:6px}
+.metrics{margin-top:14px;padding:12px;border-radius:10px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.2)}
+.tag,.badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;margin:6px 6px 0 0}
+.tag{background:rgba(99,102,241,.15)}
+.badge{background:#f59e0b22;border:1px solid #f59e0b55}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.skill{background:var(--card);border:1px solid var(--stroke);padding:18px;border-radius:16px}
+.footer-card{text-align:center;max-width:750px;margin:auto;padding:30px;border-radius:18px;background:linear-gradient(135deg, rgba(99,102,241,.12), rgba(255,255,255,.03));border:1px solid rgba(99,102,241,.25)}
 </style>
 </head>
-
 <body>
 
 <nav>
 <div class="nav-inner">
-<strong>Viktor Systems</strong>
-<div>Autonomous AI Engineer</div>
+<strong>Viktor Sarafraz</strong>
+<div>AI Systems Engineer • Data Engineer</div>
 </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-<h1>Building Autonomous AI Systems That Replace Entire Workflows</h1>
-
-<p>
-I design and ship production-grade AI SaaS products that automate marketing, support, and content creation using modern AI systems.
-</p>
-
+<section class="hero">
+<h1>AI Systems & Data Engineering Portfolio</h1>
+<p>I build production-grade AI applications, autonomous systems, and modern data platforms that transform business data into intelligent decisions.</p>
 <a href="https://github.com/viktor-ai-dev" class="btn primary">GitHub</a>
 <a href="#contact" class="btn secondary">Contact</a>
-</div>
+</section>
 
-<!-- FLAGSHIP -->
-<div class="section">
-
-<h2>Flagship Systems</h2>
+<section class="section">
+<h2>Featured Projects</h2>
+<p class="subtitle">Flagship AI systems focused on automation, intelligence, and business impact.</p>
 
 <div class="grid">
 
-<!-- FLAGSHIP 1 -->
 <div class="card">
-<h3>AdCraft AI – Autonomous Ad Generation SaaS</h3>
-
-<p class="small">
-Generates full high-converting ecommerce ad campaigns in seconds.
-</p>
-
+<h3>StorePulse AI</h3>
+<p class="small">Autonomous ecommerce intelligence platform that analyzes stores, benchmarks competitors, and generates AI-powered optimization roadmaps.</p>
 <ul>
-<li>AI-generated creatives, headlines & ad copy</li>
-<li>Multi-style generation (luxury, minimal, bold, tech, viral)</li>
-<li>Conversion-focused prompting engine</li>
-<li>SaaS with auth & credit system</li>
-<li>Real-world ecommerce workflow integration</li>
+<li>AI Store Audits</li>
+<li>Competitor Intelligence</li>
+<li>Revenue Optimization</li>
+<li>AI Shopping Analysis</li>
+<li>Autonomous Recommendations</li>
 </ul>
-
 <div class="metrics">
-↑ 10-second full ad generation<br>
-↑ Replaces manual marketing teams<br>
-↑ Production SaaS architecture
+Production-grade SaaS • FastAPI Backend • AI Analytics Engine
 </div>
-
 <div>
-<span class="tag">Next.js</span>
-<span class="tag">OpenAI API</span>
-<span class="tag">Prisma</span>
-<span class="tag">Clerk</span>
-</div>
-
-<iframe height="360"
-src="https://www.youtube.com/embed/Y5MGQSWhg70"
-allowfullscreen></iframe>
-
-<div style="margin-top:10px;">
-<a href="https://github.com/viktor-ai-dev/AdCraft" class="btn primary">GitHub</a>
-<a href="https://youtu.be/Y5MGQSWhg70" class="btn secondary">YouTube</a>
-</div>
-
-</div>
-
-<!-- FLAGSHIP 2 -->
-<div class="card">
-<h3>Autonomous E-commerce Agent</h3>
-
-<p class="small">
-AI agent that audits and improves ecommerce stores automatically.
-</p>
-
-<ul>
-<li>Website scraping & analysis</li>
-<li>AI conversion diagnosis</li>
-<li>Auto copy improvement engine</li>
-<li>Before/after scoring system</li>
-<li>Iterative optimization loop</li>
-</ul>
-
-<div class="metrics">
-↑ Automated CRO optimization<br>
-↑ +27 average score improvement<br>
-↑ Autonomous marketing system
-</div>
-
-<div>
-<span class="tag">FastAPI</span>
 <span class="tag">Python</span>
-<span class="tag">OpenAI API</span>
-<span class="tag">AI Agents</span>
+<span class="tag">FastAPI</span>
+<span class="tag">OpenAI</span>
+<span class="tag">Playwright</span>
+<span class="tag">PostgreSQL</span>
+<span class="tag">Next.js</span>
 </div>
-
-<iframe height="360"
-src="https://www.youtube.com/embed/n-ZVVXpPOWE"
-allowfullscreen></iframe>
-
-<div style="margin-top:10px;">
-<a href="https://github.com/viktor-ai-dev/autonomous-ecommerce-agent" class="btn primary">GitHub</a>
-<a href="https://youtu.be/n-ZVVXpPOWE" class="btn secondary">YouTube</a>
-</div>
-
-</div>
-    
+<div>
+<a href="https://github.com/viktor-ai-dev/storepulse-ai" class="btn primary">GitHub</a>
+<a href="#" class="btn secondary">Demo Video (Coming Soon)</a>
 </div>
 </div>
 
-<div style="text-align:center; margin-top:30px;">
-  <a href="ai-systems.html" class="btn secondary">
-    View All AI Systems →
-  </a>
+<div class="card">
+<h3>AI Customer Support RAG</h3>
+<p class="small">Production-ready retrieval-augmented customer support assistant powered by company documentation and knowledge bases.</p>
+<ul>
+<li>RAG Architecture</li>
+<li>Vector Search</li>
+<li>Knowledge Base Ingestion</li>
+<li>Source-Grounded Answers</li>
+<li>Multi-Document Retrieval</li>
+</ul>
+<div class="metrics">
+LangChain • ChromaDB • FastAPI • OpenAI
+</div>
+<div>
+<span class="tag">Python</span>
+<span class="tag">LangChain</span>
+<span class="tag">ChromaDB</span>
+<span class="tag">OpenAI</span>
+<span class="tag">FastAPI</span>
+</div>
+<div>
+<a href="https://github.com/viktor-ai-dev/ai-customer-support" class="btn primary">GitHub</a>
+<a href="#" class="btn secondary">Demo Video (Coming Soon)</a>
+</div>
 </div>
 
-<!-- CONTACT -->
-<div class="section" id="contact">
+</div>
+</section>
 
-<h2>Let’s Build Something Intelligent</h2>
+<section class="section">
+<h2>Data Engineering Projects</h2>
+<p class="subtitle">Upcoming portfolio projects focused on modern data engineering and analytics.</p>
 
-<div style="
-max-width:700px;
-margin:30px auto 0 auto;
-text-align:center;
-padding:30px;
-border-radius:18px;
-background:linear-gradient(135deg, rgba(99,102,241,0.12), rgba(255,255,255,0.03));
-border:1px solid rgba(99,102,241,0.25);
-backdrop-filter: blur(20px);
-">
-
-<p style="color:var(--muted); font-size:15px; line-height:1.6;">
-I’m currently open to <b>internships, junior roles, and collaborations</b> in AI systems, automation, and SaaS products.<br><br>
-If you’re building something ambitious — let’s talk.
-</p>
-
-<div style="margin-top:18px; font-size:14px;">
-📩 <span style="color:white;">viktor.sz.hire@gmail.com</span>
+<div class="grid">
+<div class="card">
+<span class="badge">COMING SOON</span>
+<h3 style="margin-top:12px">E-Commerce Data Platform</h3>
+<p class="small">End-to-end analytics platform for ecommerce data using modern data engineering practices.</p>
+<div>
+<span class="tag">Python</span>
+<span class="tag">SQL</span>
+<span class="tag">PostgreSQL</span>
+<span class="tag">Airflow</span>
+<span class="tag">Docker</span>
+</div>
 </div>
 
-<div style="margin-top:18px;">
+<div class="card">
+<span class="badge">COMING SOON</span>
+<h3 style="margin-top:12px">Real-Time Customer Intelligence Platform</h3>
+<p class="small">Streaming analytics platform for customer events and business intelligence.</p>
+<div>
+<span class="tag">Python</span>
+<span class="tag">Kafka</span>
+<span class="tag">PostgreSQL</span>
+<span class="tag">Docker</span>
+<span class="tag">Cloud</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Technical Stack</h2>
+<div class="skills">
+<div class="skill"><h3>AI & ML</h3><p>OpenAI, LangChain, RAG, Vector Databases, AI Agents</p></div>
+<div class="skill"><h3>Frontend</h3><p>Next.js, React, TypeScript, Tailwind CSS</p></div>
+<div class="skill"><h3>Backend</h3><p>Python, FastAPI, Node.js, PostgreSQL</p></div>
+<div class="skill"><h3>Data Engineering</h3><p>SQL, Airflow, Kafka, ETL, Docker</p></div>
+</div>
+</section>
+
+<section class="section" style="text-align:center">
+<h2>Other AI Systems</h2>
+<p class="subtitle">Explore additional AI projects including AI Content Engine and AI Marketing Generator.</p>
+<a href="ai-systems.html" class="btn secondary">View All AI Systems →</a>
+</section>
+
+<section class="section" id="contact">
+<h2>Let's Build Something Intelligent</h2>
+<div class="footer-card">
+<p>I’m currently open to internships, junior roles, and collaborations in AI systems, data engineering, automation, and SaaS products.</p>
+<div style="margin-top:18px">📩 viktor.sz.hire@gmail.com</div>
+<div>
 <a href="mailto:viktor.sz.hire@gmail.com" class="btn primary">Email Me</a>
 <a href="https://github.com/viktor-ai-dev" class="btn secondary">GitHub</a>
 </div>
-
 </div>
-
-<p style="text-align:center; margin-top:25px; font-size:12px; color:var(--muted);">
-Built with Next.js • OpenAI • FastAPI • Prisma • Clerk
+<p style="text-align:center;margin-top:25px;color:#9ca3af;font-size:12px">
+AI Systems • Data Engineering • FastAPI • Next.js • PostgreSQL • OpenAI • Docker
 </p>
-
-</div>
+</section>
 
 </body>
 </html>
