@@ -2,42 +2,237 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Viktor | AI Systems & Data Engineering</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root{
---bg:#050816;--card:rgba(255,255,255,.04);--stroke:rgba(255,255,255,.08);
---text:#e5e7eb;--muted:#9ca3af;--accent:#6366f1;
+--bg:#030712;
+--card:rgba(255,255,255,.05);
+--stroke:rgba(255,255,255,.1);
+--text:#f9fafb;
+--muted:#9ca3af;
+--accent:#6366f1;
+--accent2:#22d3ee
 }
+
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:radial-gradient(circle at top,#1a1f3a,var(--bg));color:var(--text)}
-nav{position:fixed;top:0;width:100%;backdrop-filter:blur(20px);background:rgba(5,8,22,.65);border-bottom:1px solid var(--stroke);z-index:10}
-.nav-inner{max-width:1150px;margin:auto;padding:14px 20px;display:flex;justify-content:space-between}
-.hero{text-align:center;padding:130px 20px 70px;max-width:900px;margin:auto}
-.hero h1{font-size:58px;line-height:1.05;background:linear-gradient(90deg,#fff,#a5b4fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{margin-top:18px;color:var(--muted);font-size:18px}
-.btn{display:inline-block;margin-top:18px;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px}
-.primary{background:var(--accent);color:#fff}
-.secondary{border:1px solid var(--stroke);color:#fff;margin-left:8px}
-.section{max-width:1150px;margin:auto;padding:70px 20px}
-h2{text-align:center;margin-bottom:14px;font-size:28px}
-.subtitle{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:20px}
-.card{background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid var(--stroke);border-radius:18px;padding:24px}
-.card:hover{border-color:rgba(99,102,241,.35)}
-.small{color:var(--muted);margin:10px 0}
-ul{padding-left:18px;margin-top:12px}
-li{margin-bottom:6px}
-.metrics{margin-top:14px;padding:12px;border-radius:10px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.2)}
-.tag,.badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;margin:6px 6px 0 0}
-.tag{background:rgba(99,102,241,.15)}
-.badge{background:#f59e0b22;border:1px solid #f59e0b55}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-.skill{background:var(--card);border:1px solid var(--stroke);padding:18px;border-radius:16px}
-.footer-card{text-align:center;max-width:750px;margin:auto;padding:30px;border-radius:18px;background:linear-gradient(135deg, rgba(99,102,241,.12), rgba(255,255,255,.03));border:1px solid rgba(99,102,241,.25)}
+
+body{
+font-family:Inter,sans-serif;
+background:
+radial-gradient(circle at top,#172554,transparent 35%),
+radial-gradient(circle at bottom,#111827,transparent 40%),
+var(--bg);
+color:var(--text)
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+backdrop-filter:blur(20px);
+background:rgba(3,7,18,.7);
+border-bottom:1px solid var(--stroke);
+z-index:20
+}
+
+.nav-inner{
+max-width:1150px;
+margin:auto;
+padding:16px 20px;
+display:flex;
+justify-content:space-between;
+font-size:14px
+}
+
+.hero{
+max-width:950px;
+margin:auto;
+padding:150px 20px 90px;
+text-align:center
+}
+
+.badge{
+display:inline-block;
+padding:8px 14px;
+border-radius:999px;
+background:rgba(99,102,241,.15);
+border:1px solid rgba(99,102,241,.3);
+font-size:13px;
+margin-bottom:25px
+}
+
+.hero h1{
+font-size:64px;
+line-height:1.05;
+background:linear-gradient(90deg,#fff,#a5b4fc,#22d3ee);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent
+}
+
+.hero p{
+margin-top:25px;
+font-size:20px;
+color:var(--muted)
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 20px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+font-size:14px;
+transition:.3s
+}
+
+.primary{
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+color:white
+}
+
+.secondary{
+border:1px solid var(--stroke);
+color:white;
+margin-left:10px
+}
+
+.btn:hover{transform:translateY(-3px)}
+
+.section{
+max-width:1150px;
+margin:auto;
+padding:80px 20px
+}
+
+h2{
+text-align:center;
+font-size:32px;
+margin-bottom:15px
+}
+
+.subtitle{
+text-align:center;
+color:var(--muted);
+max-width:700px;
+margin:auto auto 40px
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+gap:25px
+}
+
+.card{
+background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+border:1px solid var(--stroke);
+border-radius:22px;
+padding:25px;
+transition:.3s
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 70px rgba(99,102,241,.15)
+}
+
+.project-image{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:20px;
+border:1px solid var(--stroke);
+background:#111827
+}
+
+.small{
+color:var(--muted);
+margin-top:12px;
+line-height:1.6
+}
+
+ul{
+margin-top:15px;
+padding-left:20px
+}
+
+li{margin-bottom:8px}
+
+.metrics{
+margin-top:20px;
+padding:14px;
+border-radius:12px;
+background:rgba(99,102,241,.12)
+}
+
+.tag{
+display:inline-block;
+padding:6px 12px;
+margin:15px 5px 0 0;
+border-radius:999px;
+font-size:12px;
+background:rgba(99,102,241,.15)
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px
+}
+
+.skill{
+padding:22px;
+border-radius:18px;
+background:var(--card);
+border:1px solid var(--stroke)
+}
+
+.timeline{
+display:flex;
+flex-direction:column;
+gap:20px
+}
+
+.timeline-item{
+padding:25px;
+border-left:3px solid var(--accent);
+background:var(--card);
+border-radius:15px
+}
+
+.footer-card{
+text-align:center;
+padding:40px;
+background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(255,255,255,.05));
+border-radius:25px;
+border:1px solid var(--stroke)
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px
+}
+
+.stat{
+padding:25px;
+text-align:center;
+border-radius:20px;
+background:var(--card);
+border:1px solid var(--stroke)
+}
+
+.stat h3{font-size:30px}
 </style>
+
 </head>
+
 <body>
 
 <nav>
@@ -47,138 +242,366 @@ li{margin-bottom:6px}
 </div>
 </nav>
 
-<section class="hero">
-<h1>AI Systems & Data Engineering Portfolio</h1>
-<p>I build production-grade AI applications, autonomous systems, and modern data platforms that transform business data into intelligent decisions.</p>
-<a href="https://github.com/viktor-ai-dev" class="btn primary">GitHub</a>
-<a href="#contact" class="btn secondary">Contact</a>
-</section>
 
+<section class="hero">
+
+<div class="badge">
+AI Engineer • Data Engineer • SaaS Builder
+</div>
+
+<h1>
+AI Systems & Data Engineering Portfolio
+</h1>
+
+<p>
+Building production-grade AI applications,
+autonomous systems and modern data platforms.
+</p>
+
+<a class="btn primary" href="https://github.com/viktor-ai-dev">
+GitHub
+</a>
+
+<a class="btn secondary" href="#contact">
+Contact
+</a>
+
+</section>
 <section class="section">
+
 <h2>Featured Projects</h2>
-<p class="subtitle">Flagship AI systems focused on automation, intelligence, and business impact.</p>
+
+<p class="subtitle">
+Production-focused AI systems and intelligent platforms.
+</p>
 
 <div class="grid">
 
 <div class="card">
+
+<img class="project-image" src="assets/storepulse.png" alt="StorePulse AI">
+
 <h3>StorePulse AI</h3>
-<p class="small">Autonomous ecommerce intelligence platform that analyzes stores, benchmarks competitors, and generates AI-powered optimization roadmaps.</p>
+
+<p class="small">
+Autonomous ecommerce intelligence platform that analyzes stores,
+competitors and generates AI optimization strategies.
+</p>
+
 <ul>
 <li>AI Store Audits</li>
 <li>Competitor Intelligence</li>
 <li>Revenue Optimization</li>
-<li>AI Shopping Analysis</li>
-<li>Autonomous Recommendations</li>
+<li>AI Recommendations</li>
 </ul>
+
 <div class="metrics">
-Production-grade SaaS • FastAPI Backend • AI Analytics Engine
+FastAPI • Next.js • OpenAI • PostgreSQL
 </div>
-<div>
+
 <span class="tag">Python</span>
 <span class="tag">FastAPI</span>
 <span class="tag">OpenAI</span>
 <span class="tag">Playwright</span>
-<span class="tag">PostgreSQL</span>
 <span class="tag">Next.js</span>
-</div>
-<div>
-<a href="https://github.com/viktor-ai-dev/storepulse-ai" class="btn primary">GitHub</a>
-<a href="#" class="btn secondary">Demo Video (Coming Soon)</a>
-</div>
+
+<br>
+
+<a class="btn primary" href="https://github.com/viktor-ai-dev/storepulse-ai">
+GitHub
+</a>
+
+<a class="btn secondary">
+Demo Coming Soon
+</a>
+
 </div>
 
+
 <div class="card">
+
+<img class="project-image" src="assets/rag.png" alt="RAG System">
+
 <h3>AI Customer Support RAG</h3>
-<p class="small">Production-ready retrieval-augmented customer support assistant powered by company documentation and knowledge bases.</p>
+
+<p class="small">
+Retrieval Augmented Generation system
+for intelligent customer support.
+</p>
+
 <ul>
-<li>RAG Architecture</li>
 <li>Vector Search</li>
-<li>Knowledge Base Ingestion</li>
-<li>Source-Grounded Answers</li>
-<li>Multi-Document Retrieval</li>
+<li>Knowledge Retrieval</li>
+<li>Document Processing</li>
+<li>Grounded AI Answers</li>
 </ul>
+
 <div class="metrics">
 LangChain • ChromaDB • FastAPI • OpenAI
 </div>
-<div>
-<span class="tag">Python</span>
+
+<span class="tag">RAG</span>
 <span class="tag">LangChain</span>
-<span class="tag">ChromaDB</span>
-<span class="tag">OpenAI</span>
-<span class="tag">FastAPI</span>
-</div>
-<div>
-<a href="https://github.com/viktor-ai-dev/ai-customer-support" class="btn primary">GitHub</a>
-<a href="#" class="btn secondary">Demo Video (Coming Soon)</a>
-</div>
+<span class="tag">Python</span>
+
+<br>
+
+<a class="btn primary" href="https://github.com/viktor-ai-dev/ai-customer-support">
+GitHub
+</a>
+
+<a class="btn secondary">
+Demo Coming Soon
+</a>
+
 </div>
 
 </div>
 </section>
 
+
+
 <section class="section">
+
 <h2>Data Engineering Projects</h2>
-<p class="subtitle">Upcoming portfolio projects focused on modern data engineering and analytics.</p>
 
 <div class="grid">
+
 <div class="card">
-<span class="badge">COMING SOON</span>
-<h3 style="margin-top:12px">E-Commerce Data Platform</h3>
-<p class="small">End-to-end analytics platform for ecommerce data using modern data engineering practices.</p>
-<div>
-<span class="tag">Python</span>
+
+<img class="project-image" src="assets/ecommerce-data.png">
+
+<h3>E-Commerce Data Platform</h3>
+
+<p class="small">
+End-to-end analytics platform with pipelines,
+warehouse architecture and business intelligence.
+</p>
+
 <span class="tag">SQL</span>
-<span class="tag">PostgreSQL</span>
 <span class="tag">Airflow</span>
 <span class="tag">Docker</span>
+
 </div>
-</div>
+
 
 <div class="card">
-<span class="badge">COMING SOON</span>
-<h3 style="margin-top:12px">Real-Time Customer Intelligence Platform</h3>
-<p class="small">Streaming analytics platform for customer events and business intelligence.</p>
-<div>
-<span class="tag">Python</span>
+
+<img class="project-image" src="assets/customer-intelligence.png">
+
+<h3>Real-Time Customer Intelligence Platform</h3>
+
+<p class="small">
+Streaming data platform for customer analytics.
+</p>
+
 <span class="tag">Kafka</span>
-<span class="tag">PostgreSQL</span>
-<span class="tag">Docker</span>
+<span class="tag">Python</span>
 <span class="tag">Cloud</span>
+
 </div>
-</div>
+
 </div>
 </section>
+
+
+
 
 <section class="section">
-<h2>Technical Stack</h2>
-<div class="skills">
-<div class="skill"><h3>AI & ML</h3><p>OpenAI, LangChain, RAG, Vector Databases, AI Agents</p></div>
-<div class="skill"><h3>Frontend</h3><p>Next.js, React, TypeScript, Tailwind CSS</p></div>
-<div class="skill"><h3>Backend</h3><p>Python, FastAPI, Node.js, PostgreSQL</p></div>
-<div class="skill"><h3>Data Engineering</h3><p>SQL, Airflow, Kafka, ETL, Docker</p></div>
+
+<h2>GitHub Engineering Profile</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>AI</h3>
+<p>Production AI Systems</p>
 </div>
+
+<div class="stat">
+<h3>Python</h3>
+<p>Backend & ML</p>
+</div>
+
+<div class="stat">
+<h3>Data</h3>
+<p>ETL & Pipelines</p>
+</div>
+
+<div class="stat">
+<h3>Cloud</h3>
+<p>Modern Architecture</p>
+</div>
+
+</div>
+
 </section>
 
-<section class="section" style="text-align:center">
-<h2>Other AI Systems</h2>
-<p class="subtitle">Explore additional AI projects including AI Content Engine and AI Marketing Generator.</p>
-<a href="ai-systems.html" class="btn secondary">View All AI Systems →</a>
+
+
+
+<section class="section">
+
+<h2>Education</h2>
+
+<div class="card">
+
+<h3>
+Bachelor of Computer Science - Artificial Intelligence
+</h3>
+
+<p class="small">
+Computer science foundation focused on AI,
+software engineering and intelligent systems.
+</p>
+
+<span class="tag">Artificial Intelligence</span>
+<span class="tag">Machine Learning</span>
+<span class="tag">Software Engineering</span>
+
+</div>
+
 </section>
+
+
+
+
+<section class="section">
+
+<h2>AI → Data Engineering Journey</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>2024 — AI Foundations</h3>
+
+<p class="small">
+Computer Science, AI concepts and software engineering.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>2025 — Production AI Systems</h3>
+
+<p class="small">
+Building RAG applications, AI agents and SaaS platforms.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>2026 — AI + Data Engineering</h3>
+
+<p class="small">
+Expanding into ETL pipelines,
+data platforms and cloud architecture.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="section">
+
+<h2>Technical Stack</h2>
+
+<div class="skills">
+
+
+<div class="skill">
+
+<h3>AI & ML</h3>
+
+<p>
+OpenAI, LangChain, RAG,
+Agents, Vector Databases
+</p>
+
+</div>
+
+
+<div class="skill">
+
+<h3>Backend</h3>
+
+<p>
+Python, FastAPI,
+PostgreSQL, Docker
+</p>
+
+</div>
+
+
+<div class="skill">
+
+<h3>Frontend</h3>
+
+<p>
+React, Next.js,
+TypeScript, Tailwind
+</p>
+
+</div>
+
+
+<div class="skill">
+
+<h3>Data Engineering</h3>
+
+<p>
+SQL, Airflow,
+Kafka, ETL
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
 
 <section class="section" id="contact">
-<h2>Let's Build Something Intelligent</h2>
+
 <div class="footer-card">
-<p>I’m currently open to internships, junior roles, and collaborations in AI systems, data engineering, automation, and SaaS products.</p>
-<div style="margin-top:18px">📩 viktor.sz.hire@gmail.com</div>
-<div>
-<a href="mailto:viktor.sz.hire@gmail.com" class="btn primary">Email Me</a>
-<a href="https://github.com/viktor-ai-dev" class="btn secondary">GitHub</a>
-</div>
-</div>
-<p style="text-align:center;margin-top:25px;color:#9ca3af;font-size:12px">
-AI Systems • Data Engineering • FastAPI • Next.js • PostgreSQL • OpenAI • Docker
+
+<h2>
+Let's Build Something Intelligent
+</h2>
+
+<p>
+Open for AI Engineer, Data Engineer roles,
+internships and collaborations.
 </p>
+
+
+<a class="btn primary" href="mailto:viktor.sz.hire@gmail.com">
+Email Me
+</a>
+
+
+<a class="btn secondary" href="https://github.com/viktor-ai-dev">
+GitHub
+</a>
+
+
+</div>
+
 </section>
+
 
 </body>
 </html>
