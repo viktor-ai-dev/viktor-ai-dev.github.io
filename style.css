@@ -419,3 +419,45 @@ font-size:14px;
 }
 
 
+
+.screenshot-carousel{
+
+display:flex;
+gap:20px;
+
+overflow-x:auto;
+
+scroll-snap-type:x mandatory;
+
+padding:10px 5px 20px;
+
+}
+
+
+.screenshot-carousel::-webkit-scrollbar{
+height:8px;
+}
+
+
+.screenshot-slide{
+
+flex:0 0 85%;
+
+scroll-snap-align:center;
+
+}
+
+
+.screenshot-slide img{
+
+width:100%;
+
+border-radius:18px;
+
+display:block;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+
+}
+
+
