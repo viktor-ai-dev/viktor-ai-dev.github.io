@@ -379,3 +379,43 @@ color:#94a3b8;
 font-size:14px;
 text-align:center;
 }
+
+.storepulse-gallery{
+margin-top:30px;
+}
+
+
+.storepulse-gallery img{
+width:100%;
+border-radius:18px;
+display:block;
+transition:0.3s ease;
+}
+
+
+.storepulse-gallery img:hover{
+transform:scale(1.02);
+}
+
+
+
+.main-shot{
+margin-bottom:20px;
+}
+
+
+.small-shots{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+
+.storepulse-gallery p{
+text-align:center;
+margin-top:15px;
+color:#94a3b8;
+font-size:14px;
+}
+
+
