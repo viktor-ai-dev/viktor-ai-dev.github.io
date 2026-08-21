@@ -15,110 +15,275 @@ Viktor | AI Engineer & Data Engineer
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
 <style>
 
 /* =========================================================
-DATA PLATFORM CARD SPACING
-Keeps existing design intact while improving readability
-========================================================= */
+   PREMIUM PROJECT CONTENT
+   Keeps existing functionality while improving hierarchy,
+   spacing, readability and recruiter-focused presentation.
+   ========================================================= */
 
 .case {
-margin-bottom: 32px;
+    margin-bottom: 40px;
 }
 
 .case > .grid {
-gap: 24px;
-margin-top: 24px;
+    gap: 24px;
+    margin-top: 24px;
 }
 
 .case > .box {
-margin-top: 24px;
+    margin-top: 24px;
 }
 
 .grid > .box {
-margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .box {
-padding: 24px;
-}
-
-.box + .box {
-margin-top: 0;
+    padding: 24px;
 }
 
 .stack {
-margin-top: 24px;
+    margin-top: 24px;
 }
 
 .diagram {
-margin-top: 28px;
-margin-bottom: 28px;
+    margin-top: 28px;
+    margin-bottom: 28px;
 }
 
 .tags {
-margin-top: 14px;
+    margin-top: 14px;
 }
 
 .buttons {
-margin-top: 28px;
+    margin-top: 28px;
 }
 
-/* Better spacing for nested data-platform sections */
-
 .case .grid + .box {
-margin-top: 28px;
+    margin-top: 28px;
 }
 
 .case .box + .box {
-margin-top: 20px;
-}
-
-/* Keep grid cards evenly spaced */
-
-.grid {
-gap: 24px;
-}
-
-/* Mobile spacing */
-
-@media (max-width: 768px) {
-
-```
-.case {
-    margin-bottom: 24px;
-}
-
-.box {
-    padding: 20px;
-}
-
-.case > .grid {
-    gap: 18px;
-    margin-top: 18px;
-}
-
-.case > .box {
-    margin-top: 18px;
-}
-
-.case .grid + .box {
     margin-top: 20px;
 }
 
-.case .box + .box {
+.grid {
+    gap: 24px;
+}
+
+.box h4 {
+    margin-bottom: 12px;
+}
+
+.box p {
+    line-height: 1.7;
+}
+
+.box code {
+    display: inline-block;
+    margin: 3px 0;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 0.88em;
+    background: rgba(127,127,127,0.10);
+}
+
+.data-flow {
+    text-align: center;
+    line-height: 1.7;
+    padding: 28px 20px;
+}
+
+.data-flow .flow-stage {
+    margin: 8px 0;
+}
+
+.data-flow .flow-title {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.data-flow .flow-meta {
+    font-size: 0.92rem;
+    opacity: 0.78;
+}
+
+.data-flow .arrow {
+    font-size: 1.3rem;
+    opacity: 0.65;
+    margin: 5px 0;
+}
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.metric-card {
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(127,127,127,0.08);
+}
+
+.metric-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.metric-label {
+    font-size: 0.88rem;
+    opacity: 0.72;
+}
+
+.layer-card {
+    height: 100%;
+}
+
+.layer-number {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+.layer-purpose {
+    margin-bottom: 14px;
+}
+
+.model-list {
+    margin-top: 14px;
+}
+
+.model-group-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.62;
     margin-top: 16px;
+    margin-bottom: 8px;
 }
 
-.diagram {
-    margin-top: 22px;
-    margin-bottom: 22px;
+.architecture-note {
+    margin-top: 24px;
+    padding: 20px 22px;
+    border-left: 3px solid currentColor;
+    background: rgba(127,127,127,0.07);
+    border-radius: 0 10px 10px 0;
 }
 
-.buttons {
-    margin-top: 22px;
+.highlight-box {
+    padding: 22px 24px;
+    margin-top: 24px;
+    border-radius: 12px;
+    background: rgba(127,127,127,0.08);
 }
-```
+
+.highlight-box strong {
+    font-weight: 700;
+}
+
+.section-intro {
+    max-width: 860px;
+}
+
+.pipeline-step {
+    margin-bottom: 18px;
+}
+
+.pipeline-step:last-child {
+    margin-bottom: 0;
+}
+
+.pipeline-step strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.project-link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.project-link-row .btn {
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+
+    .metric-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .case {
+        margin-bottom: 28px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .case > .grid {
+        gap: 18px;
+        margin-top: 18px;
+    }
+
+    .case > .box {
+        margin-top: 18px;
+    }
+
+    .case .grid + .box {
+        margin-top: 20px;
+    }
+
+    .case .box + .box {
+        margin-top: 16px;
+    }
+
+    .diagram {
+        margin-top: 22px;
+        margin-bottom: 22px;
+    }
+
+    .buttons {
+        margin-top: 22px;
+    }
+
+    .metric-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .metric-card {
+        padding: 16px;
+    }
+
+    .metric-number {
+        font-size: 1.45rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .metric-grid {
+        grid-template-columns: 1fr;
+    }
 
 }
 
@@ -245,37 +410,37 @@ onclick="moveSlide(-1)">
 <div class="screenshot-carousel" id="storepulseCarousel">
 
 <div class="screenshot-slide">
-<img 
+<img
 src="assets/screenshots/storepulse1.png"
 alt="StorePulse Dashboard">
 </div>
 
 <div class="screenshot-slide">
-<img 
+<img
 src="assets/screenshots/storepulse2.png"
 alt="StorePulse AI Analysis">
 </div>
 
 <div class="screenshot-slide">
-<img 
+<img
 src="assets/screenshots/storepulse3.png"
 alt="StorePulse Report">
 </div>
 
 <div class="screenshot-slide">
-<img 
+<img
 src="assets/screenshots/storepulse4.png"
 alt="StorePulse Report">
 </div>
 
 <div class="screenshot-slide">
-<img 
+<img
 src="assets/screenshots/storepulse5.png"
 alt="StorePulse Report">
 </div>
 
 <div class="screenshot-slide">
-<img 
+<img
 src="assets/screenshots/storepulse6.png"
 alt="StorePulse Report">
 </div>
@@ -301,7 +466,7 @@ StorePulse AI Dashboard & Analysis Screens
 
 <div class="diagram">
 
-<img 
+<img
 src="assets/diagrams/storepulse-arch.png"
 alt="StorePulse AI Architecture">
 
@@ -421,7 +586,8 @@ GitHub
 
 </a>
 
-<a class="btn secondary" href="https://youtu.be/oG5C8ZYo7Ek">
+<a class="btn secondary"
+href="https://youtu.be/oG5C8ZYo7Ek">
 
 Live Demo
 
@@ -590,7 +756,8 @@ GitHub
 
 </a>
 
-<a class="btn secondary" href="https://youtu.be/P2UHLif6-C0">
+<a class="btn secondary"
+href="https://youtu.be/P2UHLif6-C0">
 
 Live Demo
 
@@ -635,14 +802,16 @@ E-Commerce Customer Intelligence Platform
 
 <p class="description">
 
-End-to-end cloud data platform that transforms raw
-e-commerce transaction data into trusted, analytics-ready
+End-to-end cloud data platform transforming raw
+e-commerce transactions into trusted, analytics-ready
 business intelligence. The platform combines automated
 ingestion, cloud storage, BigQuery, dbt, dimensional
-modeling, data quality testing, orchestration and an
-interactive Streamlit dashboard.
+modeling, data quality testing, workflow orchestration
+and an interactive Streamlit dashboard.
 
 </p>
+
+<!-- ARCHITECTURE IMAGE -->
 
 <div class="diagram">
 
@@ -658,6 +827,58 @@ E-Commerce Customer Intelligence Platform Architecture
 
 </div>
 
+<div class="metric-grid">
+
+<div class="metric-card">
+
+<div class="metric-number">
+9
+</div>
+
+<div class="metric-label">
+Staging Models
+</div>
+
+</div>
+
+<div class="metric-card">
+
+<div class="metric-number">
+5
+</div>
+
+<div class="metric-label">
+Dimensions
+</div>
+
+</div>
+
+<div class="metric-card">
+
+<div class="metric-number">
+4
+</div>
+
+<div class="metric-label">
+Fact Models
+</div>
+
+</div>
+
+<div class="metric-card">
+
+<div class="metric-number">
+5
+</div>
+
+<div class="metric-label">
+Reporting Models
+</div>
+
+</div>
+
+</div>
+
 <div class="box">
 
 <h4>
@@ -669,10 +890,9 @@ Business Problem
 <p>
 
 Raw e-commerce transaction data is difficult to analyze
-directly and is spread across multiple source datasets.
-The platform transforms these sources into governed,
-analytics-ready data for revenue, product, customer and
-retention analysis.
+directly and is distributed across multiple source datasets.
+The platform creates a reliable analytical foundation for
+revenue, product, customer and retention intelligence.
 
 </p>
 
@@ -682,48 +902,74 @@ retention analysis.
 
 <h4>
 
-End-to-End Data Pipeline
+End-to-End Pipeline
 
 </h4>
 
-<p>
+<div class="pipeline-step">
 
-<strong>1. Ingestion</strong><br>
-Raw CSV datasets are converted into Parquet for efficient
-analytical storage.
+<strong>
+01 · Ingestion
+</strong>
 
-</p>
+Raw CSV datasets are converted into Parquet for
+efficient analytical storage.
 
-<p>
+</div>
 
-<strong>2. Cloud Storage</strong><br>
+<div class="pipeline-step">
+
+<strong>
+02 · Cloud Storage
+</strong>
+
 Parquet datasets are uploaded to Google Cloud Storage.
 
-</p>
+</div>
 
-<p>
+<div class="pipeline-step">
 
-<strong>3. Warehouse Ingestion</strong><br>
-BigQuery External Tables provide warehouse access to the
-cloud-hosted datasets.
+<strong>
+03 · Warehouse Ingestion
+</strong>
 
-</p>
+BigQuery External Tables provide warehouse access
+to the cloud-hosted datasets.
 
-<p>
+</div>
 
-<strong>4. Transformation</strong><br>
+<div class="pipeline-step">
+
+<strong>
+04 · Transformation
+</strong>
+
 dbt builds the analytical warehouse through staging,
-dimensional and reporting models.
+dimensional, fact and reporting models.
 
-</p>
+</div>
 
-<p>
+<div class="pipeline-step">
 
-<strong>5. Analytics</strong><br>
-Business-ready reporting models are consumed by an
-interactive Streamlit dashboard.
+<strong>
+05 · Orchestration
+</strong>
 
-</p>
+Kestra coordinates dependent workflows across the
+data pipeline.
+
+</div>
+
+<div class="pipeline-step">
+
+<strong>
+06 · Analytics
+</strong>
+
+Business-ready reporting models are consumed by
+an interactive Streamlit dashboard.
+
+</div>
 
 </div>
 
@@ -789,6 +1035,8 @@ Jupyter
 
 </div>
 
+<!-- DATA WAREHOUSE ARCHITECTURE -->
+
 <div class="box">
 
 <h4>
@@ -797,100 +1045,114 @@ Data Warehouse Architecture
 
 </h4>
 
-
 <p>
 
-A layered, analytics-ready warehouse built with dbt,
-designed to separate source preparation, dimensional
-modeling and business-facing reporting.
+A layered dbt warehouse separates source preparation,
+dimensional modeling and business-facing analytics.
+This provides clear model ownership, reusable business
+logic and a stable interface for downstream reporting.
 
 </p>
 
+<div class="diagram data-flow">
 
-<div class="diagram">
+<div class="flow-stage">
 
-<p>
-
-<strong>
+<div class="flow-title">
 RAW DATA
-</strong>
-<br>
-CSV / Parquet / BigQuery External Tables
+</div>
 
-<br><br>
-
-↓
-
-<br><br>
-
-<strong>
-STAGING
-</strong>
-<br>
-Source standardization • Type normalization • Cleaning
-
-<br><br>
-
-↓
-
-<br><br>
-
-<strong>
-DIMENSIONS + FACTS
-</strong>
-<br>
-Star Schema • Business Entities • Transactional Events
-
-<br><br>
-
-↓
-
-<br><br>
-
-<strong>
-REPORTING
-</strong>
-<br>
-Business Metrics • KPI Models • Dashboard-ready Data
-
-<br><br>
-
-↓
-
-<br><br>
-
-<strong>
-ANALYTICS
-</strong>
-<br>
-Streamlit Business Intelligence Dashboard
-
-</p>
+<div class="flow-meta">
+CSV • Parquet • BigQuery External Tables
+</div>
 
 </div>
 
+<div class="arrow">
+↓
+</div>
+
+<div class="flow-stage">
+
+<div class="flow-title">
+STAGING
+</div>
+
+<div class="flow-meta">
+Standardization • Type Normalization • Source Cleaning
+</div>
+
+</div>
+
+<div class="arrow">
+↓
+</div>
+
+<div class="flow-stage">
+
+<div class="flow-title">
+DIMENSIONS + FACTS
+</div>
+
+<div class="flow-meta">
+Star Schema • Business Entities • Transactional Events
+</div>
+
+</div>
+
+<div class="arrow">
+↓
+</div>
+
+<div class="flow-stage">
+
+<div class="flow-title">
+REPORTING
+</div>
+
+<div class="flow-meta">
+Business Metrics • KPI Models • Dashboard-ready Data
+</div>
+
+</div>
+
+<div class="arrow">
+↓
+</div>
+
+<div class="flow-stage">
+
+<div class="flow-title">
+ANALYTICS
+</div>
+
+<div class="flow-meta">
+Streamlit Business Intelligence Dashboard
+</div>
+
+</div>
+
+</div>
 
 <div class="grid">
 
+<div class="box layer-card">
 
-<div class="box">
-
+<div class="layer-number">
+01 · Staging Layer
+</div>
 
 <h4>
-
-01 · Staging Layer
-
+Source Preparation
 </h4>
 
+<p class="layer-purpose">
 
-<p>
-
-The staging layer creates a clean and consistent
-interface to the source data. Raw fields are standardized,
-typed and prepared for downstream analytical models.
+Creates a clean and consistent interface to the source
+data. Raw fields are standardized, typed and prepared
+for downstream analytical models.
 
 </p>
-
 
 <p>
 
@@ -898,43 +1160,31 @@ typed and prepared for downstream analytical models.
 
 </p>
 
+<div class="model-list">
 
-<p>
-
-<code>stg_customers</code><br>
-<code>stg_geolocation</code><br>
-<code>stg_order_items</code><br>
-<code>stg_order_payments</code><br>
-<code>stg_order_reviews</code><br>
-<code>stg_orders</code><br>
-<code>stg_product_category_name_translation</code><br>
-<code>stg_products</code><br>
-<code>stg_sellers</code>
-
-</p>
-
+<code>stg_customers</code><br> <code>stg_geolocation</code><br> <code>stg_order_items</code><br> <code>stg_order_payments</code><br> <code>stg_order_reviews</code><br> <code>stg_orders</code><br> <code>stg_product_category_name_translation</code><br> <code>stg_products</code><br> <code>stg_sellers</code>
 
 </div>
 
+</div>
 
-<div class="box">
+<div class="box layer-card">
 
+<div class="layer-number">
+02 · Dimensional Layer
+</div>
 
 <h4>
-
-02 · Dimensional Layer
-
+Business Context
 </h4>
 
+<p class="layer-purpose">
 
-<p>
-
-Reusable dimensions provide descriptive business context
-for analytical queries and establish consistent entities
-across fact models and reporting.
+Provides reusable business dimensions that give
+descriptive context to transactional facts and support
+consistent analytical joins.
 
 </p>
-
 
 <p>
 
@@ -942,39 +1192,31 @@ across fact models and reporting.
 
 </p>
 
+<div class="model-list">
 
-<p>
-
-<code>dim_customers</code><br>
-<code>dim_date</code><br>
-<code>dim_payment_type</code><br>
-<code>dim_products</code><br>
-<code>dim_sellers</code>
-
-</p>
-
+<code>dim_customers</code><br> <code>dim_date</code><br> <code>dim_payment_type</code><br> <code>dim_products</code><br> <code>dim_sellers</code>
 
 </div>
 
+</div>
 
-<div class="box">
+<div class="box layer-card">
 
+<div class="layer-number">
+03 · Fact Layer
+</div>
 
 <h4>
-
-03 · Fact Layer
-
+Business Events
 </h4>
 
+<p class="layer-purpose">
 
-<p>
-
-Fact tables represent measurable business events at
-explicit grains, enabling reliable aggregations for
-sales, orders, payments and customer feedback.
+Captures measurable transactional and event-level
+activity with explicit table grain for reliable
+analytical aggregation.
 
 </p>
-
 
 <p>
 
@@ -982,38 +1224,31 @@ sales, orders, payments and customer feedback.
 
 </p>
 
+<div class="model-list">
 
-<p>
-
-<code>fct_order_items</code><br>
-<code>fct_orders</code><br>
-<code>fct_payments</code><br>
-<code>fct_reviews</code>
-
-</p>
-
+<code>fct_order_items</code><br> <code>fct_orders</code><br> <code>fct_payments</code><br> <code>fct_reviews</code>
 
 </div>
 
+</div>
 
-<div class="box">
+<div class="box layer-card">
 
+<div class="layer-number">
+04 · Reporting Layer
+</div>
 
 <h4>
-
-04 · Reporting Layer
-
+Business Intelligence
 </h4>
 
+<p class="layer-purpose">
 
-<p>
-
-The reporting layer converts the dimensional warehouse
-into business-ready datasets optimized for KPI analysis,
+Transforms the dimensional warehouse into stable,
+business-oriented datasets optimized for KPIs,
 dashboard consumption and decision support.
 
 </p>
-
 
 <p>
 
@@ -1021,140 +1256,105 @@ dashboard consumption and decision support.
 
 </p>
 
+<div class="model-list">
 
-<p>
-
-<code>rpt_customer_metrics</code><br>
-<code>rpt_customer_retention</code><br>
-<code>rpt_product_performance</code><br>
-<code>rpt_sales_by_category</code><br>
-<code>rpt_sales_daily</code>
-
-</p>
-
+<code>rpt_customer_metrics</code><br> <code>rpt_customer_retention</code><br> <code>rpt_product_performance</code><br> <code>rpt_sales_by_category</code><br> <code>rpt_sales_daily</code>
 
 </div>
 
-
 </div>
 
+</div>
 
 <div class="grid">
 
-
 <div class="box">
 
-
 <h4>
-
 Fact Table Grain
-
 </h4>
-
 
 <p>
 
 <strong>fct_order_items</strong><br>
-
 1 row = 1 order item
 
 </p>
 
-
 <p>
 
 <strong>fct_orders</strong><br>
-
 1 row = 1 order
 
 </p>
 
-
 <p>
 
 <strong>fct_payments</strong><br>
-
 1 row = 1 payment transaction
 
 </p>
 
-
 <p>
 
 <strong>fct_reviews</strong><br>
-
 1 row = 1 customer review
 
 </p>
 
-
 </div>
-
 
 <div class="box">
 
-
 <h4>
-
 Analytical Design
-
 </h4>
-
 
 <p>
 
-The dimensional model separates measurable events
-from reusable business dimensions. Reporting models
-then expose stable business metrics without requiring
+The dimensional model separates measurable business
+events from reusable business dimensions. Reporting
+models then expose stable metrics without requiring
 the dashboard to perform complex warehouse joins.
 
 </p>
 
-
 </div>
-
 
 <div class="box">
 
-
 <h4>
-
 Data Quality
-
 </h4>
-
 
 <p>
 
 dbt tests validate uniqueness, required fields and
 relationships across the analytical model. Business-level
-reconciliation is also used to verify metric consistency
-from facts through reporting.
+reconciliation validates metric consistency from facts
+through the reporting layer.
 
 </p>
 
+</div>
 
 </div>
 
-
-</div>
-
-
-<p>
+<div class="architecture-note">
 
 <strong>
-
 Architecture principle:
-
 </strong>
 
-Raw source data is transformed once into reusable
-analytical models, while reporting logic remains separated
-from the presentation layer.
-
-</p>
+Raw source data is transformed into reusable analytical
+models once, while business reporting logic remains
+separated from the presentation layer.
 
 </div>
+
+</div>
+
+<!-- DATA QUALITY -->
 
 <div class="box">
 
@@ -1166,22 +1366,64 @@ Data Quality & Validation
 
 <p>
 
-Data quality is treated as part of the data platform rather
-than as a final validation step. dbt tests cover uniqueness,
-not-null constraints and relationships across the analytical
-models.
+Data quality is treated as a first-class part of the
+platform rather than as a final validation step.
 
 </p>
 
+<div class="grid">
+
+<div class="box">
+
+<h4>
+Schema Integrity
+</h4>
+
 <p>
 
-Business-level reconciliation was also used to validate
-revenue, order counts, customer mappings and product
-relationships across the fact and reporting layers.
+Uniqueness and not-null tests protect critical identifiers
+and required analytical fields.
 
 </p>
 
 </div>
+
+<div class="box">
+
+<h4>
+Referential Integrity
+</h4>
+
+<p>
+
+Relationship tests validate fact-to-dimension mappings
+across the warehouse.
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h4>
+Business Reconciliation
+</h4>
+
+<p>
+
+Revenue and order metrics are reconciled between the
+underlying facts and downstream reporting models to
+ensure aggregation consistency.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BUSINESS INTELLIGENCE -->
 
 <div class="box">
 
@@ -1193,36 +1435,70 @@ Business Intelligence
 
 <p>
 
-The reporting layer powers an interactive Streamlit
-dashboard designed for business analysis across sales,
-products and customers.
+The reporting layer feeds an interactive Streamlit
+dashboard designed for executive-level visibility
+and exploratory business analysis.
 
 </p>
 
+<div class="grid">
+
+<div class="box">
+
+<h4>
+Sales Analytics
+</h4>
+
 <p>
 
-<strong>Sales Analytics</strong><br>
-Revenue trends • Orders • Average Order Value •
+Revenue trends<br>
+Orders<br>
+Average Order Value<br>
 Revenue by Category
 
 </p>
 
+</div>
+
+<div class="box">
+
+<h4>
+Product Analytics
+</h4>
+
 <p>
 
-<strong>Product Analytics</strong><br>
-Top Products • Product Revenue • Category Performance
-
-</p>
-
-<p>
-
-<strong>Customer Intelligence</strong><br>
-Customer Revenue • Repeat Customers • One-Time Customers •
-Repeat Purchase Rate • Customer Retention
+Top Products<br>
+Product Revenue<br>
+Category Performance
 
 </p>
 
 </div>
+
+<div class="box">
+
+<h4>
+Customer Intelligence
+</h4>
+
+<p>
+
+Customer Revenue<br>
+Repeat Customers<br>
+One-Time Customers<br>
+Repeat Purchase Rate<br>
+Customer Retention
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ORCHESTRATION -->
 
 <div class="box">
 
@@ -1234,20 +1510,27 @@ Pipeline Orchestration
 
 <p>
 
-Kestra orchestrates the platform as a sequence of
-dependent workflows, separating ingestion, warehouse
-creation and dbt transformation responsibilities.
+Kestra coordinates the pipeline as a sequence of
+dependent workflows, separating ingestion, cloud
+storage, warehouse creation and dbt transformation.
 
 </p>
 
-<p>
+<div class="highlight-box">
 
-<strong>Current Flow</strong><br>
+<strong>
+Current workflow:
+</strong>
 
-csv_to_parquet → upload_parquet → create_ext_tables →
-dbt_create_stg_tables → dbt_create_marts
+<br><br>
 
-</p>
+<code>csv_to_parquet</code>
+→ <code>upload_parquet</code>
+→ <code>create_ext_tables</code>
+→ <code>dbt_create_stg_tables</code>
+→ <code>dbt_create_marts</code>
+
+</div>
 
 <p>
 
@@ -1258,6 +1541,8 @@ fact and reporting layers consumed by the dashboard.
 
 </div>
 
+<!-- ENGINEERING DECISIONS -->
+
 <div class="box">
 
 <h4>
@@ -1266,50 +1551,18 @@ Key Engineering Decisions
 
 </h4>
 
-<p>
+<div class="grid">
 
-<strong>Parquet</strong> reduces the size of analytical
-files and provides a columnar storage format suited for
-warehouse ingestion.
+<div class="box">
 
-</p>
-
-<p>
-
-<strong>BigQuery External Tables</strong> provide a
-cloud-native ingestion layer between object storage and
-the analytical warehouse.
-
-</p>
+<h4>
+Parquet
+</h4>
 
 <p>
 
-<strong>dbt</strong> separates transformation logic into
-version-controlled, testable and reusable models.
-
-</p>
-
-<p>
-
-<strong>Star Schema</strong> separates measurable business
-events from descriptive dimensions and simplifies
-analytical consumption.
-
-</p>
-
-<p>
-
-<strong>Kestra</strong> handles workflow dependencies and
-orchestration while dbt remains responsible for data
-transformation logic.
-
-</p>
-
-<p>
-
-<strong>Streamlit</strong> provides a business-facing
-consumption layer without moving transformation logic into
-the dashboard itself.
+Columnar storage format selected for analytical efficiency
+and compact cloud storage.
 
 </p>
 
@@ -1318,33 +1571,142 @@ the dashboard itself.
 <div class="box">
 
 <h4>
-
-Project Scale
-
+BigQuery
 </h4>
 
 <p>
 
-<strong>9</strong> staging models<br> <strong>5</strong> dimension models<br> <strong>4</strong> fact models<br> <strong>5</strong> reporting models
-
-</p>
-
-<p>
-
-The reporting layer was validated against the underlying
-fact models to ensure consistent revenue and order metrics
-throughout the analytical pipeline.
+Serverless analytical warehouse providing scalable SQL
+analytics and native integration with GCS.
 
 </p>
 
 </div>
 
-<div class="buttons">
+<div class="box">
+
+<h4>
+dbt
+</h4>
+
+<p>
+
+Version-controlled, modular and testable transformation
+layer with explicit model dependencies.
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h4>
+Kestra
+</h4>
+
+<p>
+
+Workflow orchestration layer responsible for execution
+order and cross-stage dependencies.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PROJECT OUTCOMES -->
+
+<div class="box">
+
+<h4>
+
+Project Outcomes
+
+</h4>
+
+<p>
+
+The platform produces a complete analytical data
+environment rather than a collection of isolated scripts.
+
+</p>
+
+<div class="highlight-box">
+
+<strong>
+Data platform outcome:
+</strong>
+
+<br><br>
+
+Raw transactional data is transformed into trusted,
+tested and dashboard-ready business intelligence.
+
+</div>
+
+<div class="metric-grid">
+
+<div class="metric-card">
+
+<div class="metric-number">
+9
+</div>
+
+<div class="metric-label">
+Staging Models
+</div>
+
+</div>
+
+<div class="metric-card">
+
+<div class="metric-number">
+5
+</div>
+
+<div class="metric-label">
+Dimensions
+</div>
+
+</div>
+
+<div class="metric-card">
+
+<div class="metric-number">
+4
+</div>
+
+<div class="metric-label">
+Fact Models
+</div>
+
+</div>
+
+<div class="metric-card">
+
+<div class="metric-number">
+5
+</div>
+
+<div class="metric-label">
+Reporting Models
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project-link-row">
 
 <a class="btn primary"
 href="https://github.com/viktor-ai-dev/ecommerce-customer-intelligence-platform">
 
-GitHub
+GitHub Repository
 
 </a>
 
@@ -1800,27 +2162,19 @@ machine learning and intelligent systems.
 <div class="tags">
 
 <span>
-
 Artificial Intelligence
-
 </span>
 
 <span>
-
 Machine Learning
-
 </span>
 
 <span>
-
 Software Engineering
-
 </span>
 
 <span>
-
 Algorithms
-
 </span>
 
 </div>
@@ -1943,35 +2297,21 @@ GitHub
 
 <script>
 
-
 let currentSlide = 0;
 
-
-
 function moveSlide(direction){
-
-
 
 const carousel =
 document.getElementById(
 "storepulseCarousel"
 );
 
-
-
 const slides =
 document.querySelectorAll(
 "#storepulseCarousel .screenshot-slide"
 );
 
-
-
-
 currentSlide += direction;
-
-
-
-
 
 if(currentSlide < 0){
 
@@ -1980,38 +2320,22 @@ slides.length - 1;
 
 }
 
-
-
-
-
 if(currentSlide >= slides.length){
 
 currentSlide = 0;
 
 }
 
-
-
-
-
 carousel.scrollTo({
-
 
 left:
 carousel.clientWidth * currentSlide,
 
-
 behavior:"smooth"
-
 
 });
 
-
-
 }
-
-
-
 
 </script>
 
