@@ -797,91 +797,360 @@ Data Warehouse Architecture
 
 </h4>
 
+
 <p>
 
-The warehouse follows a layered dbt architecture that
-separates source preparation, dimensional modeling and
-business-facing analytics. This creates clear model
-responsibilities, reusable transformations and a scalable
-foundation for downstream reporting.
+A layered, analytics-ready warehouse built with dbt,
+designed to separate source preparation, dimensional
+modeling and business-facing reporting.
 
 </p>
 
+
+<div class="diagram">
+
 <p>
 
-<strong>Staging Layer</strong><br>
+<strong>
+RAW DATA
+</strong>
+<br>
+CSV / Parquet / BigQuery External Tables
 
-Standardizes and prepares raw source data through
-type normalization, naming conventions and source-level
-transformations.
+<br><br>
+
+↓
+
+<br><br>
+
+<strong>
+STAGING
+</strong>
+<br>
+Source standardization • Type normalization • Cleaning
+
+<br><br>
+
+↓
+
+<br><br>
+
+<strong>
+DIMENSIONS + FACTS
+</strong>
+<br>
+Star Schema • Business Entities • Transactional Events
+
+<br><br>
+
+↓
+
+<br><br>
+
+<strong>
+REPORTING
+</strong>
+<br>
+Business Metrics • KPI Models • Dashboard-ready Data
+
+<br><br>
+
+↓
+
+<br><br>
+
+<strong>
+ANALYTICS
+</strong>
+<br>
+Streamlit Business Intelligence Dashboard
 
 </p>
 
+</div>
+
+
+<div class="grid">
+
+
+<div class="box">
+
+
+<h4>
+
+01 · Staging Layer
+
+</h4>
+
+
 <p>
 
-stg_customers • stg_geolocation • stg_order_items •
-stg_order_payments • stg_order_reviews • stg_orders •
-stg_product_category_name_translation • stg_products •
-stg_sellers
+The staging layer creates a clean and consistent
+interface to the source data. Raw fields are standardized,
+typed and prepared for downstream analytical models.
 
 </p>
 
+
 <p>
 
-<strong>Dimensional Layer</strong><br>
-
-Provides reusable business dimensions for analytical
-queries and downstream fact models.
+<strong>9 Models</strong>
 
 </p>
 
+
 <p>
 
-dim_customers • dim_date • dim_payment_type •
-dim_products • dim_sellers
+<code>stg_customers</code><br>
+<code>stg_geolocation</code><br>
+<code>stg_order_items</code><br>
+<code>stg_order_payments</code><br>
+<code>stg_order_reviews</code><br>
+<code>stg_orders</code><br>
+<code>stg_product_category_name_translation</code><br>
+<code>stg_products</code><br>
+<code>stg_sellers</code>
 
 </p>
 
+
+</div>
+
+
+<div class="box">
+
+
+<h4>
+
+02 · Dimensional Layer
+
+</h4>
+
+
 <p>
 
-<strong>Fact Layer</strong><br>
-
-Captures transactional and event-level business activity
-at explicit grains for revenue, order, payment and review
-analytics.
+Reusable dimensions provide descriptive business context
+for analytical queries and establish consistent entities
+across fact models and reporting.
 
 </p>
 
+
 <p>
 
-fct_order_items • fct_orders • fct_payments • fct_reviews
+<strong>5 Dimensions</strong>
 
 </p>
 
+
 <p>
 
-<strong>Reporting Layer</strong><br>
-
-Transforms the dimensional warehouse into business-ready
-datasets optimized for KPI analysis and dashboard
-consumption.
+<code>dim_customers</code><br>
+<code>dim_date</code><br>
+<code>dim_payment_type</code><br>
+<code>dim_products</code><br>
+<code>dim_sellers</code>
 
 </p>
 
+
+</div>
+
+
+<div class="box">
+
+
+<h4>
+
+03 · Fact Layer
+
+</h4>
+
+
 <p>
 
-rpt_customer_metrics • rpt_customer_retention •
-rpt_product_performance • rpt_sales_by_category •
-rpt_sales_daily
+Fact tables represent measurable business events at
+explicit grains, enabling reliable aggregations for
+sales, orders, payments and customer feedback.
 
 </p>
 
+
 <p>
 
-<strong>Architecture Flow</strong><br>
+<strong>4 Fact Models</strong>
 
-Raw Source Data → Staging → Dimensions & Facts →
-Reporting → Dashboard
+</p>
+
+
+<p>
+
+<code>fct_order_items</code><br>
+<code>fct_orders</code><br>
+<code>fct_payments</code><br>
+<code>fct_reviews</code>
+
+</p>
+
+
+</div>
+
+
+<div class="box">
+
+
+<h4>
+
+04 · Reporting Layer
+
+</h4>
+
+
+<p>
+
+The reporting layer converts the dimensional warehouse
+into business-ready datasets optimized for KPI analysis,
+dashboard consumption and decision support.
+
+</p>
+
+
+<p>
+
+<strong>5 Reporting Models</strong>
+
+</p>
+
+
+<p>
+
+<code>rpt_customer_metrics</code><br>
+<code>rpt_customer_retention</code><br>
+<code>rpt_product_performance</code><br>
+<code>rpt_sales_by_category</code><br>
+<code>rpt_sales_daily</code>
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="box">
+
+
+<h4>
+
+Fact Table Grain
+
+</h4>
+
+
+<p>
+
+<strong>fct_order_items</strong><br>
+
+1 row = 1 order item
+
+</p>
+
+
+<p>
+
+<strong>fct_orders</strong><br>
+
+1 row = 1 order
+
+</p>
+
+
+<p>
+
+<strong>fct_payments</strong><br>
+
+1 row = 1 payment transaction
+
+</p>
+
+
+<p>
+
+<strong>fct_reviews</strong><br>
+
+1 row = 1 customer review
+
+</p>
+
+
+</div>
+
+
+<div class="box">
+
+
+<h4>
+
+Analytical Design
+
+</h4>
+
+
+<p>
+
+The dimensional model separates measurable events
+from reusable business dimensions. Reporting models
+then expose stable business metrics without requiring
+the dashboard to perform complex warehouse joins.
+
+</p>
+
+
+</div>
+
+
+<div class="box">
+
+
+<h4>
+
+Data Quality
+
+</h4>
+
+
+<p>
+
+dbt tests validate uniqueness, required fields and
+relationships across the analytical model. Business-level
+reconciliation is also used to verify metric consistency
+from facts through reporting.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+<p>
+
+<strong>
+
+Architecture principle:
+
+</strong>
+
+Raw source data is transformed once into reusable
+analytical models, while reporting logic remains separated
+from the presentation layer.
 
 </p>
 
