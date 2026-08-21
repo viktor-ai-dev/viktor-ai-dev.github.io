@@ -830,7 +830,7 @@ and scalable data architectures.
 
 <h3>
 
-E-Commerce Data Platform
+E-Commerce Customer Intelligence Platform
 
 </h3>
 
@@ -839,14 +839,17 @@ E-Commerce Data Platform
 
 <p class="description">
 
-Modern analytics platform transforming raw ecommerce
-data into business intelligence.
+End-to-end cloud data platform that transforms raw
+e-commerce transaction data into trusted business
+intelligence through automated ingestion, cloud storage,
+BigQuery, dbt transformations, dimensional modeling,
+orchestration and interactive analytics.
 
 </p>
 
 
 
-
+<!-- ARCHITECTURE IMAGE -->
 
 
 <div class="diagram">
@@ -854,13 +857,13 @@ data into business intelligence.
 
 <img
 src="assets/diagrams/data-platform.png"
-alt="Data Platform Architecture">
+alt="E-Commerce Customer Intelligence Platform Architecture">
 
 
 
 <p>
 
-ETL Pipeline Architecture
+E-Commerce Data Platform Architecture
 
 </p>
 
@@ -868,6 +871,116 @@ ETL Pipeline Architecture
 
 </div>
 
+
+<div class="grid">
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Business Problem
+
+</h4>
+
+
+
+<p>
+
+Raw e-commerce transaction data is difficult to analyze
+directly. The platform transforms operational data into
+trusted datasets for revenue, product, customer and
+retention analytics.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+End-to-End Pipeline
+
+</h4>
+
+
+
+<p>
+
+CSV → Parquet → Google Cloud Storage → BigQuery
+External Tables → dbt Staging → Facts & Dimensions
+→ Reporting Models → Streamlit Dashboard
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Engineering Highlights
+
+</h4>
+
+
+
+<p>
+
+✓ Workflow orchestration with Kestra<br>
+✓ Cloud data warehouse with BigQuery<br>
+✓ Dimensional modeling with dbt<br>
+✓ Automated data quality testing<br>
+✓ Dockerized services<br>
+✓ Business-ready reporting layer
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+<div class="box stack">
+
+
+
+<h4>
+
+Technology Stack
+
+</h4>
 
 
 
@@ -887,24 +1000,240 @@ SQL
 
 
 <span>
-Airflow
+Spark
 </span>
 
 
 <span>
-Warehouse
+Parquet
 </span>
 
 
 <span>
-Cloud
+Google Cloud Storage
 </span>
 
 
+<span>
+BigQuery
+</span>
+
+
+<span>
+dbt
+</span>
+
+
+<span>
+Kestra
+</span>
+
+
+<span>
+Docker
+</span>
+
+
+<span>
+Streamlit
+</span>
+
+
+
 </div>
 
 
 
+</div>
+
+
+
+<div class="box">
+
+
+
+<h4>
+
+Data Warehouse Architecture
+
+</h4>
+
+
+
+<p>
+
+The warehouse follows a layered dbt architecture with
+a dedicated staging layer, dimensional marts and a
+business-oriented reporting layer.
+
+</p>
+
+
+
+<p>
+
+<strong>Staging:</strong><br>
+stg_customers • stg_geolocation • stg_order_items •
+stg_order_payments • stg_order_reviews • stg_orders •
+stg_product_category_name_translation • stg_products •
+stg_sellers
+
+</p>
+
+
+
+<p>
+
+<strong>Dimensions:</strong><br>
+dim_customers • dim_date • dim_payment_type •
+dim_products • dim_sellers
+
+</p>
+
+
+
+<p>
+
+<strong>Facts:</strong><br>
+fct_order_items • fct_orders • fct_payments • fct_reviews
+
+</p>
+
+
+
+<p>
+
+<strong>Reporting:</strong><br>
+rpt_customer_metrics • rpt_customer_retention •
+rpt_product_performance • rpt_sales_by_category •
+rpt_sales_daily
+
+</p>
+
+
+
+</div>
+
+
+
+<div class="box">
+
+
+
+<h4>
+
+Data Quality & Validation
+
+</h4>
+
+
+
+<p>
+
+dbt tests are applied across the analytical models
+to validate uniqueness, non-null constraints and
+referential integrity.
+
+</p>
+
+
+
+<p>
+
+Business-level reconciliation was also used to verify
+that revenue and order metrics remain consistent from
+fact tables through the reporting layer.
+
+</p>
+
+
+
+</div>
+
+
+
+<div class="box">
+
+
+
+<h4>
+
+Business Intelligence
+
+</h4>
+
+
+
+<p>
+
+The reporting layer feeds an interactive Streamlit
+dashboard covering revenue trends, category performance,
+top products, customer metrics, repeat purchase behavior
+and retention analysis.
+
+</p>
+
+
+
+</div>
+
+
+
+<div class="box">
+
+
+
+<h4>
+
+Pipeline Orchestration
+
+</h4>
+
+
+
+<p>
+
+Kestra orchestrates the complete workflow through
+separate pipeline stages:
+
+</p>
+
+
+
+<p>
+
+csv_to_parquet → upload_parquet → create_ext_tables
+→ dbt_create_stg_tables → dbt_create_marts
+
+</p>
+
+
+
+</div>
+
+
+
+<div class="buttons">
+
+
+
+<a class="btn primary"
+href="https://github.com/viktor-ai-dev/ecommerce-customer-intelligence-platform">
+
+GitHub
+
+</a>
+
+
+
+<a class="btn secondary"
+href="http://localhost:8501">
+
+Dashboard
+
+</a>
+
+
 
 </div>
 
@@ -912,10 +1241,11 @@ Cloud
 
 </div>
 
+
+
 </div>
 
-
-</section>
+</div>
 
 
 <!-- ENGINEERING APPROACH -->
@@ -1387,10 +1717,15 @@ Data Engineering
 
 Python<br>
 SQL<br>
-ETL Pipelines<br>
-Apache Airflow<br>
-Apache Kafka<br>
-Data Warehousing
+Spark<br>
+Parquet<br>
+Google Cloud Storage<br>
+BigQuery<br>
+dbt<br>
+Kestra<br>
+Docker<br>
+Streamlit<br>
+Dimensional Modeling
 
 </p>
 
@@ -2108,4 +2443,3 @@ behavior:"smooth"
 
 
 </html>
-  
