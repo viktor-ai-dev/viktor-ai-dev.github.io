@@ -17,7 +17,112 @@ Viktor | AI Engineer & Data Engineer
 
 
 <link rel="stylesheet" href="style.css">
+<style>
 
+/* =========================================================
+   DATA PLATFORM CARD SPACING
+   Keeps existing design intact while improving readability
+   ========================================================= */
+
+.case {
+    margin-bottom: 32px;
+}
+
+.case > .grid {
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.case > .box {
+    margin-top: 24px;
+}
+
+.grid > .box {
+    margin-bottom: 0;
+}
+
+.box {
+    padding: 24px;
+}
+
+.box + .box {
+    margin-top: 0;
+}
+
+.stack {
+    margin-top: 24px;
+}
+
+.diagram {
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+.tags {
+    margin-top: 14px;
+}
+
+.buttons {
+    margin-top: 28px;
+}
+
+/* Better spacing for nested data-platform sections */
+
+.case .grid + .box {
+    margin-top: 28px;
+}
+
+.case .box + .box {
+    margin-top: 20px;
+}
+
+/* Keep grid cards evenly spaced */
+
+.grid {
+    gap: 24px;
+}
+
+/* Mobile spacing */
+
+@media (max-width: 768px) {
+
+    .case {
+        margin-bottom: 24px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .case > .grid {
+        gap: 18px;
+        margin-top: 18px;
+    }
+
+    .case > .box {
+        margin-top: 18px;
+    }
+
+    .case .grid + .box {
+        margin-top: 20px;
+    }
+
+    .case .box + .box {
+        margin-top: 16px;
+    }
+
+    .diagram {
+        margin-top: 22px;
+        margin-bottom: 22px;
+    }
+
+    .buttons {
+        margin-top: 22px;
+    }
+
+}
+
+</style>
 
 </head>
 
