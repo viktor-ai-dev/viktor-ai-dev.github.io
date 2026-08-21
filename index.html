@@ -1,8 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+<title>
+Viktor | AI Engineer & Data Engineer
+</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="style.css">
+<style>
+
+/* =========================================================
+   DATA PLATFORM CARD SPACING
+   Keeps existing design intact while improving readability
+   ========================================================= */
+
+.case {
+    margin-bottom: 32px;
+}
+
+.case > .grid {
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.case > .box {
+    margin-top: 24px;
+}
+
+.grid > .box {
+    margin-bottom: 0;
+}
+
+.box {
+    padding: 24px;
+}
+
+.box + .box {
+    margin-top: 0;
+}
+
+.stack {
+    margin-top: 24px;
+}
+
+.diagram {
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+.tags {
+    margin-top: 14px;
+}
+
+.buttons {
+    margin-top: 28px;
+}
+
+/* Better spacing for nested data-platform sections */
+
+.case .grid + .box {
+    margin-top: 28px;
+}
+
+.case .box + .box {
+    margin-top: 20px;
+}
+
+/* Keep grid cards evenly spaced */
+
+.grid {
+    gap: 24px;
+}
+
+/* Mobile spacing */
+
+@media (max-width: 768px) {
+
+    .case {
+        margin-bottom: 24px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .case > .grid {
+        gap: 18px;
+        margin-top: 18px;
+    }
+
+    .case > .box {
+        margin-top: 18px;
+    }
+
+    .case .grid + .box {
+        margin-top: 20px;
+    }
+
+    .case .box + .box {
+        margin-top: 16px;
+    }
+
+    .diagram {
+        margin-top: 22px;
+        margin-bottom: 22px;
+    }
+
+    .buttons {
+        margin-top: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- NAV -->
+
+
+<nav>
+
+<div class="nav-inner">
+
+<strong>
+Viktor Sarafraz
+</strong>
+
+
+<span>
+AI Engineer • Data Engineer
+</span>
+
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- HERO -->
+
+
+<section class="hero">
+
+
+<div class="container">
+
+
+
+<div class="badge">
+
+AI Systems • Data Engineering • Cloud Architecture
+
+</div>
+
+
+
+<h1>
+
+Building Production AI & Data Systems
+
+</h1>
+
+
+
+<p>
+
+I design and engineer intelligent applications,
+RAG systems, autonomous AI agents and scalable
+data pipelines for real-world business problems.
+
+</p>
+
+
+
+<div class="buttons">
+
+
+<a class="btn primary"
+href="https://github.com/viktor-ai-dev">
+
+GitHub
+
+</a>
+
+
+
+<a class="btn secondary"
+href="#projects">
+
+Projects
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- PROJECTS -->
+
+
+<section class="section" id="projects">
+
+
+<div class="container">
+
+
+
+<h2 class="section-title">
+
+Featured AI Engineering Systems
+
+</h2>
+
+
+
+
+<p class="subtitle">
+
+Production-focused AI applications combining
+LLMs, data processing, backend engineering and automation.
+
+</p>
+
+
+
+
+
+
+
+
+
+<!-- STOREPULSE -->
+
+
+<div class="case">
+
+
+
+<h3>
+
+StorePulse AI
+
+</h3>
+
+
+
+
+<p class="description">
+
+Autonomous ecommerce intelligence platform that analyzes
+stores, competitors and generates AI-powered optimization
+strategies using web intelligence and structured AI analysis.
+
+</p>
+
+
+
+
+
+
+
+<!-- IMAGE CAROUSEL -->
+
+
+<div class="screenshot-wrapper">
+
+
+
+<button class="carousel-btn prev"
+onclick="moveSlide(-1)">
+
+❮
+
+</button>
+
+
+<div class="screenshot-carousel" id="storepulseCarousel">
+
+<div class="screenshot-slide">
+<img 
+src="assets/screenshots/storepulse1.png"
+alt="StorePulse Dashboard">
+</div>
+
+<div class="screenshot-slide">
+<img 
+src="assets/screenshots/storepulse2.png"
+alt="StorePulse AI Analysis">
+</div>
+
+
+<div class="screenshot-slide">
+<img 
+src="assets/screenshots/storepulse3.png"
+alt="StorePulse Report">
+</div>
+
+<div class="screenshot-slide">
+<img 
+src="assets/screenshots/storepulse4.png"
+alt="StorePulse Report">
+</div>
+
+<div class="screenshot-slide">
+<img 
+src="assets/screenshots/storepulse5.png"
+alt="StorePulse Report">
+</div>
+  
+<div class="screenshot-slide">
+<img 
+src="assets/screenshots/storepulse6.png"
+alt="StorePulse Report">
+</div>
+
+
+</div>
+
+<button class="carousel-btn next"
+onclick="moveSlide(1)">
+
+❯
+
+</button>
+
+</div>
+
+
+<p class="screenshot-caption">
+
+StorePulse AI Dashboard & Analysis Screens
+
+</p>
+
+
+
+<!-- ARCHITECTURE IMAGE -->
+
+
+<div class="diagram">
+
+
+
+<img 
+src="assets/diagrams/storepulse-arch.png"
+alt="StorePulse AI Architecture">
+
+
+
+<p>
+
+StorePulse AI System Architecture
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
 <div class="box">
+
 
 <h4>
 
-Data Warehouse Architecture
+Business Problem
 
 </h4>
 
@@ -10,87 +417,1799 @@ Data Warehouse Architecture
 
 <p>
 
-The warehouse is built using a layered dbt architecture
-that separates data preparation, analytical modeling and
-business-facing reporting. This structure improves
-maintainability, data lineage and reusability across
-analytical workloads.
+Ecommerce companies need automated insights
+about SEO, UX, competitors and conversion issues.
 
 </p>
 
 
-
-<p>
-
-<strong>Staging Layer</strong><br>
-
-Raw source data is standardized, cleaned and type-safe
-before entering the analytical warehouse.
-
-</p>
-
-<p>
-
-stg_customers • stg_geolocation • stg_order_items •
-stg_order_payments • stg_order_reviews • stg_orders •
-stg_product_category_name_translation • stg_products •
-stg_sellers
-
-</p>
-
-
-
-<p>
-
-<strong>Dimensional Layer</strong><br>
-
-Reusable dimensions provide descriptive business context
-for analytical queries and reporting models.
-
-</p>
-
-<p>
-
-dim_customers • dim_date • dim_payment_type •
-dim_products • dim_sellers
-
-</p>
-
-
-
-<p>
-
-<strong>Fact Layer</strong><br>
-
-Fact models capture transactional and event-level business
-activity for revenue, orders, payments and customer analysis.
-
-</p>
-
-<p>
-
-fct_order_items • fct_orders • fct_payments • fct_reviews
-
-</p>
-
-
-
-<p>
-
-<strong>Reporting Layer</strong><br>
-
-Business-oriented reporting models transform the warehouse
-into ready-to-analyze datasets for dashboards and KPI
-reporting.
-
-</p>
-
-<p>
-
-rpt_customer_metrics • rpt_customer_retention •
-rpt_product_performance • rpt_sales_by_category •
-rpt_sales_daily
-
-</p>
 
 </div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+AI Solution
+
+</h4>
+
+
+
+<p>
+
+Autonomous analysis engine combining crawling,
+structured LLM outputs and business recommendations.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Engineering
+
+</h4>
+
+
+
+<p>
+
+• Web crawling<br>
+• AI structured outputs<br>
+• Evidence-based generation<br>
+• Automated reporting
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="box stack">
+
+
+
+<h4>
+
+Technology Stack
+
+</h4>
+
+
+
+
+
+<div class="tags">
+
+
+<span>
+Python
+</span>
+
+
+<span>
+FastAPI
+</span>
+
+
+<span>
+Next.js
+</span>
+
+
+<span>
+OpenAI
+</span>
+
+
+<span>
+PostgreSQL
+</span>
+
+
+<span>
+Playwright
+</span>
+
+
+<span>
+Docker
+</span>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="buttons">
+
+
+
+<a class="btn primary"
+href="https://github.com/viktor-ai-dev/storepulse-ai">
+
+GitHub
+
+</a>
+
+
+
+
+
+<a class="btn secondary" href="https://youtu.be/oG5C8ZYo7Ek">
+
+Live Demo
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+<!-- RAG -->
+
+
+<div class="case">
+
+
+<h3>
+
+AI Customer Support RAG
+
+</h3>
+
+
+
+
+<p class="description">
+
+Retrieval Augmented Generation platform providing
+accurate AI-powered customer support using document
+retrieval, embeddings, vector search and grounded
+LLM responses.
+
+</p>
+
+
+
+
+
+<div class="diagram screenshot-preview">
+
+
+<img
+src="assets/screenshots/rag-dashboard.png"
+alt="AI Customer Support RAG Application">
+
+
+
+<p>
+
+AI Customer Support RAG Application
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="diagram">
+
+
+<img
+src="assets/diagrams/rag-architecture.png"
+alt="RAG System Architecture">
+
+
+
+<p>
+
+Documents → Processing → Embeddings →
+Vector Database → Retriever → LLM → Response
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Problem
+
+</h4>
+
+
+<p>
+
+Support teams need fast and reliable answers
+from large documentation sources while
+reducing AI hallucinations.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Solution
+
+</h4>
+
+
+
+<p>
+
+A RAG pipeline that retrieves relevant knowledge
+before generating answers using context-aware
+LLM responses.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Engineering Highlights
+
+</h4>
+
+
+
+<p>
+
+✓ Document processing<br>
+✓ Semantic search<br>
+✓ Vector embeddings<br>
+✓ Retrieval pipeline<br>
+✓ Grounded AI responses
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box stack">
+
+
+
+<h4>
+
+Technology Stack
+
+</h4>
+
+
+
+
+
+<div class="tags">
+
+
+
+<span>
+Python
+</span>
+
+
+<span>
+FastAPI
+</span>
+
+
+<span>
+LangChain
+</span>
+
+
+<span>
+OpenAI
+</span>
+
+
+<span>
+ChromaDB
+</span>
+
+
+<span>
+Vector Search
+</span>
+
+
+<span>
+Docker
+</span>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="buttons">
+
+
+
+<a class="btn primary"
+href="https://github.com/viktor-ai-dev/ai-customer-support">
+
+GitHub
+
+</a>
+
+
+
+
+
+<a class="btn secondary" href="https://youtu.be/P2UHLif6-C0">
+
+Live Demo
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- DATA ENGINEERING -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+
+<h2 class="section-title">
+
+Data Engineering Systems
+
+</h2>
+
+
+
+
+<p class="subtitle">
+
+Building reliable pipelines, analytics platforms
+and scalable data architectures.
+
+</p>
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+
+
+<div class="case">
+
+
+
+<h3>
+
+E-Commerce Data Platform
+
+</h3>
+
+
+
+
+<p class="description">
+
+Modern analytics platform transforming raw ecommerce
+data into business intelligence.
+
+</p>
+
+
+
+
+
+
+<div class="diagram">
+
+
+<img
+src="assets/diagrams/data-platform.png"
+alt="Data Platform Architecture">
+
+
+
+<p>
+
+ETL Pipeline Architecture
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="tags">
+
+
+<span>
+Python
+</span>
+
+
+<span>
+SQL
+</span>
+
+
+<span>
+Airflow
+</span>
+
+
+<span>
+Warehouse
+</span>
+
+
+<span>
+Cloud
+</span>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- ENGINEERING APPROACH -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+
+
+
+<h2 class="section-title">
+
+Engineering Approach
+
+</h2>
+
+
+
+
+
+<p class="subtitle">
+
+How I design reliable AI systems and scalable data platforms.
+
+</p>
+
+
+
+
+
+
+
+
+<div class="case">
+
+
+
+<h3>
+
+Production AI System Lifecycle
+
+</h3>
+
+
+
+
+
+
+
+<div class="diagram">
+
+
+
+<img
+src="assets/diagrams/ai-system-lifecycle.png"
+alt="AI System Lifecycle">
+
+
+
+
+
+<p>
+
+Data Sources → Processing → AI Layer → Application → Monitoring
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Reliable AI Systems
+
+</h4>
+
+
+
+<p>
+
+Structured outputs, validation schemas,
+retrieval pipelines and evidence-based
+generation to reduce hallucinations.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Data Driven Architecture
+
+</h4>
+
+
+
+<p>
+
+Building pipelines that transform raw
+information into reliable business intelligence.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Production Engineering
+
+</h4>
+
+
+
+<p>
+
+API design, databases, containers,
+deployment workflows and scalable systems.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- SYSTEM ARCHITECTURE -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+
+<h2 class="section-title">
+
+System Architecture
+
+</h2>
+
+
+
+
+
+<p class="subtitle">
+
+Examples of how AI and data engineering components
+connect in production environments.
+
+</p>
+
+
+
+
+
+
+
+<div class="case">
+
+
+
+
+
+<div class="diagram">
+
+
+
+<img
+src="assets/diagrams/full-system-arch.png"
+alt="Full System Architecture">
+
+
+
+
+
+<p>
+
+Complete AI + Data Engineering Architecture
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Data Layer
+
+</h4>
+
+
+
+<p>
+
+Databases<br>
+Data warehouses<br>
+Vector databases<br>
+Storage systems
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+AI Layer
+
+</h4>
+
+
+
+<p>
+
+LLMs<br>
+RAG pipelines<br>
+AI agents<br>
+Machine learning workflows
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Application Layer
+
+</h4>
+
+
+
+<p>
+
+APIs<br>
+Dashboards<br>
+Automation tools<br>
+Business applications
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+<!-- TECHNICAL STACK -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+
+<h2 class="section-title">
+
+Technical Stack
+
+</h2>
+
+
+
+
+<p class="subtitle">
+
+Tools and technologies used to build modern
+AI and data-driven applications.
+
+</p>
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+AI Engineering
+
+</h4>
+
+
+
+
+<p>
+
+OpenAI API<br>
+LangChain<br>
+RAG Systems<br>
+AI Agents<br>
+Prompt Engineering<br>
+Vector Databases
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Data Engineering
+
+</h4>
+
+
+
+
+<p>
+
+Python<br>
+SQL<br>
+ETL Pipelines<br>
+Apache Airflow<br>
+Apache Kafka<br>
+Data Warehousing
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Backend Engineering
+
+</h4>
+
+
+
+
+<p>
+
+FastAPI<br>
+REST APIs<br>
+PostgreSQL<br>
+Docker<br>
+Authentication<br>
+Cloud Deployment
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+Frontend Engineering
+
+</h4>
+
+
+
+
+<p>
+
+React<br>
+Next.js<br>
+TypeScript<br>
+Tailwind CSS<br>
+Data Visualization
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- DEVELOPMENT PROCESS -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+
+
+
+<h2 class="section-title">
+
+Development Process
+
+</h2>
+
+
+
+
+<p class="subtitle">
+
+From idea to production-ready intelligent systems.
+
+</p>
+
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+1. Data Collection
+
+</h4>
+
+
+
+<p>
+
+Gathering structured and unstructured
+data from reliable sources.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+2. Data Processing
+
+</h4>
+
+
+
+<p>
+
+Cleaning, transforming and preparing
+data pipelines.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+3. AI Engineering
+
+</h4>
+
+
+
+<p>
+
+Building RAG systems, AI agents
+and intelligent workflows.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+4. Production
+
+</h4>
+
+
+
+<p>
+
+Deploying scalable applications
+with monitoring and reliability.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- EDUCATION -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+
+
+
+<h2 class="section-title">
+
+Education & Journey
+
+</h2>
+
+
+
+
+
+
+
+<div class="case">
+
+
+
+
+
+<h3>
+
+Bachelor of Computer Science - Artificial Intelligence
+
+</h3>
+
+
+
+
+
+
+
+<p class="description">
+
+Computer science foundation focused on
+artificial intelligence, software engineering,
+machine learning and intelligent systems.
+
+</p>
+
+
+
+
+
+
+
+<div class="tags">
+
+
+<span>
+
+Artificial Intelligence
+
+</span>
+
+
+
+<span>
+
+Machine Learning
+
+</span>
+
+
+
+<span>
+
+Software Engineering
+
+</span>
+
+
+
+<span>
+
+Algorithms
+
+</span>
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="case">
+
+
+
+
+
+<h3>
+
+AI Engineer → Data Engineer Journey
+
+</h3>
+
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+2024
+
+</h4>
+
+
+
+
+<p>
+
+Computer science foundation,
+AI concepts and software engineering.
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+2025
+
+</h4>
+
+
+
+
+<p>
+
+Production AI systems,
+RAG applications and SaaS platforms.
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h4>
+
+2026
+
+</h4>
+
+
+
+
+<p>
+
+Data engineering,
+cloud architecture and scalable platforms.
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- CONTACT -->
+
+
+<section class="section" id="contact">
+
+
+
+<div class="container">
+
+
+
+
+
+
+<div class="case contact">
+
+
+
+
+
+<h2>
+
+Let's Build Intelligent Systems
+
+</h2>
+
+
+
+
+
+
+
+<p class="description">
+
+Open for AI Engineer, Data Engineer roles,
+internships and collaborations.
+
+</p>
+
+
+
+
+
+
+
+<div class="buttons">
+
+
+
+
+
+<a class="btn primary"
+href="mailto:viktor.sz.hire@gmail.com">
+
+Email Me
+
+</a>
+
+
+
+
+
+
+
+
+<a class="btn secondary"
+href="https://github.com/viktor-ai-dev">
+
+GitHub
+
+</a>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+let currentSlide = 0;
+
+
+
+function moveSlide(direction){
+
+
+
+const carousel =
+document.getElementById(
+"storepulseCarousel"
+);
+
+
+
+const slides =
+document.querySelectorAll(
+"#storepulseCarousel .screenshot-slide"
+);
+
+
+
+
+currentSlide += direction;
+
+
+
+
+
+if(currentSlide < 0){
+
+currentSlide =
+slides.length - 1;
+
+}
+
+
+
+
+
+if(currentSlide >= slides.length){
+
+currentSlide = 0;
+
+}
+
+
+
+
+
+carousel.scrollTo({
+
+
+left:
+carousel.clientWidth * currentSlide,
+
+
+behavior:"smooth"
+
+
+});
+
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+
+</html>
